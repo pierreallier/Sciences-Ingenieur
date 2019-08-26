@@ -1,0 +1,20 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Contexte et \'etude pr\'eliminaire}{2}{section.1}
+\contentsline {paragraph}{Objectif}{2}{section*.2}
+\contentsline {section}{\numberline {2}Architecture et conception de la plateforme dynamique}{5}{section.2}
+\contentsline {paragraph}{Objectif}{5}{section*.3}
+\contentsline {subsection}{\numberline {2.1}Analyse des param\`etres \`a imposer pour obtenir un mouvement de tangage seul du simulateur}{6}{subsection.2.1}
+\contentsline {section}{\numberline {3}Commande d'un mouvement de tangage du simulateur de vol}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Mod\'elisation du comportement de la chaine cin\'ematique}{8}{subsection.3.1}
+\contentsline {paragraph}{Objectif}{8}{section*.4}
+\contentsline {paragraph}{Hypoth\`eses relatives aux dispositifs bielle-manivelle}{8}{section*.5}
+\contentsline {subsection}{\numberline {3.2}\'Etude de la structure de la cha\IeC {\^\i }ne cin\'ematique}{9}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Mod\'elisation du comportement d'un g\'en\'erateur de consigne en vitesse}{9}{subsection.3.3}
+\contentsline {paragraph}{Objectif}{9}{section*.6}
+\contentsline {section}{\numberline {4}Mod\'elisation du comportement d'un des servomoteurs du simulateur de vol}{10}{section.4}
+\contentsline {paragraph}{Objectif}{10}{section*.7}
+\contentsline {subsection}{\numberline {4.1}Optimisation des performances des servomoteurs}{11}{subsection.4.1}
+\contentsline {paragraph}{Objectif}{11}{section*.8}
+\contentsline {section}{\numberline {5}Synth\`ese}{12}{section.5}
+\contentsline {section}{\numberline {6}Conception}{12}{section.6}
+\contentsline {section}{\numberline {7}Documents r\'eponse}{15}{section.7}

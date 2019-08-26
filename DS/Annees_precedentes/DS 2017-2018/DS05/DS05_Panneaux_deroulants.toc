@@ -1,0 +1,17 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}D\'ecouverte du syst\`eme}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Mise en situation}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Diagramme des cas d'utilisation}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Diagramme de contexte}{3}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Diagramme d'exigences}{4}{subsection.1.4}
+\contentsline {section}{\numberline {2}\'Etude de la fonction : \IeC {\guillemotleft } enrouler ou d\'erouler l'affiche \IeC {\guillemotright }}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}D\'etermination de la loi de variation de la vitesse angulaire du rouleau au cours de l'enroulement des affiches}{6}{subsection.2.1}
+\contentsline {section}{\numberline {3}\'Etude de la fonction : \IeC {\guillemotleft } g\'erer le d\'efilement des affiches \IeC {\guillemotright }}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}R\'eglage de la temporisation de commande du moteur d'entra\IeC {\^\i }nement}{8}{subsection.3.1}
+\contentsline {section}{\numberline {4}\'Etude de la fonction : \FB@og tendre l'affiche \FB@fg \relax }{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Analyse de la solution 1 (solution \`a un seul moteur) (brevet N\IeC {\textdegree } FR 77 39575 ann\'ee 1977)}{9}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Analyse de la solution \`a deux motorisations \`a commande altern\'ee.}{10}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}\'Etude de l'asservissement en couple du moteur \`a courant continu}{12}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Mesure du courant image du couple moteur}{15}{subsubsection.4.2.2}
+\contentsline {subsection}{\numberline {4.3}\'Etude du comportement de la solution actuelle (solution 3)}{16}{subsection.4.3}
+\contentsline {section}{\numberline {5}\'Etude de la fonction : \FB@og guider le rouleau par rapport au ch\^assis \FB@fg \relax }{17}{section.5}

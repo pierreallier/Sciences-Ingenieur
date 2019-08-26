@@ -1,0 +1,14 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Pr\'esentation du syst\`eme}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Probl\'ematique et objectifs de l'\'etude}{3}{subsection.1.1}
+\contentsline {paragraph}{Objectif:}{3}{section*.2}
+\contentsline {subsection}{\numberline {1.2}Fonctions et diagrammes SysMl}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Analyse fonctionnelle et structurelle}{5}{section.2}
+\contentsline {section}{\numberline {3}\'Etude de la fonction \FB@og diminuer les temps de parcours d'au moins 15\% \FB@fg \relax }{6}{section.3}
+\contentsline {paragraph}{On s'int\'eresse maintenant au v\'ehicule \'equip\'e du syst\`eme de pendulation de caisse.}{8}{section*.3}
+\contentsline {section}{\numberline {4}\'Etude de la \FB@og assurer un mouvement de rotation de la caisse \FB@fg \relax }{8}{section.4}
+\contentsline {section}{\numberline {5}Mod\'elisation de l'asservissement du syst\`eme.}{10}{section.5}
+\contentsline {paragraph}{On cherche la fonction de transfert de l'actionneur.}{11}{section*.4}
+\contentsline {section}{\numberline {6}V\'erification de la pr\'ecision de positionnement}{12}{section.6}
+\contentsline {section}{\numberline {7}Conception de la liaison entre l'entrainement et l'axe roue du bogie}{13}{section.7}
+\contentsline {section}{\numberline {8}Documents r\'eponse}{15}{section.8}

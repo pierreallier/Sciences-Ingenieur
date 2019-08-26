@@ -1,0 +1,20 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Pr\'esentation du produit \'etudi\'e (20 min)}{2}
+\contentsline {subsection}{\numberline {1.1}Le produit et son march\'e}{2}
+\contentsline {subsection}{\numberline {1.2}Principes de base de la cin\'ematique des moteurs \`a combustion interne}{2}
+\contentsline {subsection}{\numberline {1.3}Principe de la variabilit\'e du taux de compression}{2}
+\contentsline {subsection}{\numberline {1.4}Principales caract\'eristiques du moteur MCE-5}{3}
+\contentsline {subsection}{\numberline {1.5}Architecture g\'en\'erale (voir D1/11 figures 3 et 4 et D2/11 figure 5)}{3}
+\contentsline {subsection}{\numberline {1.6}Principe de fonctionnement (voir figures 3 et 4 page D1/11 et figure 5 page D2/11)}{3}
+\contentsline {section}{\numberline {2}Cin\'ematique (1h)}{4}
+\contentsline {subsection}{\numberline {2.1}D\'etermination de la cylindr\'ee du moteur}{4}
+\contentsline {paragraph}{Question 1:}{4}
+\contentsline {paragraph}{Question 2:}{4}
+\contentsline {subsection}{\numberline {2.2}D\'etermination du taux de compression minimum du moteur}{5}
+\contentsline {paragraph}{Question 3:}{5}
+\contentsline {paragraph}{Question 4:}{5}
+\contentsline {paragraph}{Question 5:}{6}
+\contentsline {section}{\numberline {3}\'Etude des m\'ecanismes}{6}
+\contentsline {subsection}{\numberline {3.1}Associations de liaisons cin\'ematiques \'el\'ementaires (se reporter \`a la figure 15 page D7/11)}{6}
+\contentsline {paragraph}{Question 6:}{6}
+\contentsline {paragraph}{Question 7:}{6}
