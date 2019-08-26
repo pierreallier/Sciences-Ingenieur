@@ -1,0 +1,106 @@
+\input{../../../headers/tpheaders.tex}
+
+\ifdef{\public}{\cleardoublepage}{\newpage}
+
+\prob{Modéliser un Système Linéaire Continu et Invariant} 
+
+\titleexp{Effectuer la mesure d'un mouvement de raali} 
+
+La procédure suivante permet de mettre en \oe uvre et de mesurer les conséquences de l'asservissement du mouvement de raali.
+L'étude portera sur la régulation de cette vitesse.
+
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{img/img1}
+\end{center}
+
+Dans la suite de l'étude, la commande du robot va être complètement prise en charge par l'application \og Interface Robot Jockey \fg:
+\begin{enumerate}
+ \item Lancer l'application \og Interface Robot Jockey \fg,
+ \item Faire basculer le levier de \og Connexion robot \fg et suivre les consignes du logiciel,
+ \item Cliquer sur \og Initialisation robot \fg,
+ \item Cliquer sur \og Acquisition/mesures \fg,
+ \item Cliquer sur l'icône \og Configurer Acquisitions\fg (mot de passe \og JOCKEY \fg),
+ \item Sélectionner un mouvement en choisissant les paramètres comme indiqué sur la figure suivante.
+\end{enumerate} 
+
+\begin{center}
+ \includegraphics[width=0.9\linewidth]{img/img2}
+\end{center}
+
+\paragraph{Question 1:} Comparez les vitesses attendues et les vitesses mesurées. Que constatez-vous ? Représentez la courbe obtenue sur un graphe sur lequel vous ferez apparaître la consigne échelon, l'écart statique et le temps de réponse à 5\%.
+
+\paragraph{Question 2:} Effectuez une nouvelle mesure en intégrant une perturbation, relever les différences avec la mesure précédente.
+
+~\
+
+L'ensemble des réponses que vous aurez donné dans cette partie devra être utilisé afin de compléter le document de présentation. Les diapositives pourront être agrémentées comme vous le souhaitez.
+
+\ifdef{\public}{\cleardoublepage}{\newpage}
+
+\titlemod{Modélisation de la chaine d'énergie du système}
+
+La mise en mouvement du bras est assurée par le mouvement du moteur. Nous allons dans cette partie chercher à déterminer la fonction de transfert qui lie la tension en entrée du moteur $u_m(t)$ et la vitesse de rotation du poignet $\omega(t)$.
+
+~\
+
+Caractéristiques du système:
+\begin{tabular}{|c|c|}
+\hline
+$K_m$ & $17.10^{-3}N.m.A^{-1}$ \\
+\hline
+$R_m$ & $2,5\Omega$ \\
+\hline
+$L_m$ & négligée \\
+\hline
+$J$ & $1,5.10^{-5}kg.m^2$ \\
+\hline
+$f$ & $0,0002N.m.rad^{-1}.s$ \\
+\hline\end{tabular}
+
+~\
+
+\paragraph{Question 4:} Donner l'ensemble des équations temporelles permettant de modéliser un moteur à courant continu (on ne prendra pas en compte l'inductance interne)
+
+Passer ces équations dans le domaine de Laplace.
+
+\paragraph{Question 5:} Déterminer la fonction de transfert $H(p)=\dfrac{\Omega(p)}{U_m(p)}$. Donner les caractéristiques de cette fonction de transfert et vérifier l'homogénéité des constantes déterminées.
+
+~\
+
+L'ensemble des réponses que vous aurez donné dans cette partie devra être utilisé afin de compléter le document de présentation. Les diapositives pourront être agrémentées comme vous le souhaitez.
+
+\ifdef{\public}{\cleardoublepage}{\newpage}
+
+\titleres{Simulation du comportement du modèle}
+
+Le logiciel \textbf{Scilab} permet de tracer la réponse temporelle d'une fonction de transfert donnée.
+
+Pour cela, il suffit de lancer le logiciel et d'aller dans le module \textbf{Xcos}.
+
+Dans le dossier \textbf{CPGE} du navigateur de palettes, vous trouverez, par exemple:
+\begin{itemize}
+ \item une \textit{entrée}: STEP\_FUNCTION,
+ \item un \textit{Opérateur linéaire}: CLR, vous modifierez sa fonction de transfert afin d'obtenir ce que vous souhaitez observer,
+ \item une \textit{sortie}: SCOPE,
+ \item un \textit{outil d'analyse}: REP\_TEMP.
+\end{itemize}
+
+Faire glisser ces blocs sur une page vierge du module xcos et cliquer sur la flèche permettant de lancer la simulation.
+
+\paragraph{Question 6:} Effectuer le tracé de la fonction de transfert vue en TD afin d'apprendre à maitriser l'outil Scilab.
+
+\paragraph{Question 7:} Modifier la fonction de transfert afin d'y insérer celle modélisée durant la modélisation.
+
+\paragraph{Question 8:} Critiquer les résultats obtenus et analyser le lien entre les tracés obtenus par simulation et ceux obtenus durant l'expérimentation.
+
+~\
+
+L'ensemble des réponses que vous aurez donné dans cette partie devra être utilisé afin de compléter le document de présentation. Les diapositives pourront être agrémentées comme vous le souhaitez.
+
+\ifdef{\public}{\end{document}}{}
+
+\newpage
+
+\pagestyle{correction}\setcounter{section}{0}
+
+\end{document}

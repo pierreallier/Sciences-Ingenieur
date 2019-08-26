@@ -1,0 +1,79 @@
+\input{../../../headers/tpheaders.tex}
+
+\ifdef{\public}{\cleardoublepage}{}
+
+\prob{Modéliser un Système Linéaire Continu et Invariant à l'aide d'un schéma bloc} 
+
+\titleexp{Identifier les blocs sur le système}
+
+L'objectif de ce TP est de modéliser l'axe Emericc par le schéma blocs suivant.
+
+\begin{center}
+ \includegraphics[width=0.95\linewidth]{img/Emericc}
+\end{center}
+
+L'objectif de cette première partie va être de déterminer le comportement de l'axe Emericc à partir de son modèle schéma bloc.
+
+~\
+
+\textit{Modéliser la structure d'un asservissement}
+
+A chaque bloc du système, il est possible d'associer un composant.
+
+\paragraph{Question 1:} Associer à chaque composant du système le nom d'un composant.
+
+\paragraph{Question 2:} Déterminer à partir de l'analyse de ces composants les fonctions de transfert manquantes.
+
+Vous choisirez pour la valeur du paramètre $K_a$ plusieurs valeurs distinctes.
+
+\paragraph{Question 3:} Expliquer l'influence de ce paramètre sur les réponses temporelles de l'axe Emericc.
+
+\ifdef{\public}{\cleardoublepage}{}
+
+\titleana{Structure de l'asservissement du système}
+
+L'objectif de cette partie est de déterminer le comportement du système en analysant la structure de l'asservissement.
+~\
+
+\paragraph{Question 4:} Déterminer la FTBO du système $FTBO(p)$.
+
+\paragraph{Question 5:} Déterminer la FTBF du système $FTBF(p)$.
+
+\paragraph{Question 6:} Déterminer le gain de la FTBF, le temps de réponse à 5\%, et les constantes du système ($\tau$, $\xi$ et $\omega_0$) et l'écart statique.
+
+\paragraph{Question 7:} Vérifier les données trouvées à la question précédente grâce au tracé du système réel.
+ 
+\ifdef{\public}{\cleardoublepage}{}
+
+\titlemod{Simulation du comportement du modèle}
+
+Le logiciel \textbf{Scilab} permet de tracer la réponse temporelle d'une fonction de transfert donnée.
+
+Pour cela, il suffit de lancer le logiciel et d'aller dans le module \textbf{Xcos}.
+
+Dans le dossier \textbf{CPGE} du navigateur de palettes, vous trouverez, par exemple:
+\begin{itemize}
+ \item une \textit{entrée}: STEP\_FUNCTION,
+ \item un \textit{Opérateur linéaire}: CLR, vous modifierez sa fonction de transfert afin d'obtenir ce que vous souhaitez observer,
+ \item une \textit{sortie}: SCOPE,
+ \item un \textit{outil d'analyse}: REP\_TEMP.
+\end{itemize}
+
+Faire glisser ces blocs sur une page vierge du module xcos et cliquer sur la flèche permettant de lancer la simulation.
+
+\paragraph{Question 1:} Effectuer le tracé du schéma bloc du système sur Scilab.
+
+\paragraph{Question 2:} Tracer les réponses temporelles obtenues durant les activités précédentes afin de vérifier le modèle choisi.
+
+\ifdef{\public}{\end{document}}{}
+
+\newpage
+
+\pagestyle{correction}\setcounter{section}{0}
+
+Modélisation
+\begin{center}
+$H(p)=\dfrac{F_c(p)}{U_m(p)}=\dfrac{\dfrac{K_m}{R_m.R_p.r}}{1+\dfrac{K_e.K_m}{R_m.K_c.R_p^2.r^2}.p+\dfrac{R_m.J}{R_m.K_c.R_p^2.r^2}.p^2}$
+\end{center}
+
+\end{document}

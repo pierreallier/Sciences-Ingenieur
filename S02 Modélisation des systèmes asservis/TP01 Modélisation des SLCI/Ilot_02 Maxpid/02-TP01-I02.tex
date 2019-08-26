@@ -1,0 +1,109 @@
+\input{../../../headers/tpheaders.tex}
+
+\ifdef{\public}{\cleardoublepage}{}
+
+\prob{Modéliser un Système Linéaire Continu et Invariant} 
+
+\titleexp{Effectuer la mesure d'un déplacement du bras du Maxpid, lors d'un déplacement vertical} 
+
+La procédure suivante permet de mettre en \oe uvre et de mesurer les conséquences de l'asservissement du Maxpid.
+
+Plusieurs capteurs sont reliés à la carte du boîtier qui permet l'acquisition, le traitement et affichage sont effectués par l'ordinateur. Pour cela :
+\begin{enumerate}
+ \item Lancer le logiciel du Maxpid,
+ \item Initialiser le système en étalonnant le capteur et en mettant en place l'asservissement PID,
+ \item Cliquer sur Travailler avec le Maxpid et choisir de lancer la mesure d'un échelon de position,
+ \item Relever les résultats.
+\end{enumerate} 
+
+\paragraph{Question 1:} Représenter la courbe obtenue sur un graphe sur lequel vous ferez apparaitre la consigne échelon, l'écart statique et le temps de réponse à 5\%.
+
+~\
+
+\textit{Effectuer la mesure d'un déplacement du bras du Maxpid, lors d'un déplacement horizontal.} Pour cela coucher l'ensemble du boitier orange.
+
+\paragraph{Question 2:} Représenter la nouvelle courbe obtenue sur un graphe sur lequel vous ferez apparaitre la consigne échelon, l'écart statique et le temps de réponse à 5\%.
+
+\paragraph{Question 3:} En utilisant l'ensemble des mesures mis à votre disposition, expliquer les différences entre les deux courbes si vous en trouvez.
+
+~\
+
+L'ensemble des réponses que vous aurez donné dans cette partie devra être utilisé afin de compléter le document de présentation. Les diapositives pourront être agrémentées comme vous le souhaitez.
+
+\ifdef{\public}{\cleardoublepage}{\newpage}
+
+\titlemod{Modélisation de la chaine d'énergie du système}
+
+La mise en mouvement du bras est assurée par le mouvement du moteur. Nous allons dans cette partie chercher à déterminer la fonction de transfert qui lie la tension en entrée du moteur $u(t)$ et la tension de la corde vitesse de déplacement de l'écrou le long de la vis.
+
+~\
+
+Caractéristiques du moteur:
+\begin{tabular}{|c|c|}
+\hline
+$K_m$ & $52,5.10^{-3}N.m.A^{-1}$ \\
+\hline
+$R_m$ & $2,07\Omega$ \\
+\hline
+$L_m$ & $0,62.10^{-3}H$ \\
+\hline
+$J$ & $0.01kg.m^2$ \\
+\hline
+\end{tabular}
+
+~\
+
+\paragraph{Question 4:} Donner l'ensemble des équations temporelles permettant de modéliser un moteur à courant continu (on prendra en compte son inductance interne).
+
+\paragraph{Question 5:} Déterminer l'équation qui lie la vitesse de rotation du moteur $\omega_m(t)$ à la vitesse de déplacement de l'écrou $v_e(t)$. Effectuer sur le système toutes les mesures nécessaires à l'écriture de ces équations.
+
+\paragraph{Question 6:} Déterminer le lien entre la vitesse de l'écrou $v_e(t)$ et la position $x_e(t)$ de l'écrou.
+
+\paragraph{Question 7:} Passer ces équations dans le domaine de Laplace.
+
+\paragraph{Question 8:} Mettre le système sous la forme de la fonction de transfert suivante: $H(p)=\dfrac{X_e(p)}{U_m(p)}$. Donner les caractéristiques de cette fonction de transfert et vérifier l'homogénéité des constantes déterminées.
+
+~\
+
+L'ensemble des réponses que vous aurez donné dans cette partie devra être utilisé afin de compléter le document de présentation. Les diapositives pourront être agrémentées comme vous le souhaitez.
+
+\ifdef{\public}{\cleardoublepage}{\newpage}
+
+\titleres{Simulation du comportement du modèle}
+
+Le logiciel \textbf{Scilab} permet de tracer la réponse temporelle d'une fonction de transfert donnée.
+
+Pour cela, il suffit de lancer le logiciel et d'aller dans le module \textbf{Xcos}.
+
+Dans le dossier \textbf{CPGE} du navigateur de palettes, vous trouverez, par exemple:
+\begin{itemize}
+ \item une \textit{entrée}: STEP\_FUNCTION,
+ \item un \textit{Opérateur linéaire}: CLR, vous modifierez sa fonction de transfert afin d'obtenir ce que vous souhaitez observer,
+ \item une \textit{sortie}: SCOPE,
+ \item un \textit{outil d'analyse}: REP\_TEMP.
+\end{itemize}
+
+Faire glisser ces blocs sur une page vierge du module xcos et cliquer sur la flèche permettant de lancer la simulation.
+
+\paragraph{Question 9:} Effectuer le tracé de la fonction de transfert vue en TD afin d'apprendre à maitriser l'outil Scilab.
+
+\paragraph{Question 10:} Modifier la fonction de transfert afin d'y insérer celle modélisée durant la modélisation.
+
+\paragraph{Question 11:} Critiquer les résultats obtenus et analyser le lien entre les tracés obtenus par simulation et ceux obtenus durant l'expérimentation.
+
+~\
+
+L'ensemble des réponses que vous aurez donné dans cette partie devra être utilisé afin de compléter le document de présentation. Les diapositives pourront être agrémentées comme vous le souhaitez.
+
+\ifdef{\public}{\end{document}}{}
+
+\newpage
+
+\pagestyle{correction}\setcounter{section}{0}
+
+Modélisation
+\begin{center}
+$H(p)=\dfrac{X_e(p)}{U_m(p)}=\dfrac{\dfrac{pas}{2.\pi.K_e}}{p.\left(1+\dfrac{R.J}{K_m.K_e}.p+\dfrac{L.J}{K_m.K_e}.p^2\right)}$
+\end{center}
+
+\end{document}
