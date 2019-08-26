@@ -1,0 +1,68 @@
+\input{../../../headers/tpheaders.tex}
+
+\ifdef{\public}{\cleardoublepage}{}
+
+\prob{Déterminer une loi d'entrée/sortie géométrique} 
+
+\titlemod{Modéliser la loi d'entrée/sortie}
+
+\includegraphics[width=0.4\linewidth]{img/cinematique}
+\includegraphics[width=0.6\linewidth]{img/barriere}
+
+\question{Écrire les vecteurs $\overrightarrow{AB}$, $\overrightarrow{AC}$ et $\overrightarrow{BC}$ dans les bases respectives $B_0(\overrightarrow{x_0},\overrightarrow{y_0},\overrightarrow{z_0})$, $B_1(\overrightarrow{x_1},\overrightarrow{y_1},\overrightarrow{z_1})$ et $B_2(\overrightarrow{x_2},\overrightarrow{y_2},\overrightarrow{z_2})$. On mesurera $\|\overrightarrow{AB}\|$ et $\|\overrightarrow{BC}\|$ directement sur le système et on prendra $\|\overrightarrow{AC}\|=l(t)$ variable.}
+
+\question{Donner la relation qui existe entre ces trois vecteurs.}
+
+\question{Projeter cette relation dans la base $B_0(\overrightarrow{x_0},\overrightarrow{y_0},\overrightarrow{z_0})$ afin d'obtenir deux équations scalaires. On fera apparaître les angles $\theta_1$ et $\theta_2$.}
+
+\question{A l'aide de ces deux relations faire disparaitre $l(t)$ afin de trouver une relation entre $\theta_1$ et $\theta_2$.}
+
+\question{Mettre cette relation sous la forme $\theta_1=f(\theta_2)$.}
+
+\question{Mettre cette relation sous la forme $\theta_2=f(\theta_1)$.}
+
+\newpage
+
+\titleexp{Vérifier la relation $\theta_1=f(\theta_2)$.}
+
+Télécharger le fichier \href{https://github.com/Costadoat/S04/raw/master/TP01\%20G\%C3\%A9om\%C3\%A9trie\%20pour\%20la\%20m\%C3\%A9canique/Ilot\_01\%20Barri\%C3\%A8re/Simu\_barri\%C3\%A8re.xlsx}{Simu\_barrière.xlsx}.
+
+\question{Compléter le fichier Simu\_barrière.xlsx en effectuant les mesures d'angles sur le sous-système de la barrière.}
+
+\question{Recopier la formule de la première partie dans la troisième colonne et comparer le modèle théorique avec l'expérimentation.}
+
+\ifdef{\public}{\end{document}}
+
+\newpage
+
+\pagestyle{correction}
+
+\section{Correction}
+
+\cor{$\overrightarrow{AB}=a\cdot\overrightarrow{y_0}$, $\overrightarrow{AC}=l(t)\cdot\overrightarrow{x_1}$ et $\overrightarrow{BC}=b\cdot\overrightarrow{x_2}$, avec a=112mm et b=81mm.}
+
+\cor{$\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC}$.}
+
+\cor{\begin{eqnarray}
+l(t)\cdot cos\theta_1=b\cdot cos\theta_2\\ 
+l(t)\cdot sin\theta_1=a+b\cdot sin\theta_2
+\end{eqnarray}}
+
+\cor{\begin{eqnarray}
+tan\theta_1=\frac{a+b\cdot sin\theta_2}{b\cdot cos\theta_2}
+\end{eqnarray}}
+
+\cor{\begin{eqnarray}
+\theta_1=arctan\left(\frac{a+b\cdot sin\theta_2}{b\cdot cos\theta_2}\right)
+\end{eqnarray}}
+
+\cor{\begin{eqnarray}
+b\cdot sin\theta_1\cdot cos\theta_2=a\cdot cos\theta_1+b\cdot sin\theta_2\cdot cos\theta_1 \nonumber \\
+b\cdot \left(sin\theta_1\cdot cos\theta_2-sin\theta_2\cdot cos\theta_1\right)=a\cdot cos\theta_1 \nonumber \\
+b\cdot sin\left(\theta_1-\theta_2\right)=a\cdot cos\theta_1 \nonumber \\
+\theta_1-\theta_2=arcsin\left(\frac{a}{b}\cdot cos\theta_1\right) \nonumber \\
+\theta_2=\theta_1-arcsin\left(\frac{a}{b}\cdot cos\theta_1\right)
+\end{eqnarray}}
+
+
+\end{document}

@@ -1,0 +1,107 @@
+\input{../../../headers/tpheaders.tex}
+
+\section{Activité 1: Modélisation}
+
+\subsection{Présentation des composants}
+
+\begin{figure}[!h]
+ \begin{minipage}{0.45\linewidth}
+\paragraph{Question 1:} Inscrire sur la figure \ref{img1} le nom technique de chaque solide et mettre ces résultats sous la forme d'un graphe des liaisons.
+ \end{minipage}
+  \hfill
+ \begin{minipage}{0.45\linewidth}
+  \centering\includegraphics[width=0.7\linewidth]{img/suspension_moto}
+  \caption{Suspension de moto}
+  \label{img1}
+ \end{minipage}
+\end{figure}
+
+\paragraph{Question 2:} Proposer et justifier une modélisation plane à ce problème avec un schéma cinématique. Mesurer directement sur le système les dimensions utiles du mécanisme.
+
+\vspace{6cm}
+
+\subsection{Modélisation des actions et des liaisons mécaniques}
+
+\paragraph{Question 3:} Identifier et déterminer les torseur des actions mécaniques \textbf{extérieures} qui s'exercent sur les pièces du système.
+
+
+
+\paragraph{Question 4:} Déterminer le torseur des actions mécaniques transmissibles par \textbf{chacune des liaisons} du système.
+
+
+
+\subsection{Résolution à l'aide du P.F.S.}
+
+Pour chaque solide du système:
+\begin{enumerate}
+ \item \textbf{Isoler} la pièce,
+ \item \textbf{Faire} le Bilan des Action Mécaniques,
+ \item \textbf{Écrire} les torseurs correspondant au même point,
+ \item \textbf{Résoudre} le système d'équations.
+\end{enumerate}
+
+\paragraph{Question 5:} Déterminer le système d'équations issu du P.F.S.
+
+La résolution du système d'équations devra être codée en Python.
+
+
+
+\paragraph{Question 6:} Conclure quant à la valeur de l'effort dans le ressort pour plusieurs valeurs de masses.
+
+\begin{table}[!h]
+ \centering\begin{tabular}{|l|m{4cm}|}
+  \hline
+  $Masse$ & $F_R$ \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  \end{tabular}
+\end{table}
+
+\clearpage
+
+\section{Activité 2: Simulation numérique}
+
+Cette partie sera effectuée à partir d'une simulation sur le logiciel Meca3D.
+
+\paragraph{Question 1:} En utilisant le mode d'Analyse Mécanique \og Statique \fg. Compléter le tableau suivant.
+
+\begin{table}[!ht]
+ \centering\begin{tabular}{|l|l|}
+  \hline
+  $Masse$ & $F_R$\\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  ... \textdegree & \\
+  \hline
+  \end{tabular}
+\end{table}
+
+\paragraph{Question 2:} Comparer ces résultats avec les résultats issus de la modélisation analytique effectuée dans la partie 1 ainsi qu'avec les résultats de l'expérimentation 3.
+
+
+
+\end{document}

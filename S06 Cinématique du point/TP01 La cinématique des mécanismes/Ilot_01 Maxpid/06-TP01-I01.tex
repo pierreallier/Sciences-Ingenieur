@@ -1,0 +1,174 @@
+\input{../../../headers/tpheaders.tex}
+
+\prob{Modéliser la loi d'entrée/sortie cinématique d'un système} 
+
+\titlemod{Détermination de la loi d'entrée/sortie géométrique}
+
+L'objectif de cette partie est de déterminer la loi de fermeture géométrique du système Maxpid et de la comparer avec celle obtenue par extraction de données expérimentales.
+
+\begin{itemize}
+ \item L'angle de rotation du moteur sera appelé $\theta_m$,
+ \item L'angle de rotation du bras sera appelé $\theta_1$.
+\end{itemize}
+
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{img/Maxpid_cin}
+\end{center}
+
+\question{Déterminer $\theta_m$ et $\theta_3$ en fonction de $\theta_1$ et des paramètres géométriques du système, en utilisant la loi de fermeture géométrique. Les dimensions seront mesurées sur le système afin d'effectuer l'application numérique.}
+
+\question{A l'aide du \scriptpython, faire varier $\theta_1$ de $0$ à $\frac{\pi}{2}$. Et tracer $\theta_m$ et $\theta_3$.}
+
+\question{Après avoir récupéré le résultat d'une simulation sur le logiciel du Maxpid traçant la vitesse de rotation du bras en fonction de celle du moteur. Importer ces résultats sur le logiciel et intégrer numériquement ces courbes, vous proposerez un algorithme afin d'effectuer cette intégrale.}
+
+\question{En utilisant le résultat de l'intégrale de la vitesse de rotation du moteur comme donnée d'entrée, calculer les valeurs de $\theta_m$ et les comparer à celles obtenues numériquement.}
+
+\newpage
+
+\titlemod{Détermination de la loi d'entrée/sortie cinématique}
+
+Cette partie permettra de déterminer la loi d'entrée à imposer au moteur électrique afin de permettre d'obtenir un déplacement souhaité du bras.
+
+\begin{itemize}
+ \item La vitesse de rotation du moteur sera appelée $\omega_m=\dot{\theta_m}$,
+ \item La vitesse de rotation du bras sera appelée $\omega_b=\dot{\theta_1}$.
+\end{itemize}
+ 
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{img/Maxpid_cin}
+\end{center}
+
+\question{Déterminer $\omega_m$ en fonction de $\omega_b$ et des paramètres géométriques du système, en utilisant la loi de fermeture cinématique. Les dimensions seront mesurées sur le système afin d'effectuer l'application numérique.}
+
+L'objectif est d'obtenir le profil suivant pour la vitesse de rotation du bras par rapport au bâti.
+
+\begin{center}
+ \includegraphics[width=0.6\linewidth]{img/Maxpid_profil}
+\end{center}
+
+\question{En déduire le profil de vitesse à imposer au moteur $\omega_m$. Vous tracerez ce profil en utilisant les commandes suivantes. Vous utiliserez le \scriptpython pour effectuer les calculs.}
+
+\newpage
+
+\titleexp{Modélisation sur un modeleur 3D}
+
+Le logiciel Solidworks va permettre de déterminer les lois d'entrée sortie géométrique et cinématique du système Maxpid.
+
+Le fichier à ouvrir pour cette étude est le fichier \verb?SW_Maxpid/Maxpid.SLDASM?.
+
+\begin{itemize}
+ \item La vitesse de rotation du moteur sera appelée $\omega_m=\dot{\theta_m}$,
+ \item La vitesse de rotation du bras sera appelée $\omega_b=\dot{\theta_1}$.
+\end{itemize}
+
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{img/Maxpid_cin}
+\end{center}
+
+\question{Sur Solidworks, paramétrer le Maxpid sur le logiciel Meca3d afin de pouvoir simuler son comportement.}
+ 
+\begin{itemize}
+ \item Tracer $\theta_1=f(\alpha_m)$,
+ \item Tracer $\omega_m=f(t)$,
+\end{itemize}
+
+\question{Déterminer $t_1$, $t_2$, $t_{total}$ et $\omega_{bmax}$ afin de paramétrer le mouvement comme le plus rapide possible sur le système réel.}
+
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{img/Maxpid_profil}
+\end{center}
+
+\question{Générer cette courbe sur Meca3d à l'aide de l'utilitaire de tracé de coubes. Un tutoriel Meca3d est disponible dans une archive avec un exemple \href{http://applitec.free.fr/Meca3d/exemples/v10/PortePeage.zip}{ici}.}
+
+\question{Utiliser cette courbe comme donnée d'entrée pour calculer la vitesse $\omega_m$ en fonction du temps. Comparer ce résultat avec celui de l'activité 2.}
+
+\newpage
+
+\titleana{Activité 4: Système acausal}
+
+Cette partie va permettre d'introduire le modèle \og acausal \fg afin de déterminer si celui qui a été mis en place pour le Maxpid en est un. Un modèle \og acausal \fg est un modèle qui ne possède pas de lien cause à effet. Il revient à des équations implicites sans ordre entre les variables et sans spécification d'entrée et de sortie.
+
+\question{A la vue de la définition précédente, pensez-vous que ce système puisse être modélisé par un modèle \og acausal \fg ?}
+
+\question{Vous effectuerez la liaison entre les activités afin de récupérer les résultats de l'activité 2 pour les utiliser sur Solidworks durant l'activité 3.}
+
+\question{Vous montrerez l'influence sur les résultat des dimensions géométriques du système afin de déterminer si leur choix dépend des données cinématiques.}
+
+\ifdef{\public}{\end{document}}{}
+
+\clearpage
+
+\newpage
+
+\section{Correction}
+
+\subsection{Fermeture géométrique}
+
+$\overrightarrow{OB}+\overrightarrow{BC}+\overrightarrow{CA}+\overrightarrow{AO}=\overrightarrow{0}$
+
+$\left\{\begin{array}{l}
+b+l_1.cos\theta_1-l(t).cos\theta_3=0 \\
+l_1.sin\theta_1-l(t).sin\theta_3-a=0
+\end{array}\right.$
+
+$l(t)=l_0+\frac{p.\theta_m}{2.\pi}$
+
+$\left\{\begin{array}{l}
+l(t).cos\theta_3=b+l_1.cos\theta_1 \\
+l(t).sin\theta_3=l_1.sin\theta_1-a
+\end{array}\right.$
+
+Donc,$l(t)=\sqrt{(b+l_1.cos\theta_1)^2+(l_1.sin\theta_1-a)^2}$ et $\theta_m=(l(t)-l_0).\frac{2.\pi}{p}$.
+
+Et $\theta_3=\frac{b+l.cos\theta_1}{l(t)}$
+
+\subsection{Fermeture cinématique}
+
+$\left\{V_{1/0}\right\}=
+\left\{\begin{array}{cc}
+0 & 0\\
+0 & 0\\
+\omega_b & 0
+\end{array}
+\right\}_B=
+\left\{
+\begin{array}{cc}
+0 & 0\\
+0 & l_1.\omega_b\\
+\omega_b & 0
+\end{array}
+\right\}_{C,R_1}=
+\left\{
+\begin{array}{cc}
+0 & -sin(\theta_1).l_1.\omega_b\\
+0 & cos(\theta_1).l_1.\omega_b\\
+\omega_b & 0
+\end{array}
+\right\}_{C,R_0}$
+
+$\left\{V_{1/0}\right\}=
+\left\{
+\begin{array}{cc}
+0 & \frac{p*\omega_m}{2.\pi}\\
+0 & 0\\
+0 & 0
+\end{array}
+\right\}_{C,R_3}=
+\left\{
+\begin{array}{cc}
+0 & cos(\theta_3).\frac{p*\omega_m}{2.\pi}\\
+0 & sin(\theta_3).\frac{p*\omega_m}{2.\pi}\\
+0 & 0
+\end{array}
+\right\}_{C,R_0}$
+
+Donc, 
+$\left\{
+\begin{array}{l}
+-sin(\theta_1).l_1.\omega_b=cos(\theta_3).\frac{p*\omega_m}{2.\pi}\\
+cos(\theta_1).l_1.\omega_b=sin(\theta_3).\frac{p*\omega_m}{2.\pi}
+\end{array}\right.$
+
+Donc, $\omega_m=\frac{2.\pi}{p}.\frac{-sin(\theta_1).l_1}{cos(\theta_3)}.\omega_b$
+
+\end{document}

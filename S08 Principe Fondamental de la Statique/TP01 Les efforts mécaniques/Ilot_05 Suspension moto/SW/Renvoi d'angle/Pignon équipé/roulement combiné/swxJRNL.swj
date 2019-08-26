@@ -1,0 +1,21 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 06/26/00 by Mady et Jean-Marie REYNAUD
+' ******************************************************************************
+
+Dim swApp As Object
+Dim Part As Object
+Dim Gtol As Object
+Dim FeatureData As Object
+Dim Feature As Object
+Dim Component As Object
+Sub main()
+Set swApp = CreateObject ("SldWorks.Application")
+Set Part = swApp.NewPart
+Set Part = swApp.ActivateDoc ("Part1")
+Set Part = swApp.OpenDoc ("C:\BMW\Renvoi d'angle\Pignon équipé\roulement combiné\roulement combiné b.SLDASM", 2)
+Set Part = swApp.ActivateDoc ("roulement combiné b")
+Part.SelectByID "Dans fonction de contexte7", "INCONTEXTFEATS", 0, 0, 0
+Part.ClearSelection
+Set Part = swApp.ActivateDoc ("Part1")
+swApp.ExitApp
+End Sub

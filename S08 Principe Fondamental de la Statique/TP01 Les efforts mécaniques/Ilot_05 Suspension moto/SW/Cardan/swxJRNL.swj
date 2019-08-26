@@ -1,0 +1,58 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 05/13/00 by Mady et Jean-Marie REYNAUD
+' ******************************************************************************
+
+Dim swApp As Object
+Dim Part As Object
+Dim Gtol As Object
+Dim FeatureData As Object
+Dim Feature As Object
+Dim Component As Object
+Sub main()
+Set swApp = CreateObject ("SldWorks.Application")
+Set Part = swApp.NewPart
+Set Part = swApp.ActivateDoc ("Part1")
+Set Part = swApp.OpenDoc ("C:\BMW\Cardan\Cardan.SLDASM", 2)
+Set Part = swApp.ActivateDoc ("Cardan")
+Part.ViewZoomtofit2
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.TranslateComponent
+Part.SelectByID "Point1@Origine@croisillon-équipé-2@Cardan/aiguilles-douille-2@croisillon-équipé", "EXTSKETCHPOINT", 0, 0, 0
+Part.ClearSelection
+Part.SelectByID "", "VERTEX", -0.4552214681767, 0.2524941614732, -0.06818116836106
+Part.ActiveView().RotateAboutCenter 0.283784, -0.364649
+Part.ActiveView().RotateAboutCenter 0.114429, -0.21318
+Part.ActiveView().RotateAboutCenter 0.0961203, -0.1122
+Part.ActiveView().RotateAboutCenter 0, -0.00560999
+Part.ActiveView().RotateAboutCenter 0.0183086, -0.10098
+Part.ActiveView().RotateAboutCenter -0.00915431, 0.00560999
+Part.ActiveView().RotateAboutCenter -0.114429, 0.1122
+Part.ActiveView().RotateAboutCenter -0.1602, 0.19074
+Part.ActiveView().RotateAboutCenter -0.0549259, 0.0560999
+Part.ActiveView().RotateAboutCenter -0.0823888, 0.0560999
+Part.ActiveView().RotateAboutCenter -0.0686573, 0.10098
+Part.ActiveView().RotateAboutCenter -0.0183086, 0.0336599
+Part.ActiveView().RotateAboutCenter -0.00915431, 0.0448799
+Part.ActiveView().RotateAboutCenter 0.0457715, 0
+Part.ActiveView().RotateAboutCenter 0.0183086, 0
+Part.ActiveView().RotateAboutCenter 0.059503, -0.0560999
+Part.TranslateComponent
+Part.ClearSelection
+Part.ViewDispRefPoints
+Part.ViewDispRefPoints
+' MSGBOX
+' C:\BMW\Cardan\Cardan.SLDASM n'a pas été reconstruit avec succès depuis le dernier changement de fonction ou un modèle référencé de l'extérieur a changé.
+' 	Il est plus sûr de reconstruire avant d'enregistrer.
+' 		Reconstruire maintenant ?
+
+Part.Save2 FALSE
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Part1")
+swApp.ExitApp
+End Sub

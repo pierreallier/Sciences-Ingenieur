@@ -1,0 +1,322 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 06/13/00 by Mady et Jean-Marie REYNAUD
+' ******************************************************************************
+
+Dim swApp As Object
+Dim Part As Object
+Dim Gtol As Object
+Dim FeatureData As Object
+Dim Feature As Object
+Dim Component As Object
+Sub main()
+Set swApp = CreateObject ("SldWorks.Application")
+Set Part = swApp.NewPart
+Set Part = swApp.ActivateDoc ("Part1")
+Set Part = swApp.OpenDoc ("C:\BMW\Boîte de vitesses\came\came.SLDPRT", 1)
+Set Part = swApp.ActivateDoc ("came")
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.NewDrawing2 (6, "C:\PROGRAM FILES\SOLIDWORKS\data\temp_a4.slddrt", 6, 0.000000, 0.000000)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Draw1 - Feuille1")
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ArrangeWindows 2
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 0
+swApp.ActiveDoc.ActiveView.FrameWidth = 299
+swApp.ActiveDoc.ActiveView.FrameHeight = 636
+Set Part = swApp.ActivateDoc ("Part1")
+Set Part = Nothing
+swApp.CloseDoc "Part1"
+Set Part = swApp.ActivateDoc ("Draw1 - Feuille1")
+swApp.ArrangeWindows 2
+swApp.ActiveDoc.ActiveView.FrameWidth = 449
+swApp.ActiveDoc.ActiveView.FrameHeight = 636
+Set Part = swApp.ActivateDoc ("came")
+Part.SelectByID "", "FACE", 0.07789135667502, 0.01093625710399, 0.0224810649338
+Set Part = swApp.ActivateDoc ("Draw1 - Feuille1")
+Part.SelectByID "Feuille1", "SHEET", 0.1615577586207, 0.1396030603448, 0
+Part.ClearSelection
+Part.SelectByID "Feuille1", "SHEET", 0.1080209482759, 0.142214612069, 0
+Set Part = swApp.ActivateDoc ("came")
+Part.ClearSelection
+Part.SelectByID "came.SLDPRT", "COMPONENT", 0, 0, 0
+Set Part = swApp.ActivateDoc ("Draw1 - Feuille1")
+Part.Create3rdAngleViews "C:\BMW\Boîte de vitesses\came\came.SLDPRT"
+Part.ClearSelection
+Part.EditSketch
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.SelectByID "Feuille1", "SHEET", 0.1032557142857, 0.12489, 0
+Part.SelectByID "Feuille1", "SHEET", 0.1246757142857, 0.1327585714286, 0
+Part.ClearSelection
+Part.SelectByID "Feuille1", "SHEET", 0.1447842857143, 0.1262014285714, 0
+Part.SelectByID "Fond de plan1", "SHEET", 0, 0, 0
+Part.EditTemplate
+Part.EditSketch
+Part.ClearSelection
+Part.SelectByID "DetailItem15@Fond de plan1", "NOTE", 0.05036142857143, 0.1506814285714, 0
+Part.EditDelete
+Part.SelectByID "Fond de plan1", "SHEET", 0.1391014285714, 0.06587571428571, 0
+Part.SelectByID "Fond de plan1", "SHEET", 0.11943, 0.06893571428571, 0
+Part.SelectByID "Fond de plan1", "SHEET", 0.1185557142857, 0.05363571428571, 0
+Part.SelectByID "Fond de plan1", "SHEET", 0.1303585714286, 0.05057571428571, 0
+Part.SelectByID "Fond de plan1", "SHEET", 0.2177871428571, 0.03177857142857, 0
+Part.SelectByID "Line4", "SKETCHSEGMENT", 0.15309, 0.07725, 0
+Part.SelectByID "Line4", "SKETCHSEGMENT", 0.14391, 0.09997285714286, 0
+Part.SelectByID "Line3", "SKETCHSEGMENT", 0.1443471428571, 0.06025, 0
+Part.SelectByID "Point20", "SKETCHPOINT", 0.1594, 0.07725, 0
+Part.SelectByID "Point31", "SKETCHPOINT", 0.1854, 0.06025, 0
+Part.SelectByID "Line3", "SKETCHSEGMENT", 0.1963671428571, 0.06025, 0
+Part.EditDelete
+Part.SelectByID "Point38", "SKETCHPOINT", 0.2036, 0.07725, 0
+Part.SelectByID "Line4", "SKETCHSEGMENT", 0.20817, 0.05232428571429, 0
+Part.SelectByID "Line4", "SKETCHSEGMENT", 0.2090442857143, 0.05232428571429, 0
+Part.EditDelete
+Part.SelectByID "Line26", "SKETCHSEGMENT", 0.21123, 0.053875, 0
+Part.EditDelete
+Part.SelectByID "Fond de plan1", "SHEET", 0.1884985714286, 0.07899, 0
+Part.ClearSelection
+Part.SelectByID "Line24", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line27", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line28", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line31", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line32", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line33", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line34", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line35", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line36", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line37", "SKETCHSEGMENT", 0, 0, 0
+Part.EditDelete
+Part.SelectByID "Point96", "SKETCHPOINT", 0.287, 0.07725, 0
+Part.SelectByID "Fond de plan1", "SHEET", 0.09145285714286, 0.05888142857143, 0
+Part.ClearSelection
+Part.SelectByID "Line6", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line7", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line8", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line9", "SKETCHSEGMENT", 0, 0, 0
+Part.AndSelectByID "Line15", "SKETCHSEGMENT", 0, 0, 0
+Part.EditDelete
+Part.SelectByID "Line2", "SKETCHSEGMENT", 0.1299214285714, 0.04325, 0
+Part.EditDelete
+Part.SelectByID "Line23", "SKETCHSEGMENT", 0.2556, 0.05669571428571, 0
+Part.EditDelete
+Part.SelectByID "Point49", "SKETCHPOINT", 0.2036, 0.053875, 0
+Part.SelectByID "Point31", "SKETCHPOINT", 0.1845642857143, 0.05232428571429, 0
+Part.EditDelete
+' MSGBOX
+' Les points d'extrémité et les points centraux de l'esquisse ne peuvent pas être supprimés à moins que le point d'extrémité soit un point de fractionnement d'une courbe.
+
+Part.SelectByID "Line17", "SKETCHSEGMENT", 0.1881117082198, 0.03015858361122, 0
+Part.EditDelete
+Part.SelectByID "Point20", "SKETCHPOINT", 0.1600842857143, 0.05232428571429, 0
+Part.SelectByID "Point25", "SKETCHPOINT", 0.1516, 0.04325, 0
+Part.SelectByID "Point24", "SKETCHPOINT", 0.1386, 0.04325, 0
+Part.SelectByID "Point21", "SKETCHPOINT", 0.1126, 0.04325, 0
+Part.SelectByID "Point8", "SKETCHPOINT", 0.1048, 0.05232428571429, 0
+Part.SelectByID "Fond de plan1", "SHEET", 0.1220528571429, 0.05407285714286, 0
+Part.SelectByID "Point96", "SKETCHPOINT", 0.2868557142857, 0.04325, 0
+Part.SelectByID "Point96", "SKETCHPOINT", 0.2868557142857, 0.04325, 0
+Part.SelectByID "Ancrage de nomenclature", "BOMTEMP", 0, 0, 0
+Part.SelectByID "Vue de mise en plan1", "DRAWINGVIEW", 0, 0, 0
+Part.ClearSelection
+Part.SelectByID "Fond de plan1", "SHEET", 0.04467857142857, 0.1021585714286, 0
+Part.ClearSelection
+Part.SelectByID "Feuille1", "SHEET", 0, 0, 0
+Part.SelectByID "Feuille1", "SHEET", 0, 0, 0
+Part.SelectByID "Vue de mise en plan1", "DRAWINGVIEW", 0, 0, 0
+Part.SelectByID "Draw1.SLDDRW", "COMPONENT", 0, 0, 0
+Part.SelectByID "Fond de plan1", "SHEET", 0, 0, 0
+Part.EditSheet
+Part.EditSketch
+Part.ClearSelection
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Vue de mise en plan3", "DRAWINGVIEW", 0.2138528571429, 0.06718714285714, 0
+Part.EditSketch
+Part.SelectByID "Vue de mise en plan1", "DRAWINGVIEW", 0.09407571428571, 0.06806142857143, 0
+Part.SelectByID "Vue de mise en plan1", "DRAWINGVIEW", 0.1220528571429, 0.06937285714286, 0
+Part.EditSketch
+Part.SelectByID "Feuille1", "SHEET", 0.1474071428571, 0.1056557142857, 0
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Vue de mise en plan1", "DRAWINGVIEW", 0, 0, 0
+Part.ViewTangentEdges
+Part.SelectByID "Vue de mise en plan1", "DRAWINGVIEW", 0, 0, 0
+Part.ViewTangentEdges
+Part.SelectByID "Vue de mise en plan2", "DRAWINGVIEW", 0, 0, 0
+Part.ViewPropertySheet
+Part.ClearSelection
+Part.EditSketch
+Part.SelectByID "Draw1.SLDDRW", "COMPONENT", 0, 0, 0
+Part.DimPreferences
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Fond de plan1", "SHEET", 0, 0, 0
+Part.EditTemplate
+Part.EditSketch
+Part.ClearSelection
+Part.SelectByID "Feuille1", "SHEET", 0, 0, 0
+Part.EditSheet
+Part.EditSketch
+Part.ClearSelection
+Part.SelectByID "Feuille1", "SHEET", 0, 0, 0
+Part.EditTemplate
+Part.EditSketch
+Part.ClearSelection
+Part.SelectByID "Feuille1", "SHEET", 0, 0, 0
+Part.EditSheet
+Part.EditSketch
+Part.ClearSelection
+Part.SelectByID "Fond de plan1", "SHEET", 0, 0, 0
+Part.SelectByID "Vue de mise en plan1", "DRAWINGVIEW", 0, 0, 0
+Part.SelectByID "Vue de mise en plan3", "DRAWINGVIEW", 0, 0, 0
+Part.EditSketch
+Part.SelectByID "Feuille1", "SHEET", 0.2309014285714, 0.15549, 0
+Part.SelectByID "Feuille1", "SHEET", 0.2287157142857, 0.1602985714286, 0
+Part.ClearSelection
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Feuille1", "SHEET", 0.22347, 0.1594242857143, 0
+Part.ClearSelection
+' MSGBOX
+' Vous avez sélectionné un document de mise en plan.
+' Seules les pièces et les assemblages peuvent être visualisés dans les mises en plan.
+
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Feuille1", "SHEET", 0.07221857142857, 0.008172857142857, 0
+Part.SelectByID "Feuille1", "SHEET", 0.07659, 0.007735714285714, 0
+Part.SelectByID "Feuille1", "SHEET", 0.07221857142857, 0.007735714285714, 0
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Draw1.SLDDRW", "COMPONENT", 0, 0, 0
+Part.EditSketch
+Set Part = swApp.NewDrawing2 (6, "C:\PROGRAM FILES\SOLIDWORKS\data\temp_a4.slddrt", 6, 0.000000, 0.000000)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Draw2 - Feuille1")
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Draw1 - Feuille1")
+Part.SelectByID "Vue de mise en plan2", "DRAWINGVIEW", 0.1085014285714, 0.1410642857143, 0
+Part.ClearSelection
+Part.CreateDrawViewFromModelView "C:\BMW\Boîte de vitesses\came\came.SLDPRT", "*Isométrique", 0.2243442857143, 0.14631, 0
+' MSGBOX
+' SolidWorks a déterminé que cette vue peut avoir besoin de cotes Isométriques (Vraies)
+' au lieu de cotes standard projetées.
+' Voulez-vous basculer vers la vue pour utiliser des cotes Isométriques (Vraies)?
+
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Vue de mise en plan4", "DRAWINGVIEW", 0.1985528571429, 0.1139614285714, 0
+Part.ClearSelection
+Part.SelectByID "", "EDGE", 0.2147271428571, 0.1489328571394, -499.8743987148
+Part.ClearSelection
+Part.SelectByID "Vue de mise en plan4", "DRAWINGVIEW", 0.2698071428571, 0.1087157142857, 0
+Part.SelectByID "Feuille1", "SHEET", 0.1758214285714, 0.08598428571429, 0
+Part.EditSketch
+Part.EditSketch
+Part.InsertNewNote3 "Lycée CHEVROLLIER", 1, 0, 1, 0, 0, 0, 0, 1
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.1876242857143, 0.08554714285714, 0
+Part.EditSketch
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.2269671428571, 0.01691571428571, 0
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.2610642857143, 0.01385571428571, 0
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.2584414285714, 0.01735285714286, 0
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.2470757142857, 0.01691571428571, 0
+Part.InsertNewNote3 "Lycée CHEVROLLIER" & Chr(13) & Chr(10) &_
+	"CPGE PT", 1, 0, 1, 0, 0, 0, 0, 1
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.2274042857143, 0.01735285714286, 0
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.2501357142857, 0.01953857142857, 0
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.InsertNewNote3 "Came", 1, 0, 1, 0, 0, 0, 0, 1
+Part.EditSketch
+Part.SelectByID "Feuille1", "SHEET", 0.1544014285714, 0.08642142857143, 0
+Part.SelectByID "Feuille1", "SHEET", 0.1688271428571, 0.06981, 0
+Part.SelectByID "Feuille1", "SHEET", 0.1666414285714, 0.07680428571429, 0
+Part.ClearSelection
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.23571, 0.01910142857143, 0
+Part.SelectByID "Objet de détail2@Vue de mise en plan2", "NOTE", 0.2531957142857, 0.01910142857143, 0
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.2072957142857, 0.04139571428571, 0
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.23571, 0.01560428571429, 0
+Part.EditSketch
+Part.SelectByID "Objet de détail2@Vue de mise en plan2", "NOTE", 0.1832528571429, 0.005987142857143, 0
+Part.SelectByID "Objet de détail2@Vue de mise en plan2", "NOTE", 0.1823785714286, 0.01691571428571, 0
+Part.InsertNewNote3 "Came", 1, 0, 1, 0, 0, 0, 0, 1
+Part.EditSketch
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.23877, 0.01997571428571, 0
+Part.SelectByID "Objet de détail1@Vue de mise en plan2", "NOTE", 0.2396442857143, 0.01866428571429, 0
+Part.SelectByID "Feuille1", "SHEET", 0.2116671428571, 0.05057571428571, 0
+Part.EditSketch
+Part.EditSketch
+Part.EditSketch
+Part.InsertNewNote3 "Boîte de vitesse", 1, 0, 1, 0, 0, 0, 0, 1
+Part.EditSketch
+Part.EditSketch
+Part.SelectByID "Objet de détail3@Vue de mise en plan2", "NOTE", 0.21429, 0.04882714285714, 0
+Part.EditSketch
+Part.SelectByID "Feuille1", "SHEET", 0.18675, 0.05800714285714, 0
+Part.EditSketch
+Part.SaveAs2 "C:\BMW\Essai.SLDDRW", 0, FALSE, FALSE
+Part.EditSketch
+Part.EditSketch
+Part.PrintDirect
+Part.SelectByID "Vue de mise en plan2", "DRAWINGVIEW", 0.1141842857143, 0.1428128571429, 0
+Part.SelectByID "Feuille1", "SHEET", 0.1321071428571, 0.1200814285714, 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.ClearSelection
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Draw2 - Feuille1")
+Part.ClearSelection
+swApp.ExitApp
+End Sub

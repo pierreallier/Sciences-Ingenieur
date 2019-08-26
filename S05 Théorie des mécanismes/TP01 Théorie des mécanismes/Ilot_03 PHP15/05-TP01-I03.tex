@@ -1,0 +1,175 @@
+\input{../../../headers/tpheaders.tex}
+
+\ifdef{\public}{\cleardoublepage}{}
+
+\prob{Gérer l'hyperstatisme d'un système} 
+
+\titleana{Détecter le sources d'hyperstatisme}
+
+\paragraph{Question 1:} Décrire le système grâce à un graphe de liaison du système.
+
+\paragraph{Question 2:} A partir du graphe de liaison, compter le nombre de cycle indépendants.
+
+\paragraph{Question 3:} Pour chaque cycle, déterminer: 
+ \begin{itemize}
+  \item le nombre de pièces,
+  \item le nombre de mobilités,
+  \item le nombre d'inconnues de liaison
+\end{itemize}
+
+\paragraph{Question 4:} Calculer le degré d'hyperstatisme du système.
+
+La suite de l'étude va permettre de déterminer l'hyperstatisme qui apparaît entre les liaisons élémentaires.
+
+\paragraph{Question 5:} Proposer un graphe de contacts pour le système. Pour chaque liaison, déterminer: 
+ \begin{itemize}
+  \item le nombre de mobilités,
+  \item le nombre d'inconnues de liaison
+\end{itemize}
+
+\paragraph{Question 6:} Calculer le degré d'hyperstatisme de chacune des liaisons équivalentes.
+
+\cleardoublepage
+
+\titlemod{Activité 2: Modélisation du système}
+
+Dans cette partie, vous modéliserez les liaisons par des torseurs cinématiques. Vous utiliserez le modèle de la pompe issu de la valise d'assemblage.
+
+\paragraph{Question 7:} Déterminer les coordonnées des vecteurs en les prélevant sur le système.
+\begin{itemize}
+ \item $\overrightarrow{AB}$,
+ \item $\overrightarrow{BC}$.
+\end{itemize}
+
+\paragraph{Question 8:} Déterminer le torseur de la liaison équivalente entre un engrenage et le corps de la pompe. Vous écrirez pour cela les torseurs des différentes liaisons élémentaires.
+
+\paragraph{Question 9:} Déterminer alors le degré d'hyperstatisme ainsi que les mobilités du système. Les résultats seront à comparer avec ceux de l'activité 1.
+
+\cleardoublepage
+
+\titleexp{Solution technique du système}
+
+En s'appuyant sur le système réel, ainsi que sur la maquette d'assemblage, vous répondrez aux questions suivantes sur la conception du système.
+
+\paragraph{Question 10:} A partir du montage de la pompe fourni dans la mallette, mesurer les diamètres de tous les cylindres impliqués dans la liaison entre un engrenage et le corps. Conclure quant à la présence de jeu dans la liaison. Écrire alors sous la forme d'un torseur les déplacements autorisés par ce jeu.
+
+ex:
+$\left\{P_{1/2}\right\}=\left\{ \begin{array}{cc} r_x & j_x \\ r_y & j_y \\ r_z & j_z \end{array}\right\}_{P}$
+
+Où:
+\begin{itemize}
+ \item $r_i$ représente un petit angle autorisé par le jeu (en degré),
+ \item $j_i$ représente un petit déplacement autorisé par le jeu (en mm). 
+\end{itemize}
+
+\paragraph{Question 11:} Proposer un moyen, pour chaque liaison, afin de déterminer les torseurs de petits déplacement liés au jeu dans les autres liaisons. Vous produirez un média (photo ou vidéo pour montrer le jeu dans une des liaisons).
+
+\paragraph{Question 12:} Proposer un procédé de fabrication pour les \textbf{surfaces fonctionnelles} du système. Vous vous aiderez pour cela des documents de la bibliothèque.
+
+\cleardoublepage
+
+\titleana{Respect du cahier des charges}
+
+Le système qui sert de support à votre étude n'a pas encore été utilisé, il est donc nécessaire que vous proposiez une introduction afin de le présenter à la classe.
+
+L'assemblage d'un mécanisme possède des degrés d'hyperstatisme (activités 1 et 2), il est nécessaire de trouver des solutions techniques (activité 3) qui permettent son assemblage. Votre travail consistera à mettre ces deux aspects en correspondance.
+
+\paragraph{Question 13:} Vous classerez parmi les suivantes les principales exigences liées au système, vous les présenterez sous la forme d'un diagramme des exigences SysMl.
+
+\begin{itemize}
+ \item rigidité (le système doit supporter de gros efforts),
+ \item mobilité (le système doit pouvoir se déplacer dans beaucoup de directions),
+ \item le système n'accepte que très peu de jeu (si c'est le cas, vous préciserez la raison).
+\end{itemize}
+
+\paragraph{Question 14:} Après avoir mis en évidence à l'aide des activités 1 et 2, les composantes hyperstatique du système, vous utiliserez le résultat de l'activité 3 afin de montrer les solutions qui ont été utilisées afin de le résoudre.
+
+\end{document}
+
+\pagestyle{correction}\setcounter{section}{0}
+
+\paragraph{Question 1:}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{La pompe PHP 15}
+
+\subsection{Hyperstatisme}
+
+L'hyperstatisme est la situation d'un assemblage pour lequel le fonctionnement se fait avec plus de contraintes que ce qui est strictement nécessaire pour le maintenir, ce qui signifie qu'au moins un degré de mobilité d'une pièce est supprimé plusieurs fois.
+
+Dans ce contexte, l'assemblage peut être problématique. En effet, si les défauts géométriques vont constituer un obstacle à l'assemblage du mécanisme. Dans ce but, il faut trouver une solution pour compenser l'hyperstatisme :
+\begin{itemize}
+ \item mettre du jeu dans les liaisons,
+ \item rendre le mécanisme isostatique,
+ \item usiner le mécanisme très précisément afin qu'un jeu très faible suffise à compenser ces écarts,...
+\end{itemize}
+
+\subsection{La pompe PHP 15}
+
+\begin{minipage}{0.6\linewidth}
+L'étude va porter sur la pompe PHP 15 dont une photo est proposée à gauche.
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+ \centering\includegraphics[width=0.8\linewidth]{img/PHP15}
+\end{minipage}
+
+\paragraph{Question 1:} A partir des calculs donnes, pour la liaison 2/1, dans le document numerique :
+\begin{itemize}
+ \item Écrire le système d'équations,
+ \item Déterminer le degré d'hyperstatisme de cette liaison,
+ \item Déterminer le torseur de la liaison équivalente.
+\end{itemize}
+
+\reponse[5]
+
+\paragraph{Question 2:} A partir du torseur de la liaison équivalente déterminée a la question précédente, et
+sachant que la liaison entre les pièce 3 et 1 sera le même :
+\begin{itemize}
+\item Écrire le système d'équations qui régit le système,
+\item Déterminer le degré d'hyperstatisme du système complet.
+\end{itemize}
+
+\reponse[5]
+
+\paragraph{Question 3:} Donner pour chaque equation qui établit un degré d'hyperstatisme les composantes
+mises en jeu.
+
+\reponse[5]
+
+\paragraph{Question 4:} Expliquer le choix de cette liaison dans le contexte de ce système.
+
+\reponse[5]
+
+
+\end{document}
+
+\pagestyle{correction}\setcounter{section}{0}
+
+\paragraph{Question 1:}
+\end{document}

@@ -1,0 +1,203 @@
+%\documentclass[hyperref={pdfpagelabels=false},slidetop,9pt]{beamer}
+\documentclass[slidetop,8pt]{beamer}
+\usepackage{pgfpages}
+\usepackage{pdfpages}
+\input{beamercoursHeadings}%,draft,handout
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%Zone à modifier%%%%%%%%%%%%%%%%%
+%Est-ce un cours, si oui, mettre un 1.%%%%%%%%%%%
+\newcommand{\cours}{1}
+\title{Statique, lois de Coulomb}
+\date{Expérimenter}
+\author{Renaud Costadoat}
+\institute{Lycée le Corbusier}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\cours = 1}{}{\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]}
+\setbeamertemplate{itemize item}[ball]
+%\setbeamertemplate{blocks}[rounded]%[shadow=true]
+\setbeamercolor{block title}{fg=white,bg=blef}        % titre block normal 
+\setbeamercolor{block body}{fg=blef,bg=blec!50}      % corps block normal
+\setbeamercolor{block body alerted}{fg=white,bg=red}   % idem pour un block alerte
+
+%--------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+\bibliographystyle{abbrvnat-fr}
+
+{
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}[pagetitre]
+\setbeamertemplate{footline}[pagetitre]
+\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{../../../Figures/fond}}
+\frame{\titlepage}
+}
+
+\setcounter{framenumber}{0}
+
+\section{La Cordeuse}
+
+\subsection{Présentation}
+
+{\frame{
+\frametitle{Présentation du système}
+
+\begin{figure}
+ \begin{minipage}{0.55\linewidth}
+Pour que les joueurs de tennis ou de badminton puissent atteindre leur meilleur niveau de jeu, il est indispensable que leurs raquettes soient correctement cordées à la tension souhaitée. En effet, de nombreux tennis-elbow sont souvent provoqués par des raquettes neuves mais mal cordées.
+ \end{minipage}
+ \hfill
+  \begin{minipage}{0.4\linewidth}
+   \centering\includegraphics[width=0.7\linewidth]{../img/cordeuse.png}
+  \end{minipage}
+\end{figure}
+
+Les centres de compétition et les magasins spécialisés disposent de machines improprement appelées « à corder les raquettes » (ou « cordeuses » dans le texte) du type de celle qui sera étudiée aujourd?hui.
+}}
+
+{\frame{
+\frametitle{Définition du système}
+
+\begin{figure}
+ \begin{minipage}{0.65\linewidth}
+ Manipulation élémentaire :
+ \begin{itemize}
+  \item Mettre la machine sous tension (bouton à l'arrière, à droite du pupitre),
+  \item La corde étant fixée d'un coté sur le capteur de force (non présent sur la machine industrielle), fixer l'autre extrémité du brin de la corde dans le mors de tirage,
+ \end{itemize}
+ \end{minipage}
+ \hfill
+  \begin{minipage}{0.3\linewidth}
+   \centering\includegraphics[width=1\linewidth]{../img/cordeuse_com.png}
+  \end{minipage}
+\end{figure}
+ \begin{itemize}
+   \item Programmer la tension souhaitée (30 daN) sur le pupitre (vérifier que l'affichage est correct),
+  \item Appuyer sur le bouton poussoir (au dessus du pupitre) pour mettre en tension la corde. Pincer la corde pour avoir une image de la tension,
+  \item Maintenir le brin de corde tendu à l'aide de la pince 1 et serrer la pince,
+  \item Appuyer à nouveau sur le bouton poussoir pour relâcher la tension. Pincer à nouveau la corde pour avoir une image de la tension.
+ \end{itemize}
+  }}
+
+\subsection{Modélisation/Expérimentation}
+
+{\frame{
+\frametitle{Présentation du problème technique}
+
+\begin{figure}
+ \begin{minipage}{0.58\linewidth}
+Le blocage peut se produire car la liaison glissière n'est pas parfaite et présente :
+ \begin{itemize}
+  \item un jeu (nécessaire au bon fonctionnement)
+  \item des frottements inévitables.
+ \end{itemize}
+ \end{minipage}
+ \hfill
+  \begin{minipage}{0.4\linewidth}
+   \centering\includegraphics[width=\linewidth]{../img/cordeuse_arc.png}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}
+ \begin{minipage}{0.58\linewidth}
+Établissons la condition de non blocage sur le modèle suivant:
+ \begin{itemize}
+  \item le problème est supposé plan,
+  \item les liaisons en A et B sont ponctuelles avec frottement. (Soit f=tanj le coefficient de frottement 1-0),
+  \item on néglige l'action de pesanteur sur 1.
+ \end{itemize}
+ \end{minipage}
+ \hfill
+  \begin{minipage}{0.4\linewidth}
+   \centering\includegraphics[width=\linewidth]{../img/cordeuse_cin.png}
+  \end{minipage}
+\end{figure}
+}}
+
+\section{Le Winch}
+
+\subsection{Présentation}
+
+{\frame{
+\frametitle{Présentation du système}
+
+\begin{figure}
+ \begin{minipage}{0.55\linewidth}
+Le winch est un équipement fixé sur le pont ou les mats des voiliers. Il permet d'agir sur les drisses et les écoutes (cordages permettant de hisser une voile) fixées aux angles des voiles. Il intervient principalement au niveau du réglage de la voilure
+ \end{minipage}
+ \hfill
+  \begin{minipage}{0.4\linewidth}
+   \centering\includegraphics[width=0.7\linewidth]{../img/winch2.png}
+  \end{minipage}
+\end{figure}
+ 
+}}
+
+\subsection{Modélisation/Expérimentation}
+
+{\frame{
+\frametitle{Montage expérimental}
+
+\begin{figure}
+ \begin{minipage}{0.45\linewidth}
+Soit le montage expérimental suivant.
+
+Soit $t$ l'effort dans le brin mou et $T$ l'effort dans le brin tendu. La corde est immobile par rapport au tambour (adhérence).
+ \end{minipage}
+ \hfill
+  \begin{minipage}{0.53\linewidth}
+   \centering\includegraphics[width=\linewidth]{../img/winch_exp.png}
+  \end{minipage}
+\end{figure}
+
+\begin{itemize}
+ \item L'enroulement de la corde sur le tambour est de 3 tours,
+ \item Suspendre la charge,
+ \item Diminuez progressivement l'effort $t$ et relever la valeur pour laquelle l'adhérence n'existe plus,
+ \item Renouvelez la mesure pour 2 tours d'enroulement et 1 tour d'enroulement.
+\end{itemize}
+}}
+
+{\frame{
+\frametitle{Modélisation}
+
+\begin{figure}
+ \begin{minipage}{0.45\linewidth}
+Soit une longueur élémentaire de corde $Rd\theta$ en contact avec le Tambour 5 entourant un point M de la zone de contact corde-tambour.
+
+L'étude s'effectue à la limite du glissement.
+ \end{minipage}
+ \hfill
+  \begin{minipage}{0.53\linewidth}
+   \centering\includegraphics[width=\linewidth]{../img/corde_tambour.png}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}
+  \centering\includegraphics[width=0.7\linewidth]{../img/winch_param.png}
+\end{figure}}}
+
+{\frame{
+\frametitle{Equilibre statique de la corde}
+
+\begin{figure}
+ \begin{minipage}{0.45\linewidth}
+L'élément de corde précédent est soumis :
+\begin{itemize}
+ \item à la force élémentaire : $\overrightarrow{df_{T \rightarrow C}(M)}_M$  
+ \item à la force élémentaire du brin tendu sur C :  $\overrightarrow{T_{T \rightarrow C}(\theta)}_M$  
+ \item à la force élémentaire du brin mou sur C : $\overrightarrow{T_{T \rightarrow C}(\theta+d \theta)}_M$  
+\end{itemize}
+
+
+ \end{minipage}
+ \hfill
+  \begin{minipage}{0.53\linewidth}
+  \centering\includegraphics[width=0.7\linewidth]{../img/winch_param2.png}
+  \end{minipage}
+\end{figure}}}
+
+
+\end{document}

@@ -1,0 +1,40 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 06/26/00 by Mady et Jean-Marie REYNAUD
+' ******************************************************************************
+
+Dim swApp As Object
+Dim Part As Object
+Dim Gtol As Object
+Dim FeatureData As Object
+Dim Feature As Object
+Dim Component As Object
+Sub main()
+Set swApp = CreateObject ("SldWorks.Application")
+Set Part = swApp.NewPart
+Set Part = swApp.ActivateDoc ("Part1")
+Set Part = swApp.OpenDoc ("C:\BMW\Renvoi d'angle\Roue équipée\roue équipée.SLDASM", 2)
+Set Part = swApp.ActivateDoc ("roue équipée")
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.SelectByID "Dans fonction de contexte1", "INCONTEXTFEATS", 0, 0, 0
+Part.ClearSelection
+Part.ActiveView().RotateAboutCenter 0.0132235, 0
+Part.ActiveView().RotateAboutCenter 0.180722, -0.230009
+Part.ActiveView().RotateAboutCenter 0.10138, -0.465629
+Part.ActiveView().RotateAboutCenter 0.0308549, -0.443189
+Part.ActiveView().RotateAboutCenter 0.0176314, -0.297329
+Part.ActiveView().RotateAboutCenter -0.00881569, -0.17952
+Part.ActiveView().RotateAboutCenter -0.0617099, 0.0897598
+Part.ActiveView().RotateAboutCenter -0.0176314, 0.532949
+Part.ActiveView().RotateAboutCenter -0.0220392, 0.493679
+Part.ActiveView().RotateAboutCenter -0.0220392, 0.460019
+Part.ActiveView().RotateAboutCenter -0.0264471, 0.19635
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Part1")
+swApp.ExitApp
+End Sub

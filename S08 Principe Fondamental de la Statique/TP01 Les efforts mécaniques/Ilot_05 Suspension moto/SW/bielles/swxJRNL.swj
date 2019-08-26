@@ -1,0 +1,23 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 06/27/00 by CPGE PT
+' ******************************************************************************
+
+Dim swApp As Object
+Dim Part As Object
+Dim Gtol As Object
+Dim FeatureData As Object
+Dim Feature As Object
+Dim Component As Object
+Sub main()
+Set swApp = CreateObject ("SldWorks.Application")
+Set Part = swApp.OpenDoc ("C:\Bmw\bielles\bielle bis.SLDPRT", 1)
+Set Part = swApp.ActivateDoc ("bielle bis")
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.ShowNamedView2 "*Isométrique", 7
+Part.ViewDispOrigins
+Part.SaveAs2 "C:\Bmw\Images\bielle.TIF", 0, TRUE, FALSE
+swApp.ExitApp
+End Sub
