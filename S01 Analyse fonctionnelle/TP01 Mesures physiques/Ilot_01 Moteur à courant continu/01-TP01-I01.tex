@@ -1,0 +1,110 @@
+\input{../../../headers/tpheaders.tex}
+
+
+\prob{Déterminer les caractéristiques d'un moteur à courant continu.} 
+
+\titlemod{Modèle du moteur électrique: lien entre la tension et la vitesse de rotation}
+
+\begin{eqnarray}
+u_m(t)=L_m.\frac{di(t)}{dt}+R_m.i(t)+e(t) \\
+e(t)=K_e.\omega_m(t) \\
+J.\frac{d\omega_m(t)}{dt}=C_m(t)-C_r(t) \\
+C_m(t)=K_m.i(t)
+\end{eqnarray}
+
+En général, on suppose $K_e=K_m$ pour une MCC.
+
+\paragraph{Question 1:} D'après les équations (1) à (4), \textbf{écrire} une équation liant $u(t)$, $\omega(t)$ et $C_r(t)$.
+
+\paragraph{Question 2:} Quelles sont les \textbf{hypothèses} à prendre afin de mettre cette équation sous la forme $u_m(t)=K.\omega_m(t)$.
+
+\paragraph{Question 3:} En supposant que l'on arrive à mesurer le courant qui traverse le moteur, que devient-il alors possible de \textbf{mesurer} ?
+
+\titleexp{Mesure des valeurs caractéristiques du moteur} 
+
+\paragraph{Question 4:} \textbf{Déterminer} un protocole afin de mesurer la tension aux bornes du moteur.
+
+\paragraph{Question 5:} \textbf{Déterminer} un protocole afin de mesurer la vitesse de rotation du moteur à l'aide du tachymètre.
+
+\paragraph{Question 6:} \textbf{Mettre en \oe uvre} ce protocole pour des tensions allant de 0V à 12V. Ecrire les résultats mesurés dans un tableur et tracer la courbe $\omega_m(t)=f(u(t))$. Conclure quant à l'allure de ce tracé.
+
+\paragraph{Question 7:} \textbf{Refaire} la mesure précédente en mesurant aussi le courant qui traverse le moteur.
+
+\paragraph{Question 8:} \textbf{Proposer} et \textbf{mettre en \oe vre} un protocole permettant de mesurer la résistance interne du moteur.
+
+\titleana{Vérification des modèles et analyse des résultats}
+
+\paragraph{Question 9:} A partir des résultats précédents, \textbf{déterminer} le couple résistant $C_r(t)$ pour le moteur libre. \textbf{Proposer} une solution permettant d'augmenter ce couple, \textbf{prédire} le comportement du système.
+
+\titleexp{Vérifier expérimentalement un modèle théorique}
+
+\paragraph{Question 10:} \textbf{Mettre en \oe uvre} ce nouveau protocole et \textbf{conclure} quant à la validité de la prédiction de la question 9.
+
+\titleana{Déterminer la valeur de $L_m$}
+
+\paragraph{Question 11:} \textbf{Proposer} sans le mettre en \oe uvre des protocoles permettant de déterminer les valeurs manquantes.
+
+\titlecom{Synthèse du TP}
+
+\paragraph{Question 12:} \textbf{Conclure} quant au modèle obtenu pour ce moteur à courant continu, \textbf{réaliser} une synthèse de ce TP présentant votre démarche pour répondre à la problématique.
+
+\ifdef{\public}{\end{document}}{}
+
+\clearpage
+
+\newpage
+
+\pagestyle{correction}
+
+\section{Correction}
+
+\paragraph{Question 1:} D'après les équations (1) à (4), \textbf{écrire} une équation liant $u(t)$, $\omega(t)$ et $C_r(t)$.
+
+$u_m(t)=\frac{L_m}{K_m}.\frac{dC_m(t)}{dt}+\frac{R_m}{K_m}.C_m(t)+K_e.\omega_m(t)$
+
+$u_m(t)=\frac{L_m.J}{K_m}.\frac{d^2\omega_m(t)}{dt^2}+\frac{R_m.J}{K_m}.\frac{d\omega_m(t)}{dt}+K_e.\omega_m(t)$
+
+
+\paragraph{Question 2:} Quelles sont les \textbf{hypothèses} à prendre afin de mettre cette équation sous la forme $u_m(t)=K.\omega_m(t)$.
+
+Il faut se placer à vitesse constante (régime établi) et négliger les frottements, ainsi, $C_r(t)=0$, $\frac{d^2\omega_m(t)}{dt^2}=0$ et $\frac{d\omega_m(t)}{dt}=0$.
+
+Ainsi, $u_m(t)=K_e.\omega_m(t)$
+
+\paragraph{Question 3:} En supposant que l'on arrive à mesurer le courant qui traverse le moteur, que devient-il alors possible de \textbf{mesurer} ?
+
+Il est alors possible de déterminer le couple résistant $C_r(t)$ en régime établi.
+
+Avec $C_m(t)=K_m.i(t)$ et $J.\frac{d\omega_m(t)}{dt}=C_m(t)-C_r(t)=0$ en régime établi, on obtient $C_r(t)=K_m.i(t)=K_e.i(t)$.
+
+\newpage
+
+\titleexp{Mesure des valeurs caractéristiques du moteur} 
+
+\paragraph{Question 4:} \textbf{Déterminer} un protocole afin de mesurer la tension aux bornes du moteur.
+
+\paragraph{Question 5:} \textbf{Déterminer} un protocole afin de mesurer la vitesse de rotation du moteur à l'aide du tachymètre.
+
+\paragraph{Question 6:} \textbf{Mettre en \oe uvre} ce protocole pour des tensions allant de 0V à 12V. Ecrire les résultats mesurés dans un tableur et tracer la courbe $\omega_m(t)=f(u(t))$. Conclure quant à l'allure de ce tracé.
+
+\paragraph{Question 7:} \textbf{Refaire} la mesure précédente en mesurant aussi le courant qui traverse le moteur.
+
+\paragraph{Question 8:} \textbf{Proposer} et mettre en \oe vre un protocole permettant de mesurer la résistance interne du moteur.
+
+\titleana{Vérification des modèles et analyse des résultats}
+
+
+\paragraph{Question 9:} A partir des résultats précédents, déterminer le couple résistant $C_r(t)$ pour le moteur libre. \textbf{Proposer} une solution permettant d'augmenter ce couple, \textbf{prédire} le comportement du système.
+
+\titleexp{Vérifier expérimentalement un modèle théorique}
+
+\paragraph{Question 10:} \textbf{Mettre} en \oe uvre ce nouveau protocole et \textbf{conclure} quant à la validité de la prédiction de la question 9.
+
+\newpage
+
+\titleana{Déterminer la valeur de $L_m$}
+
+\paragraph{Question 11:} Proposer sans le mettre en \oe uvre des protocoles permettant de déterminer les valeurs manquantes.
+
+\paragraph{Question 12:} Conclure quant au modèle obtenu pour ce moteur à courant continu.
+\end{document}

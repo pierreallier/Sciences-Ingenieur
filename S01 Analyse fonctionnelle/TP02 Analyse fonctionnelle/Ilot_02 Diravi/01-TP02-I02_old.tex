@@ -1,0 +1,191 @@
+\input{intro.tex}
+\input{../../../headers/tpheaders.tex}
+
+\titleana{Déterminer la fonction globale du système} 
+
+\begin{center}
+	\includegraphics[width=0.4\linewidth]{img/Contexte}
+\end{center}
+
+\paragraph{Question 1:} Compléter le diagramme de contexte de la Diravi. Préciser les liens qui unissent chacun de ces éléments avec la Diravi en utilisant une phrase avec un verbe à l'infinitif.
+
+\reponse[3]
+
+\paragraph{Question 2:} L'un de ces éléments extérieurs au système peut-il être considéré comme un acteur ? Pourquoi ?
+
+\reponse[2]
+
+\paragraph{Question 3:} Le choix d'intégrer un élément extérieur \og automobile \fg vous paraît-il judicieux ?
+
+\reponse[2]
+
+Effectuer la prise en main du système présentée dans le diaporama.
+
+\paragraph{Question 4:} Décrire la difficulté à faire tourner le volant en fonction de la vitesse du véhicule.
+
+\reponse[3]
+
+\paragraph{Question 5:} Le comportement décrit précédemment est-il différent après avoir allumé la pompe ?
+
+\reponse[3]
+
+\begin{center}
+	\includegraphics[width=0.6\linewidth]{img/Use_case}
+\end{center}
+
+\paragraph{Question 6:} Compléter et expliquer le cas d'utilisation et les acteurs présents sur ce graphe.
+
+\reponse[3]
+
+Le diagramme des exigences suivant correspond à un extrait du cahier des charges de la Diravi. 
+
+\begin{figure}[!h]
+\centering\includegraphics[width=0.5
+\linewidth]{img/Exigences}
+\caption{Diagramme d'exigence}
+\end{figure}
+
+\paragraph{Question 7:} Que pensez vous de la priorité de chacune des exigences présentes sur le diagramme suivant ?
+
+\reponse[2]
+
+\paragraph{Question 8:} Déterminer la source, le risque et la priorité de chacune de ces exigences.
+
+\reponse[4]
+
+\paragraph{Question 9:} Proposez un protocole afin de tester la validité de l'exigence 1. Vérifier cette exigence.
+
+\reponse[3]
+
+\section{Activité 2}
+
+\subsection{Analyse structurelle}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth]{img/BDD}
+\end{center}
+
+\paragraph{Question 10:} Si possible, associez à chaque exigence une solution technique présente sur ce BDD. Associez aux autres exigences une solution que vous jugerez adéquate.
+
+\reponse[4]
+
+\begin{center}
+\includegraphics[width=0.6\linewidth]{img/IBD1}
+\end{center}
+
+\paragraph{Question 11:} Coloriez en rouge sur ce diagramme les flux par lesquels transitent de l'énergie et en bleu les flux par lesquels transitent de l'information.
+
+\paragraph{Question 12:} Précisez le type d'énergie ou la nature de l'information pour chaque flux.
+
+\paragraph{Question 13:} Essayez de repérer sur le système réel ces connexions. Les solutions techniques permettant le transfert de ces flux vous paraissent-elles de bons choix ?
+
+\reponse[2]
+
+\paragraph{Question 14:} A partir des résultats précédents, compléter le diagramme de chaîne d'énergie/chaîne d'information suivant en précisant la fonction ainsi que le composant qui l'assure.
+
+\begin{center}
+\includegraphics[width=0.6\linewidth]{img/Chaines_super_vide}
+\end{center}
+
+%\subsection{Autre choix de solution technique}
+
+%Dans le laboratoire de Sciences Industrielles, il existe une autre direction assistée, il s'agit de la Diravi.
+
+%\paragraph{Question 15:} D'après votre analyse du système, en quoi celui-ci est différent du précédent ?
+
+%\reponse[3]
+
+%\paragraph{Question 16:} D'après les résultats précédents ou votre propre expérience, déterminer sur quelles exigences et besoin la modification de solution technique a un impact ?
+
+%\reponse[3]
+
+\end{document}
+
+\newpage
+
+\pagestyle{correction}\setcounter{section}{0}
+
+\paragraph{Question 1:} 
+
+
+Le système DAE participe à faciliter la rotation du volant par l'utilisateur. Le système participe à prendre en compte la vitesse du véhicule et à s'intégrer dans l'automobile.
+
+\paragraph{Question 2:} Le conducteur se rend compte du service rendu par le système c'est donc un acteur.
+
+\paragraph{Question 3:} La DAE fait partie de l'automobile, il aurait mieux valu écrire la voiture sans la DAE.
+
+\paragraph{Question 4:} La rotation du volant est facilitée lorsque la DAE est en fonction. L'exigence en question est la 1.
+
+\paragraph{Question 5:} On constate qu'il est de nouveau difficile de faire tourner le volant au dessu d'une certaine vitesse. L'exigence est la 1.1.
+
+\paragraph{Question 6:} Le cas d'utilisation répond bien au besoin du système. L'utilisateur est effectivement celui qui se rend compte du service rendu.
+
+\paragraph{Question 7:}
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	1. Haute & 1.2 Moyenne & 1.2.2 Moyenne & 1.4 Haute \\
+	\hline
+	1.1 Haute & 1.2.1 Basse & 1.3 Haute & \\
+	\hline
+	\end{tabular}
+\end{center}
+
+\paragraph{Question 8:}
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	1. Client & 1.2 Législation & 1.2.2 Client & 1.4 Constructeur \\
+	\hline
+	1.1 Client & 1.2.1 Client & 1.3 Client & \\
+	\hline
+	\end{tabular}
+\end{center}
+
+\paragraph{Question 9:} Mesure la valeur du couple exercé sur le volant grâce au capteur intégré et effectuer des mouvements classiques du volant.
+
+\paragraph{Question 10:}
+
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	1. Assistant de direction & 1.2 Tout & 1.3 Agir sur les roues \\
+	\hline
+	1.1 Assistant de direction & 1.2.1 Moteur, réducteur, crémaillère & 1.4 Moteur, unité centrale \\
+	\hline
+	\end{tabular}
+\end{center}
+
+\paragraph{Question 11 et 12:} 
+
+\begin{center}
+ \includegraphics[width=\linewidth]{img/IBD_c}
+\end{center}
+
+\paragraph{Question 13:} 
+
+Les liaisons mécaniques sont visibles et les fils électriques aussi. Il est difficile de voir plus d'information.
+
+\paragraph{Question 14:}
+
+\textbf{Acquérir :} Volant, capteur de couple volant.
+
+\textbf{Traiter :} Unité centrale.
+
+\textbf{Communiquer :} Unité centrale.
+
+\textbf{Alimenter :} \og Volant \fg.
+
+\textbf{Distribuer :}
+
+\textbf{Convertir :} Moteur.
+
+\textbf{Transmettre :} Colonne de direction, biellettes, crémaillères, pivot de roue, réducteur, embrayage.
+
+\paragraph{Question 15:} La plus grosse différence tient dans la source d'énergie, dans le cas de la diravi, il s'agit d'énergie hydraulique issue d'une pompe.
+
+\paragraph{Question 16:} Le couple d'entrée doit être le même car le conducteur peut être le même. L'utilisation de l'énergie hydraulique permet d'obtenir de plus grandes puissances. La diravi doit sans doute être utilisée par de plus grands véhicules.
+
+\end{document}
