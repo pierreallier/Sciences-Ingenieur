@@ -1,6 +1,0 @@
-\beamer@endinputifotherversion {3.36pt}
-\select@language {french}
-\beamer@sectionintoc {1}{D\IeC {\'e}finitions}{2}{0}{1}
-\beamer@sectionintoc {2}{Mod\IeC {\'e}lisation de SLCI}{8}{0}{2}
-\beamer@sectionintoc {3}{Transformations de Laplace}{12}{0}{3}
-\beamer@sectionintoc {4}{R\IeC {\'e}ponses temporelles}{22}{0}{4}

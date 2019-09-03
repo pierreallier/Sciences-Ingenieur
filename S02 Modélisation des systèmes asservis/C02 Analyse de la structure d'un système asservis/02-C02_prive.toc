@@ -1,4 +1,0 @@
-\beamer@endinputifotherversion {3.36pt}
-\select@language {french}
-\beamer@sectionintoc {1}{D\IeC {\'e}finitions}{2}{0}{1}
-\beamer@sectionintoc {2}{Identification des S.L.C.I.}{15}{0}{2}
