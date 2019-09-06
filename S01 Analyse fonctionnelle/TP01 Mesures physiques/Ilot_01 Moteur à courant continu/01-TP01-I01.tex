@@ -12,9 +12,26 @@ J.\frac{d\omega_m(t)}{dt}=C_m(t)-C_r(t) \\
 C_m(t)=K_m.i(t)
 \end{eqnarray}
 
+Données:
+\begin{itemize}
+ \item $u_m(t)$: tension aux bornes du moteur ($V$),
+ \item $i(t)$: intensité du courant dans le moteur ($A$),
+ \item $e(t)$: force électromotrice ($V$),
+ \item $\omega_m(t)$: vitesse de rotation du moteur ($rad.s^{-1}$),
+ \item $C_m(t)$: couple moteur ($N.m$),
+ \item $C_r(t)$: couple résistant ($N.m$),
+ \item $L_m$: inductance de la bobine du moteur ($H$),
+ \item $R_m$: résistance électrique interne au moteur ($\Omega$),
+ \item $K_e$: constante électrique du moteur ($V.rad^{-1}.s$),
+ \item $J$: inertie du moteur ($kg.m^2$),
+ \item $K_m$: constante de couple du moteur ($N.m.A^{-1}$).
+\end{itemize}
+
+~\
+
 En général, on suppose $K_e=K_m$ pour une MCC.
 
-\paragraph{Question 1:} D'après les équations (1) à (4), \textbf{écrire} une équation liant $u(t)$, $\omega(t)$ et $C_m(t)$.
+\paragraph{Question 1:} D'après les équations (1) à (4), \textbf{écrire} une équation liant $u_m(t)$, $\omega(t)$ et $C_m(t)$.
 
 \paragraph{Question 2:} Quelles sont les \textbf{hypothèses} à prendre afin de mettre cette équation sous la forme $u_m(t)=K.\omega_m(t)$.
 
@@ -26,7 +43,7 @@ En général, on suppose $K_e=K_m$ pour une MCC.
 
 \paragraph{Question 5:} \textbf{Déterminer} un protocole afin de mesurer la vitesse de rotation du moteur à l'aide du tachymètre.
 
-\paragraph{Question 6:} \textbf{Mettre en \oe uvre} ce protocole pour des tensions allant de 0V à 12V. Ecrire les résultats mesurés dans un tableur et tracer la courbe $\omega_m(t)=f(u(t))$. Conclure quant à l'allure de ce tracé.
+\paragraph{Question 6:} \textbf{Mettre en \oe uvre} ce protocole pour des tensions allant de 0V à 12V. Ecrire les résultats mesurés dans un tableur et tracer la courbe $\omega_m(t)=f(u_m(t))$. Conclure quant à l'allure de ce tracé.
 
 \paragraph{Question 7:} \textbf{Refaire} la mesure précédente en mesurant aussi le courant qui traverse le moteur.
 
@@ -58,7 +75,7 @@ En général, on suppose $K_e=K_m$ pour une MCC.
 
 \section{Correction}
 
-\paragraph{Question 1:} D'après les équations (1) à (4), \textbf{écrire} une équation liant $u(t)$, $\omega(t)$ et $C_m(t)$.
+\paragraph{Question 1:} D'après les équations (1) à (4), \textbf{écrire} une équation liant $u_m(t)$, $\omega(t)$ et $C_m(t)$.
 
 $u_m(t)=\frac{L_m}{K_m}.\frac{dC_m(t)}{dt}+\frac{R_m}{K_m}.C_m(t)+K_e.\omega_m(t)$
 
@@ -85,7 +102,7 @@ Avec $C_m(t)=K_m.i(t)$ et $J.\frac{d\omega_m(t)}{dt}=C_m(t)-C_r(t)=0$ en régime
 
 \paragraph{Question 5:} \textbf{Déterminer} un protocole afin de mesurer la vitesse de rotation du moteur à l'aide du tachymètre.
 
-\paragraph{Question 6:} \textbf{Mettre en \oe uvre} ce protocole pour des tensions allant de 0V à 12V. Ecrire les résultats mesurés dans un tableur et tracer la courbe $\omega_m(t)=f(u(t))$. Conclure quant à l'allure de ce tracé.
+\paragraph{Question 6:} \textbf{Mettre en \oe uvre} ce protocole pour des tensions allant de 0V à 12V. Ecrire les résultats mesurés dans un tableur et tracer la courbe $\omega_m(t)=f(u_m(t))$. Conclure quant à l'allure de ce tracé.
 
 \paragraph{Question 7:} \textbf{Refaire} la mesure précédente en mesurant aussi le courant qui traverse le moteur.
 
