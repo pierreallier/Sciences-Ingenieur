@@ -9,6 +9,9 @@ Au_coeur_des_machines_19062016.mp4
 # Folder config file
 Desktop.ini
 
+#Dossier des sujets en rédaction
+En_redaction
+
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 local_settings.py
