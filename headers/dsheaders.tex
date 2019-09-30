@@ -132,8 +132,8 @@
 \newcommand{\reponse}[3]
 {\refstepcounter{num_rep}
 \noindent
-\rule{\linewidth}{.5pt}
-\textbf{Question \arabic{num_rep}:}~\ \\
+\rule{\linewidth}{.5pt}\\
+\textbf{Question \arabic{num_rep}:} ~\ \\
 \ifdef{\public}{\multido{\i=1+1}{#1}{~\ \\}#2}{#3}
 }
 
