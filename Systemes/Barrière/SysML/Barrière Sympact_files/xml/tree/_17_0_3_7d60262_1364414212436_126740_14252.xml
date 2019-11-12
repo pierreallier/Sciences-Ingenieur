@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state classType="State" hasChild="true" humanType="Etat" icon="Barrière Sympact_files/icon_62425603.jpg" name="Ouverture barrière" refid="_17_0_3_7d60262_1364414212436_126740_14252"><ownedElement><activity classType="Activity" hasChild="true" humanType="Activité" icon="Barrière Sympact_files/icon_932878938.jpg" name="Piloter le variateur pour ouvrir barrière en suivant profil de vitesse" refid="_17_0_3_7d60262_1364415179368_600597_14398"/></ownedElement></state>
