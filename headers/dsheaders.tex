@@ -19,7 +19,11 @@
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
 \input{intro.tex}
-
+%\usepackage{style}
+\usepackage{bodegraph}
+\usepackage{rpcinematik}
+\usepackage[locale = FR]{siunitx}
+\usepackage{caption}
 \newcommand{\institute}{Lycée Dorian}
 
 \usepackage{fancyvrb}
@@ -160,6 +164,56 @@
 }
 
 
+%Définition des torseurs :
+\newcommand{\torseur}[2]{\left\{\mathcal{#1}_{#2} \right\}}
+\newcommand{\torseurh}[3]{\left\{\genfrac{}{}{0pt}{0}{#1}{#2}\right\}_{#3}}
+\newcommand{\torseurv}[8]{\left\{
+\begin{matrix}
+#1 & #4 \\ #2 & #5 \\ #3 &#6
+\end{matrix}
+\right\}_{{#7},{#8}}}
+
+%Définition des torseurs :
+%\newcommand{\torseur}[2]{\left \{\mbox{\relsize{2}{$\mathcal {#1}$}\relsize{-2}}\phantom{}_{\mbox{\scriptsize $#2$}} \right \}}
+%\newcommand{\torseurh}[3]{\left\{\genfrac{}{}{0pt}{0}{#1}{#2}\right\}_{#3}}
+%\newcommand{\torseurv}[8]{
+%\left\{\begin{array}{@{}c|c@{}} #1 & #4 \\ #2 & #5 \\ #3 & #6 \end{array} \right\}_{#7,#8}
+%}
+\newcommand{\derivee}[2]{\left.\dfrac{\d #1}{\d t}\right|_{#2}}
+\newcommand{\tripleint}{\int\!\!\!\!\!\int\!\!\!\!\!\int}
+
+% Notation cinématique et statique
+\newcommand{\cinematique}[2]{\mbox{#1}/\mbox{#2}}
+\newcommand{\statique}[2]{\mbox{#1}\rightarrow\mbox{#2}}
+\newcommand{\moment}[3]{\vv {#1}_{\scriptsize{#3}}(#2)}
+\newcommand{\resultante}[2]{\vv {#1}_{\scriptsize{#2}}}
+
+
+%Commande de base
+\newcommand{\jo}{\left(j\omega\right)} % j \omega dans l'analyse fréquentielle
+\newcommand{\tl}{\xrightarrow{\mathcal{L}}} % transformée de laplace sur fleche
+\newcommand{\tli}{\xrightarrow{\mathcal{L}^{-1}}} % transformée inverse de laplace sur fleche
+\renewcommand{\d}[1][]{\mathrm{d#1}}
+\newcommand{\dd}[1][]{\mathrm{d#1}}
+\newcommand{\vect}[2]{{#1}\wedge{#2}}
+\newcommand{\base}[3]{(\vec #1,\vec #2,\vec #3)}
+\newcommand{\vectbase}[4]{{\vphantom{\left| \begin{matrix}
+#1\\#2\\#3 \end{matrix} \right|}}_{#4}{\left| \begin{matrix}
+#1\\#2\\#3 \end{matrix} \right.}}
+%Pour avoir les paragraphes sous la forme I, II, III
+\renewcommand{\thesection}{\Roman{section}}
+\setcounter{secnumdepth}{3}
+\renewcommand{\Frlabelitemii}{$\bullet$}
+
+
+\makeatletter
+\renewcommand{\fnum@figure}{\figurename~\thefigure~}
+\makeatother
+\newcommand{\FIG}[1]{\textsc{Figure}~{\upshape\ref{#1}}}
+\newcommand{\DR}[1]{document réponse \textsc{DR}~\ref{#1}}
+\AtBeginDocument{\renewcommand{\tablename}{\textsc{Tableau}}}
+
+
 % En tête et pied de page
 \lhead{\nom}
 \rhead{\includegraphics[width=2cm]{../../../img/logo}}
@@ -223,7 +277,7 @@ keepaspectratio]{../../../img/fond4}%
 
 \includegraphics[width=2cm]{../../../img/logo}
 
-\Huge{DS \num\ - \sujet}
+\Huge{DS \numero - \sujet}
 
 \vspace{1cm}
 
