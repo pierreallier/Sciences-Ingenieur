@@ -41,7 +41,7 @@
 \usepackage{graphics}
 \usepackage{wrapfig}
 \usepackage{textcomp}
-\usepackage{tikz}
+\usepackage{tikz,tkz-tab}
 \usepackage{wrapfig}
 \usepackage{gensymb}
 \usepackage[percent]{overpic}
@@ -128,8 +128,14 @@
 \newcounter{num_rep} \setcounter{num_rep}{0}
 \newcounter{num_cor} \setcounter{num_cor}{0}
 
+\newcommand{\feuilleDR}[1]{
+	\begin{tikzpicture}
+		\draw[gray!30](0,0)grid[step=0.5cm](\linewidth,#1);
+	\end{tikzpicture}
+}
+
 \newcommand{\question}[1]{\refstepcounter{num_quest}\par
-~\ \\ \parbox[t][][t]{0.15\linewidth}{\textbf{Question \arabic{num_quest}}}\parbox[t][][t]{0.85\linewidth}{#1}\par
+~\ \\ \parbox[t][][t]{0.15\linewidth}{\textbf{Question \label{\arabic{num_quest}}\arabic{num_quest}}}\parbox[t][][t]{0.85\linewidth}{#1}\par
 }
 
 
@@ -137,8 +143,8 @@
 {\refstepcounter{num_rep}
 \noindent
 \rule{\linewidth}{.5pt}\\
-\textbf{Question \arabic{num_rep}:} ~\ \\
-\ifdef{\public}{\multido{\i=1+1}{#1}{~\ \\}#2}{#3}
+\textbf{Question \ref{\arabic{num_rep}}:} ~\ \\
+\ifdef{\public}{#2 ~\ \\ \feuilleDR{#1}}{#3}
 }
 
 \newcommand{\cor}
@@ -205,15 +211,6 @@
 \setcounter{secnumdepth}{3}
 \renewcommand{\Frlabelitemii}{$\bullet$}
 
-
-\makeatletter
-\renewcommand{\fnum@figure}{\figurename~\thefigure~}
-\makeatother
-\newcommand{\FIG}[1]{\textsc{Figure}~{\upshape\ref{#1}}}
-\newcommand{\DR}[1]{document réponse \textsc{DR}~\ref{#1}}
-\AtBeginDocument{\renewcommand{\tablename}{\textsc{Tableau}}}
-
-
 % En tête et pied de page
 \lhead{\nom}
 \rhead{\includegraphics[width=2cm]{../../../img/logo}}
@@ -222,7 +219,8 @@
 
 \fancypagestyle{documentreponse}{%
   \fancyhf{}
-  \fancyhead[LO]{Nom: ........................ Prénom: ........................}
+  \ifdef{\public}{\fancyhead[LO]{Nom: ........................ Prénom: ........................}}
+  {\fancyhead[LO]{\colorbox{danger}{Correction\hspace{12.5cm}}}}
   \fancyhead[LE]{\nom}
   \fancyhead[RE,RO]{\includegraphics[width=2cm]{../../../img/logo}}
   \lfoot{Document réponse}
