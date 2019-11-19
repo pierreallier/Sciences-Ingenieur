@@ -1,0 +1,3 @@
+theta1=u1*t
+theta2=acos(sin(theta1-%pi/2)*lAB/lBC)
+y1=-cos(%pi/2-theta2)*u2/(lAB*cos(theta2+%pi/2-theta1))

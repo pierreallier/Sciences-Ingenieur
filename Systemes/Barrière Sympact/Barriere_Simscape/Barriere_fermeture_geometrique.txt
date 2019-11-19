@@ -1,0 +1,6 @@
+function [theta_m,l]= fermeture_geometrique(theta_b)
+e=0.109;
+R=0.08;
+theta_b=theta_b+pi/4;
+theta_m=theta_b-asin(e*cos(theta_b)/R);
+l=R*cos(theta_m)/cos(theta_b);

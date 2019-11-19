@@ -1,0 +1,16 @@
+Constrained Instances: 'Masse_mobile-1/bride-1', 'Bielle-1/lisse-1/vis_chc_M5x30-1'
+Constraint Name: Coïncidente9
+Error Details: Constrained components are not resolved. Resolve components and try again. The constraint has been ignored.
+---------------------------------------------------------------------------------
+Constrained Instances: 'Masse_mobile-1/bride-1', 'Bielle-1/lisse-1/vis_chc_M5x30-1'
+Constraint Name: Coaxiale5
+Error Details: Constrained components are not resolved. Resolve components and try again. The constraint has been ignored.
+---------------------------------------------------------------------------------
+Constrained Instances: 'Masse_mobile-1/bride-1', 'Bielle-1/lisse-1/vis_chc_M5x30-2'
+Constraint Name: Coïncidente10
+Error Details: Constrained components are not resolved. Resolve components and try again. The constraint has been ignored.
+---------------------------------------------------------------------------------
+Constrained Instances: 'Masse_mobile-1/bride-1', 'Bielle-1/lisse-1/vis_chc_M5x30-2'
+Constraint Name: Coaxiale6
+Error Details: Constrained components are not resolved. Resolve components and try again. The constraint has been ignored.
+---------------------------------------------------------------------------------
