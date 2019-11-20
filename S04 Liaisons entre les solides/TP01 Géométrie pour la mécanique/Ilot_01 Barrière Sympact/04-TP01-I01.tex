@@ -6,8 +6,11 @@
 
 \titlemod{Modéliser la loi d'entrée/sortie}
 
-\includegraphics[width=0.4\linewidth]{img/cinematique}
+\begin{center}
+\def\svgwidth{0.37\linewidth}
+	\input{img/Barriere_cinematique.pdf_tex}
 \includegraphics[width=0.6\linewidth]{img/barriere}
+\end{center}
 
 Des données sur le système sont disponibles ici: \urlsysteme.
 
@@ -30,15 +33,17 @@ Des données sur le système sont disponibles ici: \urlsysteme.
 
 Télécharger le fichier \solidworks.
 
-\question{Ouvrir le fichier assemblage de la barrière et vérifier sont paramétrage.}
+\question{Ouvrir le fichier assemblage de la barrière et vérifier sont paramétrage. On pourra vérifier en déplaçant les pièces à la main que les contraintes ont été correctement mises en place.}
 
 \medskip
-
-Télécharger le fichier \matlabsimscape.
 
 \question{Simuler le modèle simulink (version 2016a), vérifier les données affichées.}
 
 \question{Recopier la formule de la première partie dans le bloc fonction et comparer les résultats des deux modèles.}
+
+\newpage
+
+\proceduresimscape
 
 \ifdef{\public}{\end{document}}
 

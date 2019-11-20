@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
+\usepackage{textgreek}
 \usepackage[gen]{eurosym}
 %\usepackage[dvips]{graphicx}
 \usepackage{fancyhdr}
@@ -287,6 +288,59 @@
 %\node[title] at (box.north west) {\textcolor{white}{\textbf{Problématique}}};
 \end{tikzpicture}\bigskip\\~\ \\%
 }
+
+%Procédures logiciels
+
+\newcommand{\proceduresimscape}{
+\begin{center}
+ \huge{Utilisation de Matlab Simscape}
+\end{center}
+
+La procédure suivante explique comment utiliser Matlab afin de simuler un modèle Simscape.
+
+Ce modèle a été construit à partir des pièces, assemblages et contraintes d'un modèle Solidworks. Ce dernier n'est pourtant pas nécessaire pour le faire tourner.
+
+\medskip
+
+Procédure :
+\begin{itemize}
+ \item Dézipper l'archive à télécharger ici \matlabsimscape,
+ \item Lancer Matlab \includegraphics[width=80pt]{../../../img/matlabsimscape/matlab}
+ \item Depuis Matlab, naviguer \includegraphics[width=80pt]{../../../img/matlabsimscape/matlab_01} dans le dossier dézippé jusqu'au dossier contenant les fichiers \og .slx \fg\ et \og Simscape \fg,\\
+  \begin{center}
+  \includegraphics[width=0.4\linewidth]{../../../img/matlabsimscape/matlab_02}
+  \end{center}
+ \item Faire un clic-droit sur le dossier \og Simscape \fg\ et cliquer sur \og Add to Path \fg,\\
+  \begin{center}
+  \includegraphics[width=0.4\linewidth]{../../../img/matlabsimscape/matlab_03}
+  \end{center}
+ \item Double-cliquer sur le fichier correspondant au TP et à la version de Matlab utilisée, il doit avoir une extension en \og slx \fg.\\
+  \begin{center}
+  \includegraphics[width=0.4\linewidth]{../../../img/matlabsimscape/matlab_04}
+  \end{center}
+\end{itemize}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 % En tête et pied de page

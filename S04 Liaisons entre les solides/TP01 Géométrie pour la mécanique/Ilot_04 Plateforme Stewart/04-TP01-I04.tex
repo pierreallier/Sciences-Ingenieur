@@ -6,31 +6,39 @@
 
 \titlemod{Modéliser la loi d'entrée/sortie}
 
-\includegraphics[width=0.4\linewidth]{img/cinematique}
-\includegraphics[width=0.6\linewidth]{img/barriere}
+On donne le paramétrage suivant pour la géométrie de la plateforme.
+
+\begin{center}
+\def\svgwidth{0.7\linewidth}
+   \input{img/Stewart_param1.pdf_tex} \\
+\def\svgwidth{\linewidth}
+   \input{img/Stewart_euler.pdf_tex}
+\end{center}
+
 
 Des données sur le système sont disponibles ici: \urlsysteme.
 
-\question{Écrire les vecteurs $\overrightarrow{AB}$, $\overrightarrow{AC}$ et $\overrightarrow{BC}$ dans les bases respectives $B_0(\overrightarrow{x_0},\overrightarrow{y_0},\overrightarrow{z_0})$, $B_1(\overrightarrow{x_1},\overrightarrow{y_1},\overrightarrow{z_1})$ et $B_2(\overrightarrow{x_2},\overrightarrow{y_2},\overrightarrow{z_2})$. On mesurera $\|\overrightarrow{AB}\|$ et $\|\overrightarrow{BC}\|$ directement sur le système et on prendra $\|\overrightarrow{AC}\|=l(t)$ variable.}
+\question{Écrire les vecteurs $\overrightarrow{O_FB_i}$, $\overrightarrow{B_iA_i}$ et $\overrightarrow{A_iO_M}$ dans les bases respectives $B_F(\overrightarrow{x_F},\overrightarrow{y_F},\overrightarrow{z_F})$, $B_i(\overrightarrow{x_i},\overrightarrow{y_i},\overrightarrow{z_i})$ et $B_M(\overrightarrow{x_M},\overrightarrow{y_M},\overrightarrow{z_M})$. On mesurera $r_M$, $r_F$, $\alpha$ et $\beta$ directement sur le système et on prendra $\|\overrightarrow{B_iA_i}\|=l_i$ variable.}
 
-\question{Donner la relation qui existe entre ces trois vecteurs.}
+On donne le vecteur $\overrightarrow{O_FO_M}=x.\vec{x_F}+y.\vec{y_F}+z.\vec{z_F}$. $x$, $y$ et $z$ sont supposés connus. De même, $\theta_1$, $\theta_2$ et $\theta_3$ sont supposés connus.
 
-\question{Projeter cette relation dans la base $B_0(\overrightarrow{x_0},\overrightarrow{y_0},\overrightarrow{z_0})$ afin d'obtenir deux équations scalaires. On fera apparaître les angles $\theta_1$ et $\theta_2$.}
+\question{Écrire $\overrightarrow{O_FB_i}$ en fonction de $\alpha$ et de $i$.}
 
-\question{A l'aide de ces deux relations faire disparaître $l(t)$ afin de trouver une relation entre $\theta_1$ et $\theta_2$.}
+\question{Écrire $\overrightarrow{O_MA_i}$ en fonction de $\beta$ et de $i$.}
 
-\question{Mettre cette relation sous la forme $\theta_1=f(\theta_2)$.}
+\question{Écrire $x_M$, $y_M$ et $z_M$ dans la base $B_F(\overrightarrow{x_F},\overrightarrow{y_F},\overrightarrow{z_F})$.}
 
-\question{Mettre cette relation sous la forme $\theta_2=f(\theta_1)$.}
+\question{A partir des résultats précédents, écrire $\overrightarrow{B_iA_i}$ dans la base $B_F(\overrightarrow{x_F},\overrightarrow{y_F},\overrightarrow{z_F})$.}
+
+\question{Déterminer alors chaque longueur $l_i$.}
 
 \newpage
 
-\titleexp{Vérifier la relation $\theta_1=f(\theta_2)$.}
-
+\titleexp{Vérifier le calcul des longueurs $l_i$.}
 
 Télécharger le fichier \solidworks.
 
-\question{Ouvrir le fichier assemblage de la barrière et vérifier sont paramétrage.}
+\question{Ouvrir le fichier assemblage de la plateforme et vérifier sont paramétrage. On pourra vérifier en déplaçant les pièces à la main que les contraintes ont été correctement mises en place.}
 
 \medskip
 
@@ -39,6 +47,11 @@ Télécharger le fichier \matlabsimscape.
 \question{Simuler le modèle simulink (version 2016a), vérifier les données affichées.}
 
 \question{Recopier la formule de la première partie dans le bloc fonction et comparer les résultats des deux modèles.}
+
+\newpage
+
+\proceduresimscape
+
 
 \ifdef{\public}{\end{document}}
 

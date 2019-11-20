@@ -6,31 +6,33 @@
 
 \titlemod{Modéliser la loi d'entrée/sortie}
 
-\includegraphics[width=0.4\linewidth]{img/cinematique}
-\includegraphics[width=0.6\linewidth]{img/barriere}
+\begin{center}
+\def\svgwidth{0.5\linewidth}
+   \input{img/Maxpid_cinematique.pdf_tex}
+\end{center}
+
 
 Des données sur le système sont disponibles ici: \urlsysteme.
 
-\question{Écrire les vecteurs $\overrightarrow{AB}$, $\overrightarrow{AC}$ et $\overrightarrow{BC}$ dans les bases respectives $B_0(\overrightarrow{x_0},\overrightarrow{y_0},\overrightarrow{z_0})$, $B_1(\overrightarrow{x_1},\overrightarrow{y_1},\overrightarrow{z_1})$ et $B_2(\overrightarrow{x_2},\overrightarrow{y_2},\overrightarrow{z_2})$. On mesurera $\|\overrightarrow{AB}\|$ et $\|\overrightarrow{BC}\|$ directement sur le système et on prendra $\|\overrightarrow{AC}\|=l(t)$ variable.}
+\question{Écrire les vecteurs $\overrightarrow{AB}$, $\overrightarrow{AC}$ et $\overrightarrow{BC}$ dans les bases respectives $B_0(\overrightarrow{x_0},\overrightarrow{y_0},\overrightarrow{z_0})$, $B_3(\overrightarrow{x_3},\overrightarrow{y_3},\overrightarrow{z_3})$ et $B_1(\overrightarrow{x_1},\overrightarrow{y_1},\overrightarrow{z_1})$. On mesurera $\|\overrightarrow{AO}\|$, $\|\overrightarrow{OB}\|$ et $\|\overrightarrow{BC}\|$ directement sur le système et on prendra $\|\overrightarrow{AC}\|=l(t)$ variable.}
 
 \question{Donner la relation qui existe entre ces trois vecteurs.}
 
 \question{Projeter cette relation dans la base $B_0(\overrightarrow{x_0},\overrightarrow{y_0},\overrightarrow{z_0})$ afin d'obtenir deux équations scalaires. On fera apparaître les angles $\theta_1$ et $\theta_2$.}
 
-\question{A l'aide de ces deux relations faire disparaître $l(t)$ afin de trouver une relation entre $\theta_1$ et $\theta_2$.}
+\question{A l'aide de ces deux relations faire disparaître $l(t)$ afin de trouver une relation entre $\theta_1$ et $\theta_3$.}
 
-\question{Mettre cette relation sous la forme $\theta_1=f(\theta_2)$.}
+\question{Mettre cette relation sous la forme $\theta_1=f(\theta_3)$.}
 
-\question{Mettre cette relation sous la forme $\theta_2=f(\theta_1)$.}
+\question{Mettre cette relation sous la forme $\theta_3=f(\theta_1)$.}
 
 \newpage
 
-\titleexp{Vérifier la relation $\theta_1=f(\theta_2)$.}
-
+\titleexp{Vérifier la relation $\theta_3=f(\theta_1)$.}
 
 Télécharger le fichier \solidworks.
 
-\question{Ouvrir le fichier assemblage de la barrière et vérifier sont paramétrage.}
+\question{Ouvrir le fichier assemblage du Maxpid et vérifier sont paramétrage. On pourra vérifier en déplaçant les pièces à la main que les contraintes ont été correctement mises en place.}
 
 \medskip
 
@@ -40,7 +42,11 @@ Télécharger le fichier \matlabsimscape.
 
 \question{Recopier la formule de la première partie dans le bloc fonction et comparer les résultats des deux modèles.}
 
-\ifdef{\public}{\end{document}}
+\newpage
+
+\proceduresimscape
+
+\end{document}
 
 \newpage
 
@@ -48,30 +54,6 @@ Télécharger le fichier \matlabsimscape.
 
 \section{Correction}
 
-\cor{$\overrightarrow{AB}=a\cdot\overrightarrow{y_0}$, $\overrightarrow{AC}=l(t)\cdot\overrightarrow{x_1}$ et $\overrightarrow{BC}=b\cdot\overrightarrow{x_2}$, avec a=112mm et b=81mm.}
-
-\cor{$\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC}$.}
-
-\cor{\begin{eqnarray}
-l(t)\cdot cos\theta_1=b\cdot cos\theta_2\\ 
-l(t)\cdot sin\theta_1=a+b\cdot sin\theta_2
-\end{eqnarray}}
-
-\cor{\begin{eqnarray}
-tan\theta_1=\frac{a+b\cdot sin\theta_2}{b\cdot cos\theta_2}
-\end{eqnarray}}
-
-\cor{\begin{eqnarray}
-\theta_1=arctan\left(\frac{a+b\cdot sin\theta_2}{b\cdot cos\theta_2}\right)
-\end{eqnarray}}
-
-\cor{\begin{eqnarray}
-b\cdot sin\theta_1\cdot cos\theta_2=a\cdot cos\theta_1+b\cdot sin\theta_2\cdot cos\theta_1 \nonumber \\
-b\cdot \left(sin\theta_1\cdot cos\theta_2-sin\theta_2\cdot cos\theta_1\right)=a\cdot cos\theta_1 \nonumber \\
-b\cdot sin\left(\theta_1-\theta_2\right)=a\cdot cos\theta_1 \nonumber \\
-\theta_1-\theta_2=arcsin\left(\frac{a}{b}\cdot cos\theta_1\right) \nonumber \\
-\theta_2=\theta_1-arcsin\left(\frac{a}{b}\cdot cos\theta_1\right)
-\end{eqnarray}}
 
 
 \end{document}
