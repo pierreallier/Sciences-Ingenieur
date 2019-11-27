@@ -3,13 +3,13 @@ Thumbs.db
 ehthumbs.db
 .idea
 
-#Too larges videos
-Au_coeur_des_machines_19062016.mp4
+#Fichier à cacher
+*hide.mp4
 
 # Folder config file
 Desktop.ini
 
-#Dossier des sujets en rédaction
+#Dossier des sujets de DS en rédaction
 En_redaction
 
 # Recycle Bin used on file shares
@@ -35,9 +35,6 @@ __pycache__
 *.snm
 *.synctex.gz
 *.toc
-*.mp4
-*.avi
-*.flv
 *.bak
 Ressources
 ressources
