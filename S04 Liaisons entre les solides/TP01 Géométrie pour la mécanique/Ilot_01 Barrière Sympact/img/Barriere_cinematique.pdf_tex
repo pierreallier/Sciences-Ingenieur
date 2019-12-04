@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{281.66602162bp}%
+    \setlength{\unitlength}{441.68536377bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,31 +50,42 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.37340237)%
+  \begin{picture}(1,0.7726088)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{img/Barriere_cinematique.pdf}}%
-    \put(0.9260689,1.21387712){\color[rgb]{0.43921569,0.67843137,0.27843137}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}x\end{tabular}}}}%
-    \put(0.96909859,1.18959304){\color[rgb]{0.43921569,0.67843137,0.27843137}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.85941998,0.63457836){\color[rgb]{0.43921569,0.67843137,0.27843137}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}x\end{tabular}}}}%
+    \put(0.88686033,0.61909223){\color[rgb]{0.43921569,0.67843137,0.27843137}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{img/Barriere_cinematique.pdf}}%
-    \put(0.74635252,1.32702529){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}x\end{tabular}}}}%
-    \put(0.7893822,1.30274122){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(-0.00169645,0.22547257){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}A\end{tabular}}}}%
-    \put(0.02897818,0.79813655){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}B\end{tabular}}}}%
-    \put(0.81913375,0.95321382){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}C\end{tabular}}}}%
-    \put(0.25264732,0.08701071){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.47333422,0.55053839){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.39565357,0.91018414){\color[rgb]{0.43921569,0.67843137,0.27843137}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.84265719,0.73274288){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}x\end{tabular}}}}%
+    \put(0.87009754,0.71725674){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.38419875,0.19212323){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}A\end{tabular}}}}%
+    \put(0.40376018,0.52675054){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}B\end{tabular}}}}%
+    \put(0.64260333,0.59591981){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}C\end{tabular}}}}%
+    \put(0.54639564,0.10382509){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.58472669,0.40168418){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.57566541,0.53503921){\color[rgb]{0.43921569,0.67843137,0.27843137}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.83367482,0.21212383){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}θ\end{tabular}}}}%
+    \put(0.86907609,0.20519832){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.83171187,0.52532419){\color[rgb]{0.43921569,0.67843137,0.27843137}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}θ\end{tabular}}}}%
+    \put(0.86540101,0.50983805){\color[rgb]{0.43921569,0.67843137,0.27843137}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{img/Barriere_cinematique.pdf}}%
-    \put(0.42391399,0.26654248){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\texttheta\end{tabular}}}}%
-    \put(0.47674251,0.2422584){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.83663669,0.14018625){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}x\end{tabular}}}}%
+    \put(0.87059752,0.12660192){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.43629754,0.72185321){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}y\end{tabular}}}}%
+    \put(0.47025837,0.70826888){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{img/Barriere_cinematique.pdf}}%
-    \put(0.41780747,0.77992349){\color[rgb]{0.43921569,0.67843137,0.27843137}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\texttheta\end{tabular}}}}%
-    \put(0.47063599,0.75563941){\color[rgb]{0.43921569,0.67843137,0.27843137}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.69967863,0.3357928){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}π\end{tabular}}}}%
+    \put(0.70505315,0.27934588){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{img/Barriere_cinematique.pdf}}%
-    \put(0.70777932,0.14402926){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}x\end{tabular}}}}%
-    \put(0.76103388,0.12272743){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.07060749,1.26939865){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}y\end{tabular}}}}%
-    \put(0.12386204,1.24809683){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.79613542,0.28247552){\color[rgb]{0.43921569,0.18823529,0.62745098}\rotatebox{16.788506}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Barrière\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{img/Barriere_cinematique.pdf}}%
+    \put(0.82623292,0.44278734){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}x\end{tabular}}}}%
+    \put(0.86019375,0.429203){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{img/Barriere_cinematique.pdf}}%
+    \put(0.92390533,0.27994622){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}x\end{tabular}}}}%
+    \put(0.95134567,0.26446009){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.86774347,0.73801437){\color[rgb]{0.43921569,0.18823529,0.62745098}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}*\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{img/Barriere_cinematique.pdf}}%
   \end{picture}%
 \endgroup%
