@@ -485,7 +485,7 @@ On considère, figure \ref{fig:image16}, une partie de la presse composée d'un 
 \begin{center}
 \includegraphics[width=\linewidth]{img/Poinc_cin2.png}
 \caption{Schéma cinématique}
-\label{fig:image16}
+\label{fig:image16b}
 \end{center}
 \end{minipage}
 \end{figure}
@@ -551,4 +551,74 @@ Déterminer alors la vitesse de rotation $\overrightarrow{V_{B \in S_3/S_0}}$ en
 \end{minipage}
 \end{figure}
 
+\newpage
+
+\section{Prothèse de main - Description structurelle et fonctionnelle}
+
+L'ensemble de la prothèse (voir figure \ref{fig:image20}) est constitué d'un moto-réducteur à courant continu à double sens de rotation qui transmet son mouvement à un coupleur. Le mouvement de sortie de ce coupeur est transmis au préhenseur par un engrenage conique de rapport 1.
+
+\begin{figure}[!ht]
+\begin{minipage}{0.45\linewidth}
+Le préhenseur (voir figure \ref{fig:image20}) est constitué d'un bâti 1, du pignon moteur 2, du doigt supérieur 3, du doigt inférieur 4 et de la biellette 5. Un renvoi d'angle à pignons coniques transmet le mouvement issu du coupleur au pignon moteur. Celui-ci entraîne le doigt supérieur 3 par l'intermédiaire d'un secteur denté.
+\end{minipage}\hfill
+\begin{minipage}{0.5\linewidth}
+\begin{center}
+\includegraphics[width=\linewidth]{img/prothese_1}
+\caption{Prothèse}
+\label{fig:image20}
+\end{center}
+\end{minipage}
+\end{figure}
+
+Le modèle d'étude retenu pour ce préhenseur est donné par le schéma cinématique plan ci-dessous (figure \ref{fig:image21}). Le pignon 2 est en liaison pivot d'axe $O\overrightarrow{z}$ avec le bâti 1. Il entraîne le secteur denté lié au doigt supérieur 3 (JABE). Le contact entre le pignon 2 et le secteur denté est supposé ponctuel et se fait en J.
+
+Le doigt supérieur 3 est en liaison pivot d'axe $A\overrightarrow{z}$ avec le bâti 1. Une biellette 5, en liaison pivot d'axe $B\overrightarrow{z}$ avec le doigt supérieur, transmet son mouvement au doigt inférieur 4 par la liaison pivot d'axe $C\overrightarrow{z}$. Le doigt inférieur 4 (CDF) est en liaison pivot d'axe $D\overrightarrow{z}$ avec le bâti 1.
+
+\begin{figure}[!ht]
+\begin{minipage}{0.5\linewidth}
+\begin{center}
+\includegraphics[width=\linewidth]{img/prothese_2}
+\caption{Prothèse}
+\label{fig:image21}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}{0.45\linewidth}
+On pose:
+\begin{itemize}
+ \item $\overrightarrow{\Omega_{2/1}}=\omega_{2/1}.\overrightarrow{z_1}=\dot{\theta_2}.\overrightarrow{z_1}$,
+ \item $\overrightarrow{\Omega_{3/1}}=\omega_{3/1}.\overrightarrow{z_1}=\dot{\theta_3}.\overrightarrow{z_1}$, 
+ \item $\overrightarrow{\Omega_{4/1}}=\omega_{4/1}.\overrightarrow{z_1}=\dot{\theta_4}.\overrightarrow{z_1}$, 
+ \item A, J et O sont alignés et suivant $\overrightarrow{y_2}$,
+ \item $\overrightarrow{OJ}=a.\overrightarrow{y_2}$ et $\overrightarrow{AJ}=-b.\overrightarrow{y_2}$,
+ \item A, B et E sont alignés et suivant $\overrightarrow{x_3}$,
+ \item $\overrightarrow{AB}=c.\overrightarrow{x_3}$ et $\overrightarrow{BE}=d.\overrightarrow{x_3}$,
+ \item C, D et F sont alignés et suivant $\overrightarrow{x_4}$,
+ \item $\overrightarrow{CD}=c.\overrightarrow{x_4}$ et $\overrightarrow{DF}=d.\overrightarrow{x_4}$,
+ \item $\overrightarrow{OD}=-e.\overrightarrow{x_1}-f.\overrightarrow{y_1}$,
+ \item la bielle BC est de longueur $l$. 
+ \end{itemize}
+\end{minipage}
+\end{figure}
+
+
+
+\paragraph{Question 1:} Faire le graphe des liaisons de ce mécanisme.
+
+\paragraph{Question 2:} Faire les figures de changement de base pour les 3 angles définis ci-dessus.
+
+\paragraph{Question 3:} Écrire les torseurs cinématiques de chacune des liaisons.
+
+\paragraph{Question 4:} Écrire $\left\{V_{2/1}\right\}$ au point J.
+
+\paragraph{Question 5:} Écrire $\left\{V_{3/1}\right\}$ au point J.
+
+\paragraph{Question 6:} Écrire une composition de vitesse au point J pour trouver une expression de 
+$\overrightarrow{V_{J\in 3/2}}$.
+
+\paragraph{Question 7:} Sachant que $\overrightarrow{V_{J\in 3/2}}=\overrightarrow{0}$, trouver une relation entre $\omega_{2/1}$ et $\omega_{3/1}$.
+
+\paragraph{Question 8:} Trouver une expression de $\overrightarrow{V_{E\in 3/1}}$, puis $\overrightarrow{V_{F\in 4/1}}$.
+
 \end{document}
+
+
