@@ -92,7 +92,7 @@ Déterminer l'accélération $\overrightarrow{\Gamma_{P \in 3/0}}$.
 
 \section{Étude d'un poste de palettisation de bidons}
 
-La société Agronutrition est une PME du tissu économique midi-pyrénéen. Elle conçoit, fabrique et commercialise une large gamme de compléments nutritionnels destinés à améliorer la qualité et/ou le rendement des productions végétales (grandes cultures, vigne, arboriculture, maraîchage). Utilisables en Agriculture Biologique, ces compléments permettent d'améliorer les qualités nutritives des produits agricoles (teneur en protéines, teneur en sucres, teneur en oligo-éléments, résistance aux meurtrissures, conservation, etc.).
+La société Agronutrition est une PME du tissu économique midi-pyrénéen. Elle conçoit, fabrique et commercialise une large gamme de compléments nutritionnels destinés à améliorer la qualité et/ou le rendement des productions végétales (grandes cultures, vigne, arboriculture, maraîchage).
 
 L'étude se limitera à l'atelier de conditionnement des produits, aujourd'hui en partie automatisé.
 
@@ -118,13 +118,13 @@ Les bidons vides sont livrés par palettes. Le conditionnement des produits cons
  \end{minipage}
 \hfill
  \begin{minipage}{0.40\linewidth}
-  \centering\includegraphics[width=0.7\linewidth]{img/bidon.png}
+  \centering\includegraphics[width=0.5\linewidth]{img/bidon.png}
   \caption{Bidon}
   \label{img:image101}
  \end{minipage}
 \end{figure}
 
-Seules les opérations 2, 3, 4, 5 et 6 sont aujourd'hui entièrement automatisées. En particulier, la palettisation des bidons pleins au poste 6 est réalisée par un robot Kuka KR 180-2 PA dont les caractéristiques sont précisées en annexe 1, page 15.
+Seules les opérations 2, 3, 4, 5 et 6 sont aujourd'hui entièrement automatisées. En particulier, la palettisation des bidons pleins au poste 6 est réalisée par un robot Kuka KR 180-2 PA dont les caractéristiques sont précisées sur la figure \ref{img:image104}.
 
 \subsection{Analyse cinématique du robot}
 
@@ -146,20 +146,31 @@ On s'intéressera ensuite aux particularités des mouvements du robot (dont la v
  \item L'espace de travail du robot est défini Figure 15, annexe 1,
  \item Les palettes sont disposées symétriquement par rapport à l'axe $\overrightarrow{O_0x0}$,
  \item On suppose que l'axe vertical de symétrie d'un bidon est confondu avec l'axe $(O_4,\overrightarrow{z_4})$ et que la face supérieure d'un bidon est située dans le plan $(\overrightarrow{x_4},\overrightarrow{z_4})$,
+\end{itemize} 
+
+ \begin{minipage}{0.5\linewidth}
+\begin{itemize}
  \item $\overrightarrow{O_{10}O_4}=a.\overrightarrow{x_4}+b.\overrightarrow{z_4}$,
  \item $\overrightarrow{O_3O_{10}}=l.\overrightarrow{x_3}$,
  \item $\overrightarrow{O_2O_3}=l.\overrightarrow{x_2}$,
  \item $\overrightarrow{O_1O_2}=c.\overrightarrow{x_1}+d.\overrightarrow{z_1}$,
+\end{itemize} 
+ \end{minipage} \hfill
+ \begin{minipage}{0.5\linewidth}
+\begin{itemize}
  \item $\alpha_0=(\overrightarrow{x_0},\overrightarrow{x_1})=(\overrightarrow{y_0},\overrightarrow{y_1})$,
  \item $\theta_2=(\overrightarrow{x_1},\overrightarrow{x_2})=(\overrightarrow{z_1},\overrightarrow{z_2})$,
  \item $\theta_3=(\overrightarrow{x_1},\overrightarrow{x_3})=(\overrightarrow{z_1},\overrightarrow{z_3})$.
 \end{itemize}
+ \end{minipage}
 
-%\begin{figure}[!h]
-%  \centering\includegraphics[width=0.5\linewidth]{img/figure15.png}
-%  \caption{Dimensions du système}
-%  \label{img:image104}
-%\end{figure}
+
+\begin{figure}[!h]
+  \centering\includegraphics[width=0.7\linewidth]{img/annexe_robot}
+  \caption{Dimensions du système}
+  \label{img:image104}
+\end{figure}
+
 
 \paragraph{Question 1:} Quelle figure géométrique constitue la chaîne de fermeture géométrique $O_3O_8O_9O_{10}$ ? Que pouvez vous en déduire concernant les côtés $O_3O_8$ et $O_9O_{10}$ ? En déduire la nature du mouvement de 4 par rapport à 7.
 
@@ -175,8 +186,6 @@ On s'intéressera ensuite aux particularités des mouvements du robot (dont la v
 
 \paragraph{Question 4:} En déduire le vecteur accélération $\overrightarrow{\Gamma_{(O_4\in4/0)}}$, accélération de $O_4$ appartenant à 4 par rapport au sol.
 
-\begin{figure}[!h]
- \begin{minipage}{0.6\linewidth}
 \paragraph{Question 5:} Déterminer $\overrightarrow{\Omega_{4/1}}$. En déduire la nature du mouvement du poignet 4 par rapport à la pièce 1.
 Ceci correspond-il à la vocation de palettisation du robot ? Quel est l'intérêt d'une telle structure par rapport à celle d'un robot 6 axes (voir figure \ref{img:image5}) ?
 
@@ -186,17 +195,8 @@ Ceci correspond-il à la vocation de palettisation du robot ? Quel est l'intér�
  \item mouvement de 7 par rapport à 1,
  \item mouvement de 1 par rapport au sol.
 \end{enumerate}
-\end{minipage}
-\hfill
- \begin{minipage}{0.35\linewidth}
-  \centering\includegraphics[width=0.6\linewidth]{img/6axes.png}
-  \caption{Système 6 axes}
-  \label{img:image5}
- \end{minipage}
-\end{figure}
 
-\includepdf[pages={1}]{img/annexe_robot}
-
+\newpage
 
 \section{Attelage automatique type 10L}
 
