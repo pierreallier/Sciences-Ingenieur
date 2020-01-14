@@ -13,7 +13,7 @@
    width="859"
    height="475"
    viewBox="0 0 859.00003 475"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="Maxpid_cinematique.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -24,8 +24,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
+     inkscape:window-width="3110"
+     inkscape:window-height="1697"
      id="namedview4081"
      showgrid="false"
      fit-margin-top="0"
@@ -37,10 +37,10 @@
      inkscape:snap-nodes="false"
      showguides="false"
      inkscape:zoom="1.0314319"
-     inkscape:cx="429.5"
+     inkscape:cx="159.48702"
      inkscape:cy="237.5"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-x="90"
+     inkscape:window-y="55"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2">
     <inkscape:grid
@@ -55,7 +55,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1092,8 +1092,8 @@
      width="859"
      style="stroke-width:3;stroke-miterlimit:10;stroke-dasharray:none" />
   <rect
-     y="0"
-     x="0"
+     y="2.9085779"
+     x="1.9390519"
      height="475"
      width="859"
      id="rect5094"
