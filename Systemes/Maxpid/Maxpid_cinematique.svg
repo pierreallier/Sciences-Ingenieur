@@ -35,10 +35,10 @@
      inkscape:snap-others="false"
      inkscape:object-nodes="false"
      inkscape:snap-nodes="false"
-     showguides="false"
-     inkscape:zoom="2.8898133"
-     inkscape:cx="121.52126"
-     inkscape:cy="221.18458"
+     showguides="true"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="373.66098"
+     inkscape:cy="257.74217"
      inkscape:window-x="90"
      inkscape:window-y="55"
      inkscape:window-maximized="1"
@@ -282,12 +282,12 @@
      y="0"
      style="stroke-width:3;stroke-miterlimit:10;stroke-dasharray:none" />
   <rect
-     style="fill:#ffffff;fill-opacity:0.66326527;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:none"
+     style="fill:#ffffff;fill-opacity:0.66326527;stroke-width:3.06459951;stroke-miterlimit:10;stroke-dasharray:none"
      id="rect5090"
-     width="859"
-     height="475"
-     x="0"
-     y="0" />
+     width="878.09186"
+     height="484.89951"
+     x="-8"
+     y="-6" />
   <g
      id="g34"
      transform="matrix(1.3333333,0,0,-1.3333333,-179.78606,506.86527)"
