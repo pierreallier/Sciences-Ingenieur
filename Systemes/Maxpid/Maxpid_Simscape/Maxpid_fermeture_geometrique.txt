@@ -1,9 +1,0 @@
-function [theta_m,l,theta_3]= Fermeture_geometrique(theta_b)
-a=0.08;
-b=0.07;
-l1=0.08;
-p=0.004;
-l0=0.17;
-l=sqrt((b+l1*cos(theta_b))^2+(l1*sin(theta_b)-a)^2);
-theta_m=-(l-l0)*2*pi/p;
-theta_3=acos((b+l1*cos(theta_b))/l);

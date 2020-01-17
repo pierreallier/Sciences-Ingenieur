@@ -19,6 +19,7 @@ uploads/
 venv/
 migrations/
 __pycache__
+*Simscape/
 
 # Windows Installer files
 *.cab

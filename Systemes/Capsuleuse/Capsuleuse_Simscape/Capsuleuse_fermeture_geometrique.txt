@@ -1,5 +1,0 @@
-function [theta_m,l] = fermeture_geometrique(theta_c)
-R=0.089;
-e=0.125;
-theta_m=theta_c-(pi-asin(e*cos(theta_c)/R)); % Le (pi-theta) permet de forcer la croix de Malte à tourner dans le bon sens
-l=(R*sin(theta_m)+e)/sin(theta_c);

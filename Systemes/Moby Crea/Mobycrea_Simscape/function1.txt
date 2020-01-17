@@ -1,4 +1,0 @@
-theta1=u1*t
-theta2=acos(sin(theta1-%pi/2)*lAB/lBC)
-omega20=-lAB*sin(theta1)*u1/(lBC*sin(theta2))
-y1=lAB*cos(theta1)*u1+lBC*cos(theta2)*omega20
