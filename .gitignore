@@ -20,6 +20,7 @@ venv/
 migrations/
 __pycache__
 *Simscape/
+*experimental/
 
 # Windows Installer files
 *.cab
