@@ -259,7 +259,7 @@ en mouvement de translation rectiligne,
 
 Données:
 \begin{itemize}
- \item Inertie	équivalente	ramenée	à l'axe $(A,\overrightarrow{z_0})$: $I_1=5,7\times 10^{5}kg.m^2$,
+ \item Inertie	équivalente	ramenée	à l'axe $(A,\overrightarrow{z_0})$: $I_1=5,7\times 10^{-5}kg.m^2$,
  \item Frottement fluide entre rotor et stator : $f_v = 1,6\times 10^{-3} N.m.s$,
  \item Masse du solide 3 : $M_3=0,1kg$,
  \item Toutes les autres masses sont négligées.
@@ -424,7 +424,7 @@ Trois réponses ont été tracées, et l'une d'entre elles correspond à la fonc
 \label{fig20}
 \end{figure}
 
-\question{Déterminer à quel tracé correspond la fonction de transfert de la question 16 et déterminer la valeur de l'échelon qui lui a été appliqué en entrée.}
+\question{Déterminer à quel tracé correspond la fonction de transfert de la question précédente et déterminer la valeur de l'échelon qui lui a été appliqué en entrée.}
 
 \question{En vous aidant des abaques des figures suivantes, vérifier les exigences \og stabilité \fg (uniquement l'amortissement), \og rapidité \fg et \og précision \fg (uniquement l'erreur statique).}
 
@@ -449,7 +449,7 @@ L'assemblage du mécanisme de HOEKEN doit être démontable. Pour cela on demand
 	\includegraphics[width=0.7\linewidth]{img/Figure21}
 \end{minipage}
 
-\question{Proposer une solution d'assemblage par vis du système suivant. Une des deux pièces doit être taraudée, il n'est pas permis d'utiliser d'écrou. Représenter la réponse sur la vue en coup du document réponse \og Mécanisme de HOEKEN \fg.}
+\question{Proposer une solution d'assemblage par vis du système suivant. Une des deux pièces doit être taraudée, il n'est pas permis d'utiliser d'écrou. Représenter la réponse sur la vue en coupe du document réponse \og Mécanisme de HOEKEN \fg.}
 
 \begin{center}
 \huge{-- FIN --}
@@ -466,9 +466,18 @@ L'assemblage du mécanisme de HOEKEN doit être démontable. Pour cela on demand
 
 \section{Document réponse}
 
-\reponse{10}{}{$L_2=\sqrt{(L_0+L_1.cos(\theta_1)-L_2.cos(\theta_3))^2+L_1.sin(\theta_1)-L_2.sin(\theta_3))^2}$.}
+\ifdef{\public}{
+\begin{tikzpicture} 
+	\draw (0,0) rectangle (2,2);
+	\draw (0,0) -- (2,2);
+	\draw (1.5,0.5) node {\large 20};
+	\draw (2.5,0) rectangle (16,2);
+	\draw (4.2,1.7) node {\large Commentaires:};
+\end{tikzpicture}\\} 
 
-\reponse{8}{}{$\overrightarrow{AE}=L_0.\overrightarrow{x_0}+L_1.\overrightarrow{x_1}-2.L_2.\overrightarrow{x_3}=\left(\begin{array}{c} L_0+L_1.cos(\theta_1)-2.L_2.cos(\theta_3) \\ L_1.sin(\theta_1)-2.L_2.sin(\theta_3) \\ 0
+\reponse{9}{}{$L_2=\sqrt{(L_0+L_1.cos(\theta_1)-L_2.cos(\theta_3))^2+(L_1.sin(\theta_1)-L_2.sin(\theta_3))^2}$.}
+
+\reponse{7}{}{$\overrightarrow{AE}=L_0.\overrightarrow{x_0}+L_1.\overrightarrow{x_1}-2.L_2.\overrightarrow{x_3}=\left(\begin{array}{c} L_0+L_1.cos(\theta_1)-2.L_2.cos(\theta_3) \\ L_1.sin(\theta_1)-2.L_2.sin(\theta_3) \\ 0
 \end{array}\right)$}
 
 \ifdef{\public}{\newpage}
@@ -515,11 +524,11 @@ Pour faire le calcul il suffit de déplacer les torseurs de $1\rightarrow 3$ et 
 
 Ainsi, $N_{B,Op3}=-L_2.(cos\theta_3.Y_{31}-sin\theta_3.X_{31})$ et $N_{B,Op3}=L_2.F.sin\theta_3$.
 
-On obtient alors pour l'isolement de 3 et par application du théorème du moment $-L_2.(cos\theta_3.Y_{31}-sin\theta_3.X_{31})+L_2.F.sin\theta_3=0$, donc $sin\theta_3.X_{31})+F.sin\theta_3-cos\theta_3.Y_{31}=0$
+On obtient alors pour l'isolement de 3 et par application du théorème du moment $-L_2.(cos\theta_3.Y_{31}-sin\theta_3.X_{31})+L_2.F.sin\theta_3=0$, donc $sin\theta_3.X_{31}+F.sin\theta_3-cos\theta_3.Y_{31}=0$
 
 \noindent Résultante statique
 
-Ainsi, $Y_{13}=sin\theta_2.X_{31}-cos\theta_2.Y_{31}$ et $N_{Op3}=-F.sin\theta_2$.
+Ainsi, $Y_{13}=sin\theta_2.X_{31}-cos\theta_2.Y_{31}$.
 
 On obtient alors pour l'isolement de 3 et par application du théorème de la résultante $-F.sin\theta_2+sin\theta_2.X_{31}-cos\theta_2.Y_{31}=0$
 }
@@ -595,10 +604,13 @@ Finalement $\left\{V(3/0)\right\}=\left\{\begin{array}{c}\overrightarrow{\Omega(
 \reponse{10}{}{
 $\overrightarrow{V(C,3/0)}=\overrightarrow{V(C,3/2)}+\overrightarrow{V(C,2/1)}+\overrightarrow{V(C,1/0)}=\overrightarrow{CB}\wedge \overrightarrow{\Omega(2/1)}+\overrightarrow{CA}\wedge \overrightarrow{\Omega(1/0)}$
 
-$\overrightarrow{V(C,3/0)}=-L_2.(cos(\theta_2).\overrightarrow{x_0}+sin(\theta_2).\overrightarrow{y_0})\wedge \dot{\theta_1}.\overrightarrow{z_2}-(L_2.(cos(\theta_2).\overrightarrow{x_0}+sin(\theta_2).\overrightarrow{y_0})+L_1.(cos(\theta_1).\overrightarrow{x_0}+sin(\theta_1).\overrightarrow{y_0}))\wedge \dot{\theta_1}.\overrightarrow{z_1}$
+$\overrightarrow{V(C,3/0)}=-L_2.(cos(\theta_2).\overrightarrow{x_0}+sin(\theta_2).\overrightarrow{y_0})\wedge \dot{\theta_2}.\overrightarrow{z_0}-(L_2.(cos(\theta_2).\overrightarrow{x_0}+sin(\theta_2).\overrightarrow{y_0})+L_1.(cos(\theta_1).\overrightarrow{x_0}+sin(\theta_1).\overrightarrow{y_0}))\wedge \dot{\theta_1}.\overrightarrow{z_1}$
 
-$\left\{\begin{array}{l} L_2.\dot{\theta_2}.cos(\theta_2)+L_2.\dot{\theta_1}.sin(\theta_2)-L_1.\dot{\theta_1}.sin(\theta_1)=0 \\ V_c=-L_2.\dot{\theta_2}.sin(\theta_2)-L_2.\dot{\theta_1}.cos(\theta_2)+L_1.\dot{\theta_1}.cos(\theta_1)
-\end{array}\right.$}
+$\left\{\begin{array}{l} L_2.\dot{\theta_2}.sin(\theta_2)+L_2.\dot{\theta_1}.sin(\theta_2)+L_1.\dot{\theta_1}.sin(\theta_1)=0 \\ V_c=L_2.\dot{\theta_2}.cos(\theta_2)+L_2.\dot{\theta_1}.cos(\theta_2)+L_1.\dot{\theta_1}.cos(\theta_1)
+\end{array}\right.$
+
+Donc,
+$V_c=-\left(cos\theta_1+\frac{sin\theta_1}{tan\theta_2}\right).L_1.\dot{\theta_1}$}
 
 \reponse{10}{}{Transformée de Laplace
 
@@ -606,22 +618,16 @@ $\left[\left(M_3+I_1.\alpha^2\right).p^2+f.\alpha^2.p\right]X_s(p)=C_m(p).\alpha
 
 $H(p)=\dfrac{\dfrac{1}{f.\alpha}}{p.\left(\dfrac{(M_3+I_1\alpha^2)}{f.\alpha^2}.p+1 \right)}$
 
-A.N: $H(p)=\dfrac{20,8}{p.(0,1.p+1)}$}
+A.N: $H(p)=\dfrac{-20,8}{p.(0,1.p+1)}$}
 
 \reponse{9}{}{
 ~\ \\
 
-\begin{minipage}{0.65\linewidth}
 Il faut considérer la figure, et la fin de la phase d'insertion. Compte-tenu de ce qui est demandé (relation linéaire), on va retenir la phase entre les instants $t_1$ et $t_2$ sur l'extrait de la figure ci-contre. \\
 Durant cette phase, les grandeurs $f_e$ et $x_e$ ont toutes deux une évolution linéaire. De plus $x_e=0$ quand $f_e=0$.
 
-$k_e=\dfrac{0,5-0,05}{0,028-0,02}=56N.m^{-1}$
-\end{minipage}\hfill
-\begin{minipage}{0.3\linewidth}
-\begin{center}
- \includegraphics[width=0.4\linewidth]{img/extrait}
-\end{center}
-\end{minipage}}
+$k_e=\dfrac{0,5}{0,03}=16,6N.m^{-1}$
+}
 
 \reponse{9}{}{
 
@@ -639,7 +645,7 @@ En remplaçant par les valeurs numériques de déplacement, et $\omega=2.\pi.f=\
 
 On identifie $A=5mm$ et $f=\dfrac{1}{T}=0.24Hz$.
 
-Finalement, $f_e(t)=k_e\times x_e(t)=0.28.\left[-1+sin\left(2.\pi.\dfrac{t}{4,25}+\phi\right)\right]$}
+Finalement, $f_e(t)=k_e\times x_e(t)=\left[-1+sin\left(2.\pi.\dfrac{t}{4,25}+\phi\right)\right]$}
 
 \reponse{6}{}{
 

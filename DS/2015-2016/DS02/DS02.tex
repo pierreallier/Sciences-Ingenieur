@@ -273,7 +273,7 @@ Trois réponses ont été tracées, et l'une d'entre elles correspond à la fonc
 \end{minipage}\hfill
 
 
-\paragraph{Question 17:} Déterminer à quel tracé correspond la fonction de transfert de la question 16 et déterminer la valeur de l'échelon qui lui a été appliqué en entrée.
+\paragraph{Question 17:} Déterminer à quel tracé correspond la fonction de transfert de la question précédente et déterminer la valeur de l'échelon qui lui a été appliqué en entrée.
 
 
 \paragraph{Question 18:} En vous aidant des abaques des figures suivantes, vérifier les exigences \og stabilité \fg (uniquement l'amortissement), \og rapidité \fg et \og précision \fg (uniquement l'erreur statique).
@@ -293,7 +293,7 @@ L'assemblage du mécanisme de HOEKEN doit être démontable. Pour cela on demand
 	\includegraphics[width=0.7\linewidth]{img/Figure21}
 \end{minipage}
 
-\paragraph{Question 19:} Proposer une solution d'assemblage par vis du système suivant. Une des deux pièces doit être taraudée, il n'est pas permis d'utiliser d'écrou. Représenter la réponse sur la vue en coup du document réponse \og Mécanisme de HOEKEN \fg.
+\paragraph{Question 19:} Proposer une solution d'assemblage par vis du système suivant. Une des deux pièces doit être taraudée, il n'est pas permis d'utiliser d'écrou. Représenter la réponse sur la vue en coupe du document réponse \og Mécanisme de HOEKEN \fg.
 
 
 \begin{center}
@@ -313,7 +313,7 @@ FIN DU SUJET
 
 \pagestyle{correction}\setcounter{section}{0}
 
-\paragraph{Question 1:} $L_2=\sqrt{(L_0+L_1.cos(\theta_1)-L_2.cos(\theta_3))^2+L_1.sin(\theta_1)-L_2.sin(\theta_3))^2}$.
+\paragraph{Question 1:} $L_2=\sqrt{(L_0+L_1.cos(\theta_1)-L_2.cos(\theta_3))^2+(L_1.sin(\theta_1)-L_2.sin(\theta_3))^2}$.
 
 \paragraph{Question 2:} $\overrightarrow{AE}=L_0.\overrightarrow{x_0}+L_1.\overrightarrow{x_1}-2.L_2.\overrightarrow{x_3}=\left(\begin{array}{c} L_0+L_1.cos(\theta_1)-2.L_2.cos(\theta_3) \\ L_1.sin(\theta_1)-2.L_2.sin(\theta_3) \\ 0
 \end{array}\right)$
@@ -376,10 +376,13 @@ Finalement $\left\{V(3/0)\right\}=\left\{\begin{array}{c}\overrightarrow{\Omega(
 
 \paragraph{Question 8:} $\overrightarrow{V(C,3/0)}=\overrightarrow{V(C,3/2)}+\overrightarrow{V(C,2/1)}+\overrightarrow{V(C,1/0)}=\overrightarrow{CB}\wedge \overrightarrow{\Omega(2/1)}+\overrightarrow{CA}\wedge \overrightarrow{\Omega(1/0)}$
 
-$\overrightarrow{V(C,3/0)}=-L_2.(cos(\theta_2).\overrightarrow{x_0}+sin(\theta_2).\overrightarrow{y_0})\wedge \dot{\theta_1}.\overrightarrow{z_2}-(L_2.(cos(\theta_2).\overrightarrow{x_0}+sin(\theta_2).\overrightarrow{y_0})+L_1.(cos(\theta_1).\overrightarrow{x_0}+sin(\theta_1).\overrightarrow{y_0}))\wedge \dot{\theta_1}.\overrightarrow{z_1}$
+$\overrightarrow{V(C,3/0)}=-L_2.(cos(\theta_2).\overrightarrow{x_0}+sin(\theta_2).\overrightarrow{y_0})\wedge \dot{\theta_2}.\overrightarrow{z_0}-(L_2.(cos(\theta_2).\overrightarrow{x_0}+sin(\theta_2).\overrightarrow{y_0})+L_1.(cos(\theta_1).\overrightarrow{x_0}+sin(\theta_1).\overrightarrow{y_0}))\wedge \dot{\theta_1}.\overrightarrow{z_1}$
 
-$\left\{\begin{array}{l} L_2.\dot{\theta_2}.cos(\theta_2)+L_2.\dot{\theta_1}.sin(\theta_2)-L_1.\dot{\theta_1}.sin(\theta_1)=0 \\ V_c=-L_2.\dot{\theta_2}.sin(\theta_2)-L_2.\dot{\theta_1}.cos(\theta_2)+L_1.\dot{\theta_1}.cos(\theta_1)
+$\left\{\begin{array}{l} L_2.\dot{\theta_2}.sin(\theta_2)+L_2.\dot{\theta_1}.sin(\theta_2)+L_1.\dot{\theta_1}.sin(\theta_1)=0 \\ V_c=L_2.\dot{\theta_2}.cos(\theta_2)+L_2.\dot{\theta_1}.cos(\theta_2)+L_1.\dot{\theta_1}.cos(\theta_1)
 \end{array}\right.$
+
+Donc,
+$V_c=-\left(cos\theta_1+\frac{sin\theta_1}{tan\theta_2}\right).L_1.\dot{\theta_1}$
 
 \paragraph{Question 9:} Transformée de Laplace
 
@@ -387,21 +390,15 @@ $\left[\left(M_3+I_1.\alpha^2\right).p^2+f.\alpha^2.p\right]X_s(p)=C_m(p).\alpha
 
 $H(p)=\dfrac{\dfrac{1}{f.\alpha}}{p.\left(\dfrac{(M_3+I_1\alpha^2)}{f.\alpha^2}.p+1 \right)}$
 
-A.N: $H(p)=\dfrac{20,8}{p.(0,1.p+1)}$
+A.N: $H(p)=\dfrac{-20,8}{p.(0,1.p+1)}$
 
 \paragraph{Question 10:} ~\ \\
 
-\begin{minipage}{0.65\linewidth}
 Il faut considérer la figure, et la fin de la phase d'insertion. Compte-tenu de ce qui est demandé (relation linéaire), on va retenir la phase entre les instants $t_1$ et $t_2$ sur l'extrait de la figure ci-contre. \\
 Durant cette phase, les grandeurs $f_e$ et $x_e$ ont toutes deux une évolution linéaire. De plus $x_e=0$ quand $f_e=0$.
 
-$k_e=\dfrac{0,5-0,05}{0,028-0,02}=56N.m^{-1}$
-\end{minipage}\hfill
-\begin{minipage}{0.3\linewidth}
-\begin{center}
- \includegraphics[width=0.4\linewidth]{img/extrait}
-\end{center}
-\end{minipage}
+$k_e=\dfrac{0,5}{0,03}=16,6N.m^{-1}$
+
 
 
 \paragraph{Question 11:}
@@ -420,7 +417,7 @@ En remplaçant par les valeurs numériques de déplacement, et $\omega=2.\pi.f=\
 
 On identifie $A=5mm$ et $f=\dfrac{1}{T}=0.24Hz$.
 
-Finalement, $f_e(t)=k_e\times x_e(t)=0.28.\left[-1+sin\left(2.\pi.\dfrac{t}{4,25}+\phi\right)\right]$
+Finalement, $f_e(t)=k_e\times x_e(t)=\left[-1+sin\left(2.\pi.\dfrac{t}{4,25}+\phi\right)\right]$
 
 \paragraph{Question 12:}
 
