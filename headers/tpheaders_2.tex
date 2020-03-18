@@ -344,7 +344,7 @@ Procédure :
  \item Lancer Matlab \includegraphics[width=80pt]{../../img/matlabsimscape/matlab}
  \item Depuis Matlab, naviguer \includegraphics[width=80pt]{../../img/matlabsimscape/matlab_01} dans le dossier dézippé jusqu'au dossier contenant les fichiers \og .slx \fg\ et \og Simscape \fg,\\
   \begin{center}
-  \includegraphics[width=0.4\linewidth]{../../img/matlabsimscape/matlab_02}
+  \includegraphics[width=0.3\linewidth]{../../img/matlabsimscape/matlab_02}
   \end{center}
  \item Faire un clic-droit sur le dossier \og Simscape \fg\ et cliquer sur \og Add to Path \fg,\\
   \begin{center}
@@ -354,7 +354,8 @@ Procédure :
   \begin{center}
   \includegraphics[width=0.4\linewidth]{../../img/matlabsimscape/matlab_04}
   \end{center}
- \item Afin d'exporter des données, il est nécessaire d'insérer un bloc \textbf{To File} disponible dans la section \textif{Sinks} et de le connecter à la donnée à extraire. Cela a pour effet de créer un fichier \textit{fichier.mat},
+ \item Afin d'exporter des données, il est nécessaire d'insérer un bloc \textbf{To File} disponible dans la section \textif{Sinks} et de le connecter à la donnée à extraire,
+ \item Double-cliquer dessus afin de modifier le paramètre \textif{Save format} en \textbf{Array}. Cela a pour effet de créer un fichier \textit{fichier.mat},
  \item Celui-ci peut être convertit en fichier \textit{fichier.csv} en utilisant les commandes suivantes:
 \verb?FileData = load('fichier.mat');
 
