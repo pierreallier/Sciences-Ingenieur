@@ -318,6 +318,12 @@ Procédure :
   \begin{center}
   \includegraphics[width=0.4\linewidth]{../../../img/matlabsimscape/matlab_04}
   \end{center}
+ \item Afin d'exporter des données, il est nécessaire d'insérer un bloc \textbf{To File} disponible dans la section \textif{Sinks} et de le connecter à la donnée à extaire,
+ \item Cela a por effet de créer un fichier \textit{.mat}, qui peut être convertit en fichier \textit{.csv} en utilisant les commandes suivantes:
+ \begin{itemize}
+  \item FileData = load('nom_du_fichier.mat');
+  \item csvwrite('nom_du_fichier.csv', FileData.ans);
+ \end{itemize}
 \end{itemize}
 }
 
