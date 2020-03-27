@@ -267,7 +267,7 @@ Préciser sur la figure suivante le(s) quadrant(s) dans le(s)quel(s) le moteur �
 \subsubsection{Analyse de l'influence du hacheur sur l'évolution du courant dans le circuit}
 
 Quels que soient les résultats obtenus précédemment, on considère pour la suite le hacheur réversible en
-tension. Dans le cas ù cette architecture ne serait pas compatible avec tous les modes de fonctionnement
+tension. Dans le cas où cette architecture ne serait pas compatible avec tous les modes de fonctionnement
 des moteurs, un hacheur réversible en courant et tension serait adopté. Ces deux architectures ayant le même
 impact sur la forme du courant dans le circuit au cours du temps, on se contente ici d'analyser le comportement
 du circuit avec un hacheur réversible en tension.
@@ -473,9 +473,9 @@ $i(t)=\frac{U_{alim}-e_m}{R}.(1-e^{-\frac{t}{\tau_e}})+i_0.e^{-\frac{t}{\tau_e}}
 
 En faisant un développement limité et en prenant t proche de 0, on obtient:
 
-$i(t)=\frac{U_{alim}-e_m}{L}.t+i_0$
+$i(t)=\frac{U_{alim}-e_m}{L}.t+i_0.(1-\frac{t}{\tau_e})$
 
-Et si $t=\alpha.T$, $i(\alpha.T)=\frac{U_{alim}-e_m}{L}.\alpha.T+i_0$.
+Et si $t=\alpha.T$ et $T<<\tau_e$, $i(\alpha.T)=\frac{U_{alim}-e_m}{L}.\alpha.T+i_0$.
 
 \begin{center}
  \includegraphics[width=0.3\linewidth]{img/td02_17}
