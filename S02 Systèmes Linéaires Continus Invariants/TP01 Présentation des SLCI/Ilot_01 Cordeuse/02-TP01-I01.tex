@@ -1,7 +1,19 @@
 \newcommand{\sortie}{la tension de la corde $Fc(t)$ (N)}
-\newcommand{\entree}{la tension en entrée du moteur $u(t)$ (V)}
-\newcommand{\systequations}{$J.\dfrac{d \omega_m(t)}{dt}=C_m(t)-r.R_p.F_c(t)$}
+\newcommand{\entree}{la tension en entrée du moteur $u_m(t)$ (V)}
+\newcommand{\systequations}{\item $J.\dfrac{d \omega_m(t)}{dt}=C_m(t)-r.R_p.F_c(t)$}
 \newcommand{\grandeurs}{\item la vitesse de rotation du moteur $\omega_m(t)$,
 \item la vitesse de déplacement du charriot $v_c(t)$,
-\item l'allongement de la corde $\delta_c(t)$.}
+\item la position du charriot $x_c(t)$,
+\item l'allongement de la corde $\delta_c(t)$,
+\item \sortie.}
 \newcommand{\fonctiontransfert}{$H(p)=\dfrac{F_c(p)}{U_m(p)}$}
+
+\newcommand{\correction}{\newpage
+
+\pagestyle{correction}\setcounter{section}{0}
+
+Modélisation
+\begin{center}
+$H(p)=\dfrac{F_c(p)}{U_m(p)}=\dfrac{\dfrac{K_m}{R_m.R_p.r}}{1+\dfrac{K_e.K_m}{R_m.K_c.R_p^2.r^2}.p+\dfrac{R_m.J}{R_m.K_c.R_p^2.r^2}.p^2}$
+\end{center}}
+

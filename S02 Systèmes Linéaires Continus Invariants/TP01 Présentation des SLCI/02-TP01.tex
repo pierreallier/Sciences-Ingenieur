@@ -26,66 +26,53 @@ La démarche de l’ingénieur permet :
 
 \newpage
 
-
-\ifdef{\public}{\cleardoublepage}{}
-
 \section{Modéliser la chaîne d'énergie du système en Boucle Ouverte}
 
 Nous allons dans cette partie chercher à déterminer la fonction de transfert qui lie \entree et \sortie.
 
 On donnera le système d'équations suivants: \\
-\systequations
+\begin{itemize}
+ \systequations
+\end{itemize}~\
 
-Les caractéristiques du système sont données sur le SITE INTERNET. Si les valeurs numériques de certaines grandeurs ne sont pas données, c'est qu'elles seront négligées par la suite.
+Les caractéristiques du système sont données sur la page \urlsysteme. Si les valeurs numériques de certaines grandeurs ne sont pas données, c'est qu'elles seront négligées par la suite.
 
-\paragraph{Question 1:} Donner l'ensemble des équations temporelles permettant de modéliser un moteur à courant continu.
+\question{Donner l'ensemble des équations temporelles permettant de modéliser un moteur à courant continu.}
 
-\paragraph{Question 2:} Déterminer les équation qui lient les paramètres suivants:
+~\
+
+\textbf{La question suivante est la plus complexe et la plus importante du TP.} Pour y répondre, il faudra fouiller dans le logiciel de pilotage du système, proposer des mesures à réaliser sur le système,... et proposer à votre enseignant des idées sur la démarche à suivre.
+
+\question{Déterminer les équation qui lient les paramètres suivants:
 \begin{itemize}
  \grandeurs
-\end{itemize}
+\end{itemize}}
 
-\paragraph{Question 3:} Passer ces équations dans le domaine de Laplace.
+\section{Résolution des équations du modèle}
 
-\paragraph{Question 8:} Mettre le système sous la forme de la fonction de transfert suivante: \fonctiontransfert. Donner les caractéristiques de cette fonction de transfert et vérifier l'homogénéité des constantes déterminées.
+\question{Passer ces équations dans le domaine de Laplace.}
 
-\titleres{Simulation du comportement du modèle}
+\question{Mettre le système sous la forme de la fonction de transfert suivante: \fonctiontransfert. }
 
-Le logiciel \textbf{Scilab} permet de tracer la réponse temporelle d'une fonction de transfert donnée.
-
-Pour cela, il suffit de lancer le logiciel et d'aller dans le module \textbf{Xcos}.
-
-Dans le dossier \textbf{CPGE} du navigateur de palettes, vous trouverez, par exemple:
-\begin{itemize}
- \item une \textit{entrée}: STEP\_FUNCTION,
- \item un \textit{Opérateur linéaire}: CLR, vous modifierez sa fonction de transfert afin d'obtenir ce que vous souhaitez observer,
- \item une \textit{sortie}: SCOPE,
- \item un \textit{outil d'analyse}: REP\_TEMP.
-\end{itemize}
+\question{Donner les caractéristiques de cette fonction de transfert et vérifier l'homogénéité des constantes déterminées.}
 
 ~\
 
-Faire glisser ces blocs sur une page vierge du module xcos et cliquer sur la flèche permettant de lancer la simulation.
+Afin de tracer les réponses temporelles, il est possible d'utiliser un script python téléchargeable 
+\href{https://github.com/Costadoat/Sciences-Ingenieur/raw/master/S02\%20Systèmes\%20Linéaires\%20Continus\%20Invariants/C01\%20Présentation\%20des\%20SLCI/02-C01.py}{ici}.
 
-\paragraph{Question 9:} Effectuer le tracé de la fonction de transfert vue en TD afin d'apprendre à maitriser l'outil Scilab.
+\section{Expérimentation sur le système réel}
 
-\paragraph{Question 10:} Modifier la fonction de transfert afin d'y insérer celle modélisée dans la section modélisation.
+Mettre en \oe uvre le système, et préparer la prise de mesure. 
 
-\paragraph{Question 11:} Critiquer les résultats obtenus et analyser le lien entre les tracés obtenus par simulation et ceux obtenus durant l'expérimentation.
+\question{Après avoir analysé le logiciel d'expérimentation, déterminer quelles grandeurs peuvent être utilisées en entrée. Est-ce que \entree en fait partie ?}
 
-~\
+\question{Relever les tracés des réponses temporelles de \entree et de \sortie.}
 
-L'ensemble des réponses que vous aurez donné dans cette partie devra être utilisé afin de compléter le document de présentation. Les diapositives pourront être agrémentées comme vous le souhaitez.
+\question{En mettant en parallèle les tracés issus de la modélisation et ceux issus de l'expérimentation, conclure quand à la validation du modèle utilisé.}
 
 \ifdef{\public}{\end{document}}{}
 
-\newpage
-
-\pagestyle{correction}\setcounter{section}{0}
-
-Modélisation
-\begin{center}
-$H(p)=\dfrac{F_c(p)}{U_m(p)}=\dfrac{\dfrac{K_m}{R_m.R_p.r}}{1+\dfrac{K_e.K_m}{R_m.K_c.R_p^2.r^2}.p+\dfrac{R_m.J}{R_m.K_c.R_p^2.r^2}.p^2}$
-\end{center}
+\correction
 
 \end{document}

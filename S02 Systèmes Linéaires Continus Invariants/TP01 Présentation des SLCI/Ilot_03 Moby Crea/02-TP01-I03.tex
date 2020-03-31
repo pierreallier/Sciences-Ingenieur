@@ -1,117 +1,15 @@
-\input{../../../headers/tpheaders.tex}
+\newcommand{\sortie}{la vitesse de rotation de la manivelle $\Omega_v(t)$ ($rad.s^{-1}$)}
+\newcommand{\entree}{la tension en entrée du moteur $u_m(t)$ (V)}
+\newcommand{\systequations}{\item $J.\dfrac{d \omega_m(t)}{dt}=C_m(t)$}
+\newcommand{\grandeurs}{\item la vitesse de rotation du moteur $\omega_m(t)$,
+\item \sortie.}
+\newcommand{\fonctiontransfert}{$H(p)=\dfrac{\Omega_v(p)}{U_m(p)}$}
 
-\ifdef{\public}{\cleardoublepage}{\newpage}
-
-\prob{Modéliser un Système Linéaire Continu et Invariant} 
-
-\titleexp{Effectuer la mesure d'un déplacement horizontal du berceau du MobyCrea} 
-
-La procédure suivante permet de mettre en \oe uvre et de mesurer les conséquences de l'asservissement du berceau automatique Mobycrea.
-L'étude portera sur la régulation de vitesse sur l'axe horizontal du Mobycrea.
-
-\begin{center}
- \includegraphics[width=0.8\linewidth]{img/img1}
-\end{center}
-
-Dans la suite de l'étude, la commande du moteur va être complètement prise en charge par l'application Labview \og asservissement\_hor\_MobyCREA \fg. Cette application va envoyer la consigne de vitesse au moteur et sera informée en retour de la vitesse réelle mesurée par le capteur.
-\begin{enumerate}
- \item Lancer l'application \og asservissement\_hor\_MobyCREA \fg et mettre le mode PID,
- \item Appliquer différentes consignes de vitesses de 1 à 4 et observez la vitesse mesurée en sortie. 
-\end{enumerate} 
-
-\begin{center}
- \includegraphics[width=0.8\linewidth]{img/img3}
-\end{center}
-
-\paragraph{Question 1:} Comparez les vitesses attendues et les vitesses mesurées. Que constatez-vous ? Représentez la courbe obtenue sur un graphe sur lequel vous ferez apparaître la consigne échelon, l'écart statique et le temps de réponse à 5\%.
-
-Effectuez une nouvelle mesure en intégrant une perturbation, comme indiqué ci-dessous :
-\begin{itemize}
- \item Placez le curseur sur la position 3 et observez la vitesse, vous relèverez la vitesse obtenue, la tension d'alimentation du moteur et le courant consommé,
- \item Appliquez alors un léger effort résistant au siège avec votre doigt pendant le déplacement sans le bloquer (application d'une perturbation).
-\end{itemize}
-
-\paragraph{Question 2:} Observez l'évolution des signaux et justifiez l'évolution des différentes grandeurs. Réaliser le même graphe que précédemment et donner ses caractéristiques. Conclure quant à l'aptitude d'une telle commande en mode PID.
-
-
-~\
-
-L'ensemble des réponses que vous aurez donné dans cette partie devra être utilisé afin de compléter le document de présentation. Les diapositives pourront être agrémentées comme vous le souhaitez.
-
-\ifdef{\public}{\cleardoublepage}{\newpage}
-
-\titlemod{Modélisation de la chaine d'énergie du système}
-
-\begin{center}
- \includegraphics[width=0.8\linewidth]{img/img2}
-\end{center}
-
-La chaine d'énergie du mouvement horizontal est représentée ci-dessus, le moteur est alimenté par un commutateur (transistor), qui reçoit les consignes de la chaîne d'information. Le moteur entraine le siège en translation par l'intermédiaire du réducteur de vitesse et du système bielle manivelle.
-
-~\
-
-Caractéristiques du système:
-\begin{tabular}{|c|c|}
-\hline
-$K_m$ & $22.10^{-3}N.m.A^{-1}$ \\
-\hline
-$R_m$ & $11,2\Omega$ \\
-\hline
-$L_m$ & négligée \\
-\hline
-$J$ & $4,16.10^{-6}kg.m^2$ \\
-\hline
-\end{tabular}
-
-~\
-
-\paragraph{Question 4:} Donner l'ensemble des équations temporelles permettant de modéliser un moteur à courant continu (on ne prendra pas en compte l'inductance interne)
-
-Passer ces équations dans le domaine de Laplace.
-
-\paragraph{Question 5:} Déterminer la fonction de transfert $H(p)=\dfrac{\Omega(p)}{U_m(p)}$. Donner les caractéristiques de cette fonction de transfert et vérifier l'homogénéité des constantes déterminées.
-
-~\
-
-L'ensemble des réponses que vous aurez donné dans cette partie devra être utilisé afin de compléter le document de présentation. Les diapositives pourront être agrémentées comme vous le souhaitez.
-
-\ifdef{\public}{\cleardoublepage}{\newpage}
-
-\titleres{Simulation du comportement du modèle}
-
-Le logiciel \textbf{Scilab} permet de tracer la réponse temporelle d'une fonction de transfert donnée.
-
-Pour cela, il suffit de lancer le logiciel et d'aller dans le module \textbf{Xcos}.
-
-Dans le dossier \textbf{CPGE} du navigateur de palettes, vous trouverez, par exemple:
-\begin{itemize}
- \item une \textit{entrée}: STEP\_FUNCTION,
- \item un \textit{Opérateur linéaire}: CLR, vous modifierez sa fonction de transfert afin d'obtenir ce que vous souhaitez observer,
- \item une \textit{sortie}: SCOPE,
- \item un \textit{outil d'analyse}: REP\_TEMP.
-\end{itemize}
-
-Faire glisser ces blocs sur une page vierge du module xcos et cliquer sur la flèche permettant de lancer la simulation.
-
-\paragraph{Question 6:} Effectuer le tracé de la fonction de transfert vue en TD afin d'apprendre à maitriser l'outil Scilab.
-
-\paragraph{Question 7:} Modifier la fonction de transfert afin d'y insérer celle modélisée durant la modélisation.
-
-\paragraph{Question 8:} Critiquer les résultats obtenus et analyser le lien entre les tracés obtenus par simulation et ceux obtenus durant l'expérimentation.
-
-~\
-
-L'ensemble des réponses que vous aurez donné dans cette partie devra être utilisé afin de compléter le document de présentation. Les diapositives pourront être agrémentées comme vous le souhaitez.
-
-\ifdef{\public}{\end{document}}{}
-
-\newpage
+\newcommand{\correction}{\newpage
 
 \pagestyle{correction}\setcounter{section}{0}
 
-Modélisation
+Modélisation																																																																																		
 \begin{center}
-$H(p)=\dfrac{X_e(p)}{U_m(p)}=\dfrac{\dfrac{pas}{2.\pi.K_e}}{p.\left(1+\dfrac{R.J}{K_m.K_e}.p+\dfrac{L.J}{K_m.K_e}.p^2\right)}$
-\end{center}
-
-\end{document}
+$H(p)=\dfrac{\Omega_v(p)}{U_m(p)}=\dfrac{\dfrac{K_{red}}{K_e}}{p.\left(1+\dfrac{R.J}{K_m.K_e}.p+\dfrac{L.J}{K_m.K_e}.p^2\right)}$
+\end{center}}
