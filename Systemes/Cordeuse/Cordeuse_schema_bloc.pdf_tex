@@ -53,6 +53,6 @@
   \begin{picture}(1,0.14814205)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{schema_bloc.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Cordeuse_schema_bloc.pdf}}%
   \end{picture}%
 \endgroup%

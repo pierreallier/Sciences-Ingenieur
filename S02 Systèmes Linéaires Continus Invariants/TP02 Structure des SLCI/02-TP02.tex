@@ -1,6 +1,5 @@
 \input{../../headers/tpheaders_2.tex}
-%\input{"\dossierilot/\sequence-\type\num-I\ilotstr.tex"}
-\input{"Ilot_01 Cordeuse/02-TP02-I01.tex"}
+\input{"\dossierilot/\sequence-\type\num-I\ilotstr.tex"}
 
 
 \prob{Modéliser un Système Linéaire Continu et Invariant} \\
@@ -26,11 +25,11 @@ La démarche de l’ingénieur permet :
 
 \newpage
 
-\section{Modéliser un Système Linéaire Continu et Invariant à l'aide d'un schéma bloc} 
+\section{Modélisation d'un S.L.C.I. à l'aide d'un schéma bloc} 
 
 \titleexp{Identifier les blocs sur le système}
 
-L'objectif de ce TP est de modéliser la cordeuse par le schéma blocs suivant.
+L'objectif de ce TP est de modéliser le système par le schéma blocs suivant.
 
 \graphicspath{{"../../Systemes/\systemes/"}}
 
@@ -43,48 +42,34 @@ L'objectif de cette première partie va être de déterminer les fonctions de tr
 
 ~\
 
-\textit{Fonction de transfert du capteur d'effort dans le ressort}
+\question{Déterminer si c'est possible à quels sous-systèmes \dusysteme les blocs vides correspondent.}
 
-La mesure de l'effort dans la corde utilisée pour son asservissement s'effectue grâce à un capteur de déplacement en translation qui 
-mesure la déformation d'un ressort.
+Les grandeurs suivantes circulent en entrée ou en sortie de certains blocs du schéma:
+\begin{itemize}
+ \lesgrandeurs
+\end{itemize}
+\textbf{Les deux questions suivantes sont parmi les plus complexes et les plus importantes du TP.} Pour y répondre, il faudra fouiller dans le logiciel de pilotage du système, proposer des mesures à réaliser sur le système,... et proposer à votre enseignant des idées sur la démarche à suivre.
 
-En effet:
-\begin{enumerate}
- \item le ressort situé dans la chaîne de transmission entre le moteur et le chariot reçoit environ le même effort que la tension de la corde,
- \item cet effort génère une déformation proportionnelle en fonction de la raideur de ce ressort,
- \item ce déplacement est mesuré par un capteur potentiométrique (alimenté en 5V).
-\end{enumerate}
+\question{Placer ces grandeurs sur le schéma bloc.}
 
-\paragraph{Question 1:} Déterminer expérimentalement la loi proportionnelle qui lie la déformation du ressort $\delta(t)$ et la variation de la résistance $R(t)$ en $\Omega$ du capteur potentiométrique.
+\question{Déterminer les relations temporelles qui existent entre ces grandeurs.}
 
-\paragraph{Question 2:} Le capteur agit comme un pont diviseur de tension. Cela signifie que $M_m(t)=\dfrac{R(t)}{R_{total}}.V_{cc}$ avec $V_{cc}=5V$. La résistance $R_{total}$ étant la résistance maximale du capteur potentiométrique.
+\question{En déduire les fonctions de transfert qui correspondent aux blocs vides.}
 
-\paragraph{Question 3:} Déterminer expérimentalement la raideur du ressort qui lie l'effort dans le ressort $F(t)$ et la déformation du ressort $\delta(t)$.
 
-\paragraph{Question 4:} Traduire ces équations dans le domaine de Laplace afin de déterminer la fonction de transfert du capteur $\dfrac{M_m(p)}{F_c(p)}$. L'effort de compression du ressort $F(t)$ sera considéré comme égal à celui de tension de la corde $Fc(t)$. En déduire, la valeur de $K_c$ et celle de $K_b$.
+\section{Détermienr les fonctions de transfert globales du système.}
 
-\paragraph{Question 5:} En utilisant les résultats de la séance précédente déterminer la valeur des gains $K_1$ et $K_2$.
+L'objectif de cette partie est de déterminer le comportement du système en analysant sa structure.
 
-\paragraph{Question 6:} La valeur de $K_a$ sera dans un premier temps prise égale à 1.
-
-\ifdef{\public}{\cleardoublepage}{}
-
-\titleana{Structure de l'asservissement du système}
-
-L'objectif de cette partie est de déterminer le comportement du système en analysant la structure de l'asservissement.
 ~\
 
-\paragraph{Question 7:} Déterminer la FTBO du système $FTBO(p)$.
+\question{Déterminer la FTBO du système $FTBO(p)$.}
 
-\paragraph{Question 8:} Déterminer la FTBF du système $FTBF(p)$.
+\question{Déterminer la FTBF du système $FTBF(p)$.}
 
-\paragraph{Question 9:} Déterminer le gain de la FTBF, le temps de réponse à 5\%, et les constantes du système ($\tau$, $\xi$ et $\omega_0$) et l'écart statique.
+\question{Déterminer le gain de la FTBF, le temps de réponse à 5\%, et les constantes du système ($\tau$, $\xi$ et $\omega_0$) et l'écart statique.}
 
-\paragraph{Question 10:} Vérifier les données trouvées à la question précédente grâce au tracé du système réel.
- 
-\ifdef{\public}{\cleardoublepage}{}
-
-\titlemod{Simulation du comportement du modèle}
+\section{Simulation du comportement du modèle}
 
 Le logiciel \textbf{Scilab} permet de tracer la réponse temporelle d'une fonction de transfert donnée.
 
@@ -100,9 +85,15 @@ Dans le dossier \textbf{CPGE} du navigateur de palettes, vous trouverez, par exe
 
 Faire glisser ces blocs sur une page vierge du module xcos et cliquer sur la flèche permettant de lancer la simulation.
 
-\paragraph{Question 11:} Effectuer le tracé du schéma bloc du système sur Scilab.
+\question{Effectuer le tracé du schéma bloc du système sur Scilab.}
 
-\paragraph{Question 12:} Tracer les réponses temporelles obtenues durant les activités précédentes afin de vérifier le modèle choisi.
+\question{Tracer les réponses temporelles obtenues durant les activités précédentes afin de vérifier le modèle choisi.}
+
+\section{Relevé expérimentaux du comportement du système.}
+
+\question{Tracer les réponses temporelles de \lentree et de \lasortie.}
+
+\question{Comparer ces résultats avec les tracés issus de la simulation.}
 
 \ifdef{\public}{\end{document}}{}
 
@@ -110,9 +101,6 @@ Faire glisser ces blocs sur une page vierge du module xcos et cliquer sur la fl�
 
 \pagestyle{correction}\setcounter{section}{0}
 
-Modélisation
-\begin{center}
-$H(p)=\dfrac{F_c(p)}{U_m(p)}=\dfrac{\dfrac{K_m}{R_m.R_p.r}}{1+\dfrac{K_e.K_m}{R_m.K_c.R_p^2.r^2}.p+\dfrac{R_m.J}{R_m.K_c.R_p^2.r^2}.p^2}$
-\end{center}
+\lacorrection
 
 \end{document}

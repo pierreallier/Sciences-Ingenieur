@@ -1,95 +1,17 @@
-\input{../../../headers/tpheaders.tex}
-
-\ifdef{\public}{\cleardoublepage}{}
-
-\prob{Modéliser un Système Linéaire Continu et Invariant à l'aide d'un schéma bloc} 
-
-\titleexp{Identifier les blocs sur le système}
-
-L'objectif de ce TP est de modéliser le berceau automatique Mobycrea par le schéma blocs
-suivant : (L'étude portera sur la régulation de vitesse sur l'axe horizontal du Mobycrea).
-
-\begin{center}
- \includegraphics[width=0.95\linewidth]{img/mobycrea}
-\end{center}
-
-L'objectif de cette première partie va être de déterminer les fonctions de transfert manquantes
-dans la description du système. $Ka$ est un gain pur qui permet d'adapter le signal d'entrée. $Kc$ est
-un gain qui symbolise un correcteur. On prendra et $Kc=1$.
-
-\begin{center}
- \includegraphics[width=0.95\linewidth]{img/chaine_energie}
-\end{center}
-
-La chaine d'énergie du mouvement horizontal est représentée ci-dessus, le moteur est alimenté
-par un commutateur (transistor), qui reçoit les consignes de la chaîne d'information. Le moteur
-entraine le siège en translation par l'intermédiaire du réducteur de vitesse et du système bielle
-manivelle.
-
-\paragraph{Question 1:} Fonction de transfert du transistor : nous allons considérer qu'il se comporte comme un gain pur $Kh$. Écrire alors sa fonction de transfert $H_1(p)$.
-
-
-\paragraph{Question 2:} Fonction de transfert du moteur à courant continu : vous avez déjà déterminé la fonction de transfert du moteur à courant continu (sans la charge). Écrire la fonction de transfert $H_m(p)$.
-
-La figure suivante permet de comprendre comment on obtient la rotation de la grande roue (en rose) qui transmettra le mouvement horizontal par le biais d'une bielle (rouge).
-
-\begin{center}
- \includegraphics[width=0.95\linewidth]{img/engrenages}
-\end{center}
-
-La carte de commande est informée de la vitesse du moteur grâce à un capteur optique associé à un disque à secteurs, l'ensemble constitue un codeur incrémental. Le codeur incrémental génère des impulsions en tout ou rien (pulses) contrairement à un codeur absolu qui aurait donné la position angulaire.
-
-\paragraph{Question 3:} Fonction de transfert du système de réduction de vitesse : Déterminez le nombre d'impulsions reçues pour une rotation de la bielle (la grande roue comporte 90 dents, la petite 24 et la vis un filet, le codeur à 6 secteurs). 
-
-Par quel moyen peut-on obtenir la vitesse angulaire de la roue à partir des impulsions générées par le capteur ? Déterminer
-alors $Ke$, $Kcp$ et $Ka$.
-
-\ifdef{\public}{\cleardoublepage}{}
-
-\titleana{Structure de l'asservissement du système}
-
-L'objectif de cette partie est de déterminer le comportement du système en analysant la structure de l'asservissement.
-~\
-
-\paragraph{Question 7:} Déterminer la FTBO du système $FTBO(p)$.
-
-\paragraph{Question 8:} Déterminer la FTBF du système $FTBF(p)$.
-
-\paragraph{Question 9:} Déterminer le gain de la FTBF, le temps de réponse à 5\%, et les constantes du système ($\tau$, $\xi$ et $\omega_0$) et l'écart statique.
-
-\paragraph{Question 10:} Vérifier les données trouvées à la question précédente grâce au tracé du système réel.
- 
-\ifdef{\public}{\cleardoublepage}{}
-
-\titlemod{Simulation du comportement du modèle}
-
-Le logiciel \textbf{Scilab} permet de tracer la réponse temporelle d'une fonction de transfert donnée.
-
-Pour cela, il suffit de lancer le logiciel et d'aller dans le module \textbf{Xcos}.
-
-Dans le dossier \textbf{CPGE} du navigateur de palettes, vous trouverez, par exemple:
-\begin{itemize}
- \item une \textit{entrée}: STEP\_FUNCTION,
- \item un \textit{Opérateur linéaire}: CLR, vous modifierez sa fonction de transfert afin d'obtenir ce que vous souhaitez observer,
- \item une \textit{sortie}: SCOPE,
- \item un \textit{outil d'analyse}: REP\_TEMP.
-\end{itemize}
-
-Faire glisser ces blocs sur une page vierge du module xcos et cliquer sur la flèche permettant de lancer la simulation.
-
-\paragraph{Question 11:} Effectuer le tracé du schéma bloc du système sur Scilab.
-
-\paragraph{Question 12:} Tracer les réponses temporelles obtenues durant les activités précédentes afin de vérifier le modèle choisi.
-
-\ifdef{\public}{\end{document}}{}
-
-\newpage
-
-\pagestyle{correction}\setcounter{section}{0}
-
-Modélisation
+\newcommand{\lentree}{la consigne de vitesse de rotation de la manivelle $\omega_{sc}$ ($rad.s^{-1}$)}
+\newcommand{\lasortie}{la vitesse de rotation de la manivelle $\omega_{s}$ ($rad.s^{-1}$)}
+\newcommand{\dusysteme}{du Moby Crea}
+\newcommand{\lesgrandeurs}{\item la tension du moteur $u_m$ ($V$),
+\item la vitesse de rotation en sortie du réducteur $\omega_r$ ($rad.s^{-1}$),
+\item la vitesse de rotation du moteur $\omega_m$ ($rad.s^{-1}$),
+\item la force contre électromotrice $e$ ($V$),
+\item le couple moteur $c_m$ ($N.m$),
+\item le courant dans le moteur $i_m$ ($A$),
+\item \lentree,
+\item \lasortie.}
+\newcommand{\lacorrection}{Modélisation
 \begin{center}
 $H(p)=\dfrac{F_c(p)}{U_m(p)}=\dfrac{\dfrac{K_m}{R_m.R_p.r}}{1+\dfrac{K_e.K_m}{R_m.K_c.R_p^2.r^2}.p+\dfrac{R_m.J}{R_m.K_c.R_p^2.r^2}.p^2}$
-\end{center}
+\end{center}}
 
-\end{document}
+
