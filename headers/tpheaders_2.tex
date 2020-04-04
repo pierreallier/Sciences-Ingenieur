@@ -354,14 +354,12 @@ Procédure :
   \begin{center}
   \includegraphics[width=0.4\linewidth]{../../img/matlabsimscape/matlab_04}
   \end{center}
- \item Afin d'exporter des données, il est nécessaire d'insérer un bloc \textbf{To File} disponible dans la section \textif{Sinks} et de le connecter à la donnée à extraire,
- \item Double-cliquer dessus afin de modifier le paramètre \textif{Save format} en \textbf{Array}. Cela a pour effet de créer un fichier \textit{fichier.mat},
+ \item Afin d'exporter des données, il est nécessaire d'insérer un bloc \textbf{To File} disponible dans la section \textit{Sinks} et de le connecter à la donnée à extraire,
+ \item Double-cliquer dessus afin de modifier le paramètre \textit{Save format} en \textbf{Array}. Cela a pour effet de créer un fichier \textit{fichier.mat},
  \item Celui-ci peut être convertit en fichier \textit{fichier.csv} en utilisant les commandes suivantes:
-\verb?FileData = load('fichier.mat');
-
-\verb?csvwrite('fichier.csv', FileData.ans);
+ \texttt{FileData = load('fichier.mat');} \\
+ \texttt{csvwrite('fichier.csv', FileData.ans);}
  \end{itemize}	
-\end{itemize}
 
 \label{proceduresimscape}
 }
