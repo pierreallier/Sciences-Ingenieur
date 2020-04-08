@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'page_3.pdf' (pdf, eps, ps)
+%% Accompanies image file 'img/page_3.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -54,9 +54,9 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{img/page_3.pdf}}%
-    \put(0.6573678,0.70457055){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Menu de configuration\end{tabular}}}}%
-    \put(0.78092795,0.54491416){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Onglets d'affichage\end{tabular}}}}%
-    \put(0.78925787,0.35540897){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Modèle didactique\end{tabular}}}}%
+    \put(0.6673678,0.69457055){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Configuration\end{tabular}}}}%
+    \put(0.68092795,0.52491416){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Onglets d'affichage\end{tabular}}}}%
+    \put(0.68925787,0.36540897){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Modèle didactique\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{img/page_3.pdf}}%
   \end{picture}%
 \endgroup%

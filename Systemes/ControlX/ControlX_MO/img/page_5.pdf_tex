@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'page_5.pdf' (pdf, eps, ps)
+%% Accompanies image file 'img/page_5.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -54,9 +54,9 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{img/page_5.pdf}}%
-    \put(0.04001089,0.64589007){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Réglages\end{tabular}}}}%
+    \put(0.04001089,0.66589007){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Réglages\end{tabular}}}}%
     \put(0.88009733,0.43611869){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Affichage des\\ diagrammes\end{tabular}}}}%
-    \put(0.10288515,0.19205228){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Lancer l'analyse\end{tabular}}}}%
+    \put(0.10288515,0.17205228){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Lancer l'analyse\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{img/page_5.pdf}}%
   \end{picture}%
 \endgroup%
