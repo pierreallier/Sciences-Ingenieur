@@ -39,7 +39,7 @@ t=np.linspace(0,temps[-1],1000)
 omega=K/U0*(1-np.exp(-t/tau))
 
 # Tracé
-plt.plot(t,omega)
+#plt.plot(t,omega)
 
 # Prise en compte du couple résistant
 K2=-K*R/Kt
@@ -47,10 +47,8 @@ tau2=tau
 
 # Nouvelles valeurs numériques
 wp=U0*K/(red*vis)
-Cr0=0
-Cs0=0
-#Cr0=6*10e-5
-#Cs0=4*10e-5
+Cr0=6*10e-5
+Cs0=4*10e-5
 
 # Calcul des coefficients de la décomposition en éléments simples
 A=-K2*Cr0*tau2/(1+tau2**2*wp**4)-tau2*K2*Cs0
@@ -60,14 +58,14 @@ D=K2*Cs0
 
 # Calcul réponse temporelle
 omega2=A*np.exp(-t/tau2)+B*np.cos(wp*t)+(C/wp)*np.sin(wp*t)+D
-#omega=omega+omega2
-#plt.plot(t,omega)
+omega=omega+omega2
 
 # Décalage de la réponse temporelle pour synchroniser avec expérimental
-#dt=0.2
-#t=np.linspace(dt,temps[-1]+dt,1000)
+dt=0.2
+t=np.linspace(dt,temps[-1]+dt,1000)
 
 # Tracé de la courbe
+plt.plot(t,omega)
 plt.show()
 
 
