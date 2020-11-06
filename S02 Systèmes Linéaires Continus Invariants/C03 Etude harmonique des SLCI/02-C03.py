@@ -6,9 +6,9 @@ from pylab import *
 K=2
 w0=5
 ### La fonction de transfert ici H(j.w)=1/(1+0.01.j.w-w²)
-def H(w):
-    xi=1.4
-    return K/(1 + (2*xi*1j*w)/w0 -w**2/w0**2)
+##def H(w):
+##    xi=1.4
+##    return K/(1 + (2*xi*1j*w)/w0 -w**2/w0**2)
 
 ### La fonction de transfert ici H(j.w)=1/(1+0.01.j.w-w²)
 ##def H2(w):
@@ -51,9 +51,8 @@ tau=4
 ##            out.append(K/(tau1*1j*w*tau2*1j*w))
 ##    return out
 
-
-##def H(w):
-##    return K/w
+def H(w):
+    return K/(1j*w)
 
 ##K=2
 ##def H(w):
