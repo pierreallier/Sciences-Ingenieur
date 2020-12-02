@@ -22,8 +22,8 @@ w0=5
 
 
 
-K=1.5
-tau=4
+K=0.97
+tau=0.004
 ##def H(w):
 ##    return K/(1 + tau*1j*w)
 ##
@@ -52,7 +52,7 @@ tau=4
 ##    return out
 
 def H(w):
-    return K/(1j*w)
+    return K/(1+tau*1j*w)
 
 ##K=2
 ##def H(w):
@@ -63,7 +63,7 @@ def trace(zoom,ordre,H):
     if ordre==1:
         fig=figure('Diagrammes Bode')
         w0=1/tau
-        puissance_w=arange(log10(w0)-4,log10(w0)+3,0.01)
+        puissance_w=arange(log10(w0)-5,log10(w0)+4,0.01)
     else:
         w0=100
         if zoom==False:
@@ -79,21 +79,28 @@ def trace(zoom,ordre,H):
     # Le module en dB
     module = 20*log10(absolute(H(W)))
     #Tracer du diagramme de Bode
-    subplot(211) # Permet d’afficher plusieurs graphes (nombre de graphe (2), colonne (1), ligne (1))
-    semilogx(W,module) # Tracé en semilog du module
+    subplot(211) # Perme    t d’afficher plusieurs graphes (nombre de graphe (2), colonne (1), ligne (1))
+    semilogx(W,module,10,1) # Tracé en semilog du module
     axes = gca()
-    axes.set_xlim(0.005,200)
+    axes.set_xlim(10,10000)
+    axes.set_ylim(-40,5)
     axes.set_ylabel('Gain (dB)')
-    grid(True) # Activation de la grille
+    axes.set_xscale('log')
+    major_ticks_y = np.arange(-40, 10, 20)
+    minor_ticks_y = np.arange(-40, 10, 10)
+    axes.set_yticks(major_ticks_y)
+    axes.set_yticks(minor_ticks_y, minor=True)
+    axes.grid(True,which='minor', alpha=0.2)
+    axes.grid(True,which='major', alpha=0.5)
     subplot(212)
-    semilogx(W,phase) #Tracé en semilog du module
+    semilogx(W,phase,10,1) #Tracé en semilog du module
     axes = gca()
     axes.set_ylabel('Phase (deg)')
     axes.set_xlabel('Pulsation $(rad.s^{-1})$')
-    axes.set_xlim(0.005,200)
-    grid(True) #Activation de la grille
-    #On montre le graphique
-
+    axes.set_xlim(10,10000)
+    axes.grid(True,which='minor', alpha=0.2)
+    axes.grid(True,which='major', alpha=0.5)
+    
 ordre=1
 
 if ordre==1:

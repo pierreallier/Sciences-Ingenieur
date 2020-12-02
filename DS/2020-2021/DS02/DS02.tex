@@ -231,7 +231,7 @@ On commence par utiliser un correcteur proportionnel $C(p)=K_p=0.6$, et $C_r(p)=
 
 On choisit maintenant d’utiliser un correcteur proportionnel intégral. Ainsi, la fonction de transfert équivalente C(p) peut s’écrire $C(p)=K_p\frac{1+\tau_i\cdot p}{\tau_i\cdot p}$.
 
-\question{Exprimer la fonction de transfert boucle fermée du système $H_1(p)$, sous forme canonique, en fonction de $K$, $K_p$, $K_i$, $\tau$ et $\tau_i$. Préciser l’ordre et la classe de ce système.}
+\question{Exprimer la fonction de transfert boucle fermée du système $H_1(p)$, sous forme canonique, en fonction de $K$, $K_p$, $\tau$ et $\tau_i$. Préciser l’ordre et la classe de ce système.}
 
 \question{Calculer l’erreur statique notée $\varepsilon_{s1}$ pour $C_r(p)=0$ et $\Omega_c(p)=\frac{\Omega_{c0}}{p}$ où $\Omega_{c0}=1.$}
 
@@ -347,7 +347,7 @@ Avec un effort résistant, le temps de déplacement est $2.25s$ de la vitesse at
 
 Dans les deux cas le cahier des charges est respecté.
 
-Dans les modèles avec prise en compte des frottements la vitesse de rotation du moteur en régime permanent est bien inférieure à celle obtenue sans tenir compte du frottement. Dans le cas d’un effort constant la vitesse atteinte en régime permanent est d’environ $465\ rad.s^{-1}$ et est constante.
+Dans les modèles avec prise en compte des frottements la vitesse de rotation du moteur en régime permanent est bien inférieure à celle obtenue sans tenir compte du frottement.
 
 Dans le cas d’un effort variable et à la fin du régime permanent, la vitesse de rotation du moteur est la même que dans le cas précédent puis diminue linéairement au cours du temps.
 
@@ -376,8 +376,8 @@ $A(p)=E(p)$
 
 \reponse{5}{}{
 $E(p)=K_{capt}=A(p)$\\
-$D(p)=\frac{C_m(p)}{U_m(p)}=\frac{k_c}{r}$\\
-$M(p)=\frac{1}{J\cdot p+f_v+/frac{k_e \cdot k_c}{R}}$\\
+$D(p)=\frac{C_m(p)}{U_m(p)}=\frac{k_c}{R_m}$\\
+$M(p)=\frac{1}{J\cdot p+f_v}$\\
 $B(p)= C_{corr}(p)$
 }
 
@@ -403,15 +403,15 @@ $\varepsilon(p).(1+C(p)M(p))=\Omega_c(p)+C_r(p)M(p)$\\
 $\varepsilon(p)=\frac{\Omega_c(p)+C_r(p)M(p)}{1+C(p)M(p)}=\frac{\Omega_c(p)}{1+C(p)M(p)}+\frac{C_r(p)M(p)}{1+C(p)M(p)} $ \\
 $\begin{cases}
   H_c(p)=\frac{1}{1+C(p)M(p)} \\ 
-  H_r(p)=\frac{C_r(p)M(p)}{1+C(p)M(p)} 
+  H_r(p)=\frac{M(p)}{1+C(p)M(p)} 
 \end{cases}$
 }
 
 \reponse{6}{}{
 $\begin{cases}
-	H_1(p)=\frac{C(p) \cdot M(p)}{1+C(p) \cdot M(p)}=\frac{K_p\cdot \frac{K}{1+\tau .p}}{1+K_p \cdot \frac{K}{1+\tau .p}}\\
+	H_1(p)=\frac{C(p) \cdot M(p)}{1+C(p) \cdot M(p)}=\frac{K_p\cdot \frac{K}{1+\tau.p}}{1+K_p \cdot \frac{K}{1+\tau.p}}\\
 	H_1(p)=\frac{K_p .K}{1+\tau p + K_p.K} \\
-	H_1(p)=\frac{K_p.K}{1+K_p.K}\cdot \frac{1}{1+\frac{\tau}{1+K_p.K}}
+	H_1(p)=\frac{K_p.K}{1+K_p.K}\cdot \frac{1}{1+\frac{\tau.p}{1+K_p.K}}
 \end{cases}$
 Ordre 1, classe 0
 }
@@ -419,7 +419,7 @@ Ordre 1, classe 0
 \reponse{5}{}{
 $\begin{cases}
 	\omega_m(t)=K’(1-e^{\frac{-t}{\tau’}}) \\
-	avec\;K’=\frac{K_p.K}{1+K_p.K}\;et\;\tau’=\frac{\tau}{1+K_p.K}
+	avec\;K’=\frac{K_p.K}{1+K_p.K}\approx 0.97\;et\;\tau’=\frac{\tau}{1+K_p.K}\approx0.0045s
 \end{cases}$
 }
 
@@ -435,22 +435,23 @@ $\varepsilon_s=\lim\limits_{t \to \infty}\varepsilon(t)=\lim\limits_{p \to 0}p\c
 $\varepsilon_s=\lim\limits_{p \to 0}p\cdot \frac{\Omega_c(p)}{1+C(p)M(p)}$\\
 $\varepsilon_s=\lim\limits_{p \to 0}p\cdot \frac{\frac{1}{p}}{1+K_p.\frac{K}{1+\tau p}}$\\
 $\varepsilon_s=\lim\limits_{p \to 0}\frac{1}{1+K_p.\frac{K}{1+\tau p}}$\\
-$\varepsilon_s=\frac{1}{1+K_p.K}$ \\
+$\varepsilon_s=\frac{1}{1+K_p.K}\approx 0.03rad.s^{-1}$ \\
 On peut également partir de la fonction temporelle $\varepsilon_s=\lim\limits_{t \to \infty}(\Omega_c(t)-\Omega_m(t))$}
 
 \reponse{3}{\begin{center}
 \includegraphics[width=0.85\linewidth]{img/DR23}
 \end{center}}{
 \begin{center}
+$\omega_0\approx 250rad.s^{-1}$\\
 \includegraphics[width=0.85\linewidth]{img/DR23_cor}
 \end{center}}
 
 
 \reponse{6}{}{
 $H_1(p)=\frac{C(p) \cdot M(p)}{1+C(p) \cdot M(p)}$\\
-$H_1(p)=\frac{K_p\frac{K_i}{1+\tau_i\;p} \cdot \frac{K}{1+\tau\;p}}{1+K_p\frac{K_i}{1+\tau_i\;p} \cdot \frac{K}{1+\tau\;p}}$\\
-$H_1(p)=\frac{K_pK_iK}{(1+\tau_i p)(1+\tau p)+K_pK_iK}$\\
-$H_1(p)=\frac{K_pK_iK}{1+K_pK_iK} \cdot \frac{1}{1+\frac{\tau_i+\tau}{1+K_pK_iK}\cdot p+\frac{\tau_i \tau}{1+K_pK_iK} \cdot p^2 }$
+$H_1(p)=\frac{K_p\frac{1+\tau_i\;p}{\tau_i\;p} \cdot \frac{K}{1+\tau\;p}}{1+K_p\frac{1+\tau_i\;p}{\tau_i\;p} \cdot \frac{K}{1+\tau\;p}}$\\
+$H_1(p)=\frac{K_p\cdot K\cdot (1+\tau_i\;p)}{\tau_i\cdot p\cdot(1+\tau p)+K_p(1+\tau_i\;p)K}$\\
+$H_1(p)=\frac{1+\tau_i\;p}{1+\tau_i\cdot(1+\frac{1}{K_pK})\cdot p+\frac{\tau_i \tau}{K_pK} \cdot p^2 }$
 ordre 2 classe 0}
 
 \reponse{4}{}{
@@ -458,8 +459,8 @@ $\varepsilon_{s1}=\lim\limits_{p \to 0} p\cdot \varepsilon(p)=\lim\limits_{p \to
 $\varepsilon_{s1}=0$}
 
 \reponse{4}{}{
-$\varepsilon_{s2}=\lim_{p \to 0}p\cdot \varepsilon(p)=\lim\limits_{p \to 0}p\cdot\frac{C_r(p)M(p)}{1+C(p)M(p)}=\lim\limits_{p \to 0}p\cdot\frac{\frac{C_{r0}}{p}\cdot \frac{K}{1+\tau\;p}}{1+K_p\frac{K_i}{1+\tau_i\;p} \cdot \frac{K}{1+\tau\;p}}$ \\
-$\varepsilon_{s2}=\lim\limits_{p \to 0}\frac{C_{r0}\cdot \frac{K}{1+\tau\;p}}{1+K_p\frac{K_i}{1+\tau_i\;p} \cdot \frac{K}{1+\tau\;p}}=\frac{K.C_{r0}}{1+K_p\;K_i\;K}$}
+$\varepsilon_{s2}=\lim\limits_{p \to 0}p\cdot \varepsilon(p)=\lim\limits_{p \to 0}p\cdot\frac{C_r(p)M(p)}{1+C(p)M(p)}=\lim\limits_{p \to 0}p\cdot\frac{\frac{C_{r0}}{p}\cdot \frac{K}{1+\tau\;p}}{1+K_p\frac{1+\tau_i\;p}{\tau_i\;p} \cdot \frac{K}{1+\tau\;p}}$ \\
+$\varepsilon_{s2}=\lim\limits_{p \to 0}\frac{C_{r0}\cdot K}{1+K_p\frac{1}{\tau_i\;p} \cdot K}=0$}
 
 
 \reponse{4}{}{
@@ -468,8 +469,8 @@ $\varepsilon_{t1}=\lim\limits_{p \to 0} p\cdot \varepsilon(p)=\lim\limits_{p \to
 $\varepsilon_{t1}=\frac{\Omega_{c0}\;\tau_i}{K_p\;K}$}
 
 \reponse{4}{}{
-$\varepsilon_{t2}=\lim_{p \to 0}p\cdot \varepsilon(p)=\lim\limits_{p \to 0}p\cdot\frac{C_r(p)M(p)}{1+C(p)M(p)}=\lim\limits_{p \to 0}p\cdot\frac{\frac{C_{r0}}{p^2}\cdot \frac{K}{1+\tau\;p}}{1+K_p\frac{K_i}{1+\tau_i\;p} \cdot \frac{K}{1+\tau\;p}}$ \\
-$\varepsilon_{t2}=\lim\limits_{p \to 0}\frac{1}{p}\;\frac{C_{r0}\cdot \frac{K}{1+\tau\;p}}{1+K_p\frac{K_i}{1+\tau_i\;p} \cdot \frac{K}{1+\tau\;p}}=0$}
+$\varepsilon_{t2}=\lim_{p \to 0}p\cdot \varepsilon(p)=\lim\limits_{p \to 0}p\cdot\frac{C_r(p)M(p)}{1+C(p)M(p)}=\lim\limits_{p \to 0}p\cdot\frac{\frac{C_{r0}}{p^2}\cdot \frac{K}{1+\tau\;p}}{1+K_p\frac{1+\tau_i\;p}{\tau_i\;p} \cdot \frac{K}{1+\tau\;p}}$ \\
+$\varepsilon_{t2}=\lim\limits_{p \to 0}\frac{1}{p}\;\frac{C_{r0}\cdot K}{1+K_p\frac{1}{\tau_i\;p}\cdot K}=\frac{C_{r0}}{K_p}$}
 
 \reponse{1}{\begin{center}
 \includegraphics[width=0.8\linewidth]{img/DR29}
