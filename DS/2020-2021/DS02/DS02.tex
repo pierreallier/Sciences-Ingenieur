@@ -487,14 +487,14 @@ $\varepsilon_{t2}=\lim\limits_{p \to 0}\frac{1}{p}\;\frac{C_{r0}\cdot K}{1+K_p\f
 \end{center}}
 
 \reponse{6}{}{
-Pour $\omega>100rad.s^{-1}$, on peut l'assymiler à un premier ordre de fonction de transfert $H_r(p)=\frac{2.2}{1+0.004\; p}$
+Pour $\omega>100rad.s^{-1}$, on peut l'assymiler à un premier ordre de fonction de transfert $H_r(p)=\frac{2.2\cdot p}{1+0.004\; p}$
 
-Calcul de$C_{obs}(p)$
+$C_{obs}(p)=p\cdot\frac{0.6\cdot \epsilon(p)+10\cdot C_{r0}\cdot\tau}{246}\cdot\frac{2.2}{1+1.34\cdot p}$
 }
 
 
 \reponse{6}{}{
-Instant obstacle;
+L'obstacle apparaît à 5.1s. Il faudrait un seuil pour le détecter.
 
 }
 
@@ -529,9 +529,7 @@ $x=\frac{1\pm0.94}{2}$
 
 $x1=0.03$ et $x2=0.97$
 
-Donc $\xi=\sqrt{0.03}\approx0.17$
-
-Et $\omega_0=200rad.s^{-1}$.
+Donc $\xi=\sqrt{0.03}\approx0.17$, $\omega_0=200rad.s^{-1}$ et $K=10$.
 }
 
 
