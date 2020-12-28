@@ -1,69 +1,44 @@
-import control
-import matplotlib.pyplot as plt
+# -*- coding: utf-8 -*-
+
+import matplotlib.pyplot as plt #pour l'affichage des courbes
+from scipy.signal import lti    #pour l'utilisation de la classe lti
 import numpy as np
 
-###### Ne pas modifier les fonctions suivantes ###############
+K1=53.5
+tau1=0.13
+Kp=0.6
 
-def constructions_ordre_1(E,G,tau):
-    plt.plot([0,t_out[-1]],[0.95*G*E,0.95*G*E])
-    plt.plot([3*tau,3*tau],[0,G*E],'r--')
-    plt.plot([tau,tau],[0,G*E],'g--')
-    plt.plot([0,tau],[0,G*E],'g--')
+K=Kp*K1/(1+Kp*K1)
+print(K)
+tau=tau1/(1+Kp*K1)
+print(tau)
 
-def constructions_ordre_2(E,G,xsi,omega0):
-    if xsi>0.7:
-        plt.plot([0,t_final],[0.95*G*E,0.95*G*E])
-    else:
-        D=G*np.exp(-np.pi*xsi/np.sqrt(1-xsi**2))
-        th=np.pi/(omega0*np.sqrt(1-xsi**2))
-        T=2*th
-        plt.plot([0,t_final],[0.95*G*E,0.95*G*E],'orange')
-        plt.plot([0,t_final],[1.05*G*E,1.05*G*E],'orange')
-        plt.plot([0,t_final],[D+G*E,D+G*E])
-        plt.plot([th,th],[0,D+G*E],'g--')
-        plt.plot([th+T,th+T],[0,D+G*E],'g--')
-    
-###### Définir la fonction temporelle s(t) #######################
-def ordre1(t):
-    return G*E*(1-np.exp(-t/tau))
+H=lti([K],[tau,1])              #creation d'une instance de la classe
+t,y=H.step()                    #appel de la méthode step de la classe lti
 
-def ordre2_xsi_plus_grand_1(t):
-    tau1=1/(omega0*(xsi+np.sqrt(xsi**2-1)))
-    tau2=1/(omega0*(xsi-np.sqrt(xsi**2-1)))    
-    return G*E*(1-tau1/(tau1-tau2)*np.exp(-t/tau1)+tau2/(tau1-tau2)*np.exp(-t/tau2))
 
-def ordre2_xsi_plus_petit_1(t):
-    xsi1=xsi/np.sqrt(1-xsi**2)
-    omega1=omega0*np.sqrt(1-xsi**2)
-    gain1=np.exp(-omega0*xsi*t)/(np.sqrt(1-xsi**2))
-    return G*E*(1-gain1*np.cos(omega1*t-np.arctan(xsi1)))
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
 
-###### Tracé des courbes temporelles #############################
-t_final=10     # t_final (durée du tracé à modifier si besoin)
-t=np.linspace(0,t_final,1000)
+major_ticks_y = np.arange(0, 1.1, 0.2)
+minor_ticks_y = np.arange(0, 1.1, 0.02)
+major_ticks_x = np.arange(0, 0.05, 0.005)
+minor_ticks_x = np.arange(0, 0.05, 0.001)
 
-E=2             # Valeur de l'échelon d'entrée
 
-## Fonction du premier ordre
-G=10            # Gain de la fonction de transfert
-tau=1           # Constante de temps tau
-sys = control.TransferFunction(G*E, [tau,1])
+ax.set_xticks(major_ticks_x)
+ax.set_xticks(minor_ticks_x, minor=True)
+ax.set_yticks(major_ticks_y)
+ax.set_yticks(minor_ticks_y, minor=True)
 
-## Fonction du second ordre
-G=10            # Gain de la fonction de transfert
-xsi=0.3         # Coefficient d'amortissemrnt xsi
-omega0=100      # Pulsation propre omega0
-#sys = control.TransferFunction(G*E, [1/omega0**2,2*xsi/omega0,1])
+# And a corresponding grid
+ax.grid(which='both')
 
-# Tracé temporel issu de la fonction de transfert
-t_out,s_l=control.step_response(sys,t,0)
-plt.plot(t_out,s_l)
+# Or if you want different settings for the grids:
+ax.grid(which='minor', alpha=0.2)
+ax.grid(which='major', alpha=0.5)
 
-# Tracé de la fonction temporelle s(t)
-plt.plot(t,ordre1(t))
-
-###### Construction des valeurs remarquables des réponses #######
-#constructions_ordre_1(E,G,tau)
-#constructions_ordre_2(E,G,xsi,omega0)
-
+plt.plot(t,y)                       #affichage
+plt.grid('on')
 plt.show()
+

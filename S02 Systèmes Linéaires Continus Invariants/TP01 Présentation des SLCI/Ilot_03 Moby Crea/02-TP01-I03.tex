@@ -9,7 +9,76 @@
 
 \pagestyle{correction}\setcounter{section}{0}
 
-Modélisation																																																																																		
-\begin{center}
-$H(p)=\dfrac{\Omega_v(p)}{U_m(p)}=\dfrac{\dfrac{K_{red}}{K_e}}{p.\left(1+\dfrac{R.J}{K_m.K_e}.p+\dfrac{L.J}{K_m.K_e}.p^2\right)}$
-\end{center}}
+\begin{eqnarray}
+J\cdot \frac{d\omega (t)}{dt}=Cm(t) \\
+Um(t)=R\cdot i(t) +e(t) \\
+e(t)=K_e\cdot \omega (t) \\
+Cm(t)=K_t\cdot i(t)
+\end{eqnarray}
+
+$H(p)=\dfrac{\dfrac{1}{K_e}}{1+\dfrac{R\cdot J}{K_e\cdot K_t}\cdot p}$
+
+Avec $U=\frac{U_0}{p}$.
+
+$\Omega(p)=\dfrac{\dfrac{U_0}{K_e}}{p\cdot \left(1+\dfrac{R\cdot J}{K_e\cdot K_t}\cdot p\right)}$, donc $\omega(t)=K(1-e^{-\frac{t}{\tau}})$
+
+\begin{eqnarray}
+J\cdot \frac{d\omega (t)}{dt}=Cm(t)-Cr(t)-f.\omega(t) \\
+Um(t)=R\cdot i(t) +e(t) \\
+e(t)=K_e\cdot \omega (t) \\
+Cm(t)=K_t\cdot i(t)
+\end{eqnarray}
+
+Avec $Cr(t)=Cr_0.cos(\omega_r.t)+Cs_0$.\\
+
+$J\cdot p \cdot \Omega = Cm(p)-Cr(p)-f.\Omega$
+
+$Um(p)-\dfrac{R\cdot Cr(p)}{K_t}=\left(\dfrac{R\cdot (J\cdot p+f)}{K_t}+K_e\right)\cdot\Omega=\left(\dfrac{R\cdot (J\cdot p+f)}{K_t}+K_e\right)\cdot\Omega$
+
+$\Omega(p)=\dfrac{\dfrac{Kt}{Kt\cdot Ke+R\cdot f}}{1+\dfrac{R\cdot J}{Kt\cdot Ke+R\cdot f}\cdot p}\cdot \left(Um(p)-\dfrac{R\cdot Cr(p)}{K_t}\right)$
+
+Avec $U=\frac{U_0}{p}$ et $Cr=0$.
+
+$\Omega_1(p)=\dfrac{\dfrac{Kt}{Kt\cdot Ke+R\cdot f}}{1+\dfrac{R\cdot J}{Kt\cdot Ke+R\cdot f}\cdot p}\cdot \dfrac{U_0}{p}$
+
+Avec $U=0$ et $Cr=\dfrac{Cr_0\cdot p}{p^2+\omega_r^2}+\dfrac{Cs_0}{p}$.
+
+
+$\Omega_2(p)=-\dfrac{\dfrac{Kt}{Kt\cdot Ke+R\cdot f}}{1+\dfrac{R\cdot J}{Kt\cdot Ke+R\cdot f}\cdot p}\cdot \dfrac{R}{K_t}\cdot \left(\dfrac{Cr_0\cdot p}{p^2+\omega_r^2}+\dfrac{Cs_0}{p}\right)$
+
+On prend:
+
+$K=-\dfrac{Kt}{Kt\cdot Ke+R\cdot f}\cdot \dfrac{R}{K_t}$
+
+$\tau=\dfrac{R\cdot J}{Kt\cdot Ke+R\cdot f}$
+
+$\Omega_2(p)=\dfrac{K}{1+\tau\cdot p}\cdot \left(\dfrac{Cr_0\cdot p}{p^2+\omega_r^2}+\dfrac{Cs_0}{p}\right)=\dfrac{K\cdot(Cr_0\cdot p^2+Cs_0\cdot p^2+Cs_0\cdot \omega_r^2)}{(1+\tau\cdot p)\cdot(p^2+\omega_r^2)\cdot p}$
+
+~\
+
+$\Omega_2(p)=\dfrac{A}{1+\tau\cdot p}+\dfrac{B\cdot p+C}{p^2+\omega_r^2}+\dfrac{D}{p}$
+
+$=\dfrac{A\cdot p^3+A\cdot \omega_r^2\cdot p+B\cdot p^2+C\cdot p+B\cdot \tau\cdot p^3+C\cdot \tau \cdot p^2+D\cdot p^2+D\cdot \omega_r^2+D\cdot \tau\cdot p^3+D\cdot \omega_r^2\cdot \tau\cdot p}{(1+\tau\cdot p)\cdot(p^2+\omega_r^2)\cdot p}$
+
+\begin{eqnarray}
+A+B\cdot \tau+D\cdot \tau=0 \\
+B+C\cdot \tau+D=K\cdot(Cr_0+Cs_0) \\
+A\cdot \omega_r^2+C+D\cdot \omega_r^2\cdot \tau=0 \\
+D \cdot \omega_r^2=K\cdot Cs_0\cdot \omega_r^2
+\end{eqnarray}
+
+$D=K\cdot Cs_0$
+
+$C=B\cdot \tau \cdot \omega_r^2$
+
+$B\cdot (1+\tau^2 \cdot \omega_r^4)+D=K\cdot(Cr_0+Cs_0)$
+
+$B=\dfrac{K\cdot Cr_0}{1+\tau^2 \cdot \omega_r^4}$
+
+$C=\dfrac{K\cdot Cr_0\cdot \tau \cdot \omega_r^2}{1+\tau^2 \cdot \omega_r^4}$
+
+$A=-\dfrac{K\cdot Cr_0\cdot \tau}{1+\tau^2 \cdot \omega_r^4}-\tau\cdot K\cdot Cs_0$
+
+
+$\omega_2(t)=\dfrac{A}{\tau}.e^{\frac{-t}{\tau}}+B\cdot cos(\omega_r\cdot t)+\dfrac{C}{\omega_r}\cdot sin(\omega_r\cdot t)+D$
+}

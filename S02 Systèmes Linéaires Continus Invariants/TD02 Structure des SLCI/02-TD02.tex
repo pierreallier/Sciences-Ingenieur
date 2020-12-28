@@ -237,9 +237,9 @@ Ces résultats vont servir à compléter les blocs vides du schéma bloc de la D
 
 \paragraph{Question 4:} Exprimer toutes les constantes dans des unités S.I. de base sauf le Newton qu'il est conseillé de conserver.
 
-\paragraph{Question 4:} Montrer qu'il est possible de simplifier la FTBF, donner alors les expressions littérales puis les valeurs numériques de ces caractéristiques.
+\paragraph{Question 5:} Montrer qu'il est possible de simplifier la FTBF, donner alors les expressions littérales puis les valeurs numériques de ces caractéristiques.
 
-\paragraph{Question 4:} Déterminer le temps de réponse à 5\% et le dépassement D\%.
+\paragraph{Question 6:} Déterminer le temps de réponse à 5\% et le dépassement D\%.
 
 \section{Centre usinage grande vitesse}
 
@@ -344,7 +344,7 @@ Prise en compte du retard. Le résultat de la réponse à un échelon de la bouc
  \includegraphics[width=0.8\linewidth]{img/img21}
 \end{center}
 
-\paragraph{Question 2:} Par analyse de la réponse en couple à l'échelon d'amplitude trois avec prise en compte du retard et en reprenant la transmittance de la question 3, donner la transmittance type 1er ordre avec retard sous forme canonique reliant le couple de sortie $C(p)$ au couple de référence $C_{ref}(p)$. On précisera sur la figure les tracés nécessaires à l'obtention de cette transmittance.
+\paragraph{Question 2:} Par analyse de la réponse en couple à l'échelon d'amplitude trois avec prise en compte du retard et en reprenant la transmittance de la question 1, donner la transmittance type 1er ordre avec retard sous forme canonique reliant le couple de sortie $C(p)$ au couple de référence $C_{ref}(p)$. On précisera sur la figure les tracés nécessaires à l'obtention de cette transmittance.
 
 La transmittance obtenue avec prise en compte du retard est non-linéaire.
 
@@ -373,7 +373,7 @@ La phase réelle comprise entre 2kHz et 4kHz est bien sur comprise entre -180° 
 
 La phase est fournie en fonction de la fréquence f (Hz).
 
-\paragraph{Question 5:} L'évolution de la phase obtenue ci-dessus est-elle identique à celle du diagramme de Bode obtenue à la question 6 ? Argumenter votre réponse.
+\paragraph{Question 5:} L'évolution de la phase obtenue ci-dessus est-elle identique à celle du diagramme de Bode obtenue à la question 4 ? Argumenter votre réponse.
 
 \fi
 
@@ -521,7 +521,7 @@ On s'intéressera plus particulièrement au tracteur Fendt 930 de la gamme \og F
 
 \subsubsection{Présentation}
 
-Le réglage du rapport du réducteur Fendt dépend des paramètres $x$ et $y$ et donc (voir question 7) des angles d'inclinaisons $\alpha$ et $\beta$ des barillets du moteur et de la pompe. La commande permettant d'agir sur ces paramètres s'effectue intégralement à l'aide d'un joystick situé dans la cabine de pilotage (voir figure \ref{fig19}) :
+Le réglage du rapport du réducteur Fendt dépend des paramètres $x$ et $y$ et donc des angles d'inclinaisons $\alpha$ et $\beta$ des barillets du moteur et de la pompe. La commande permettant d'agir sur ces paramètres s'effectue intégralement à l'aide d'un joystick situé dans la cabine de pilotage (voir figure \ref{fig19}) :
 \begin{itemize}
  \item pousser le joystick en avant permet d'accélérer,
  \item tirer le joystick en arrière permet de ralentir au frein moteur,
@@ -668,8 +668,7 @@ On souhaite diviser par dix le temps de réponse du système afin de satisfaire 
 
  \item Donner les expressions littérales de $K'_m$ et $\tau'_m$ en fonction notamment de $K_m$ et $\tau_m$,
  \item Déterminer la valeur $k$ du gain du retour tachymétrique de telle sorte que $\tau'_m=\dfrac{\tau_m}{10}$,
- \item Déterminer les nouvelles valeurs de $K'_m$, $K_{BO}$, $K_c$, $K_{BF}$ et $T$,
- \item En déduire sans calcul l'écart de position du système équivalent.
+ \item Déterminer les nouvelles valeurs de $K'_m$, $K_{BO}$, $K_c$, $K_{BF}$ et $T$.
 \end{itemize}
 
 \subsubsection{Analyse du régime statique ou régime permanent}
@@ -839,7 +838,7 @@ $FTBF(p)=\dfrac{\dfrac{K_a}{K_c.K_d}}{1+\dfrac{S}{K_b.k.K_c.K_d}.p+\dfrac{M.f}{S
 La FTBF est de classe 0 et d'ordre 3.
 
 
-\paragraph{Question 3:} 
+\paragraph{Question 4:} 
 
 \begin{itemize}
  \item $K_a=\dfrac{34}{57}$,
@@ -853,7 +852,7 @@ La FTBF est de classe 0 et d'ordre 3.
  \item $\dfrac{V.\beta}{2}=10^{-3}.10^{-3}.10^{-6}m^5.N^{-1}$
 \end{itemize}
 
-\paragraph{Question 4:}
+\paragraph{Question 5:}
 
 On constate que $\dfrac{V.\beta}{2}$ est négligeable devant $f$, donc on peut négliger le terme de degré 3.
 
@@ -873,7 +872,7 @@ $K=\frac{\frac{34}{57}}{\frac{2.\pi.10^3}{500}.\frac{34}{57}}=\frac{1}{4.\pi}\ap
 Valeurs sans approximations intermédiaires:
 $\omega_0=497,37rad.s^{-1}$, $\xi=0,18$.
 
-\paragraph{Question 4:}
+\paragraph{Question 6:}
 
 \begin{center}
  \includegraphics[width=0.7\linewidth]{img/diravi_temp}
@@ -911,9 +910,9 @@ $\xi=\frac{R.r.\Phi_p}{4}.\sqrt{\frac{M_{eq}}{L.K_i.K_e}}=16,14$
 
 $\xi$ est plus grand que 1, il existe donc deux racines réelles $\tau_1$ et $\tau_2$.
 
-$\tau_1=\frac{1}{\omega_0}.(\xi+\sqrt{\xi^2-1}))=10s$
+$\tau_1=\frac{1}{\omega_0.(\xi-\sqrt{\xi^2-1}))}=10s$
 
-$\tau_2=\frac{1}{\omega_0}.(\xi-\sqrt{\xi^2-1}))=0,01s$
+$\tau_2=\frac{1}{\omega_0.(\xi+\sqrt{\xi^2-1}))}=0,01s$
 
 On peut négliger l'effet de $\tau_2$ sur la réponse du système, ainsi on peut écrire:
 
@@ -923,13 +922,13 @@ $H(p)=\frac{G}{1+\tau_1.p}$.
 
 $FTBO(p)=\frac{X_m(p)}{\epsilon (p)}=\frac{C(p).G.K_c}{p(1+\tau_1.p)}=\frac{G.K_c}{p(1+\tau_1.p)}$
 
-\paragraph{Question 3:}
+\paragraph{Question 4:}
 
 $FTBF(p)=\frac{1}{1+\frac{1}{K_c.G}.p+\frac{\tau_1}{K_c.G}.p^2}$, avec:
 
 \begin{itemize}
- \item $\omega_0=\sqrt{\frac{K_c.G}{\tau_1}}=0,05èrad.s^{-1}$,
- \item $\xi=\frac{1}{2.\sqrt{K_c.G.\tau_1}}=0,88$
+ \item $\omega_0=\sqrt{\frac{K_c.G}{\tau_1}}=1,9rad.s^{-1}$,
+ \item $\xi=\frac{1}{2.\sqrt{K_c.G.\tau_1}}=0,025$
 \end{itemize}
 
 \subsection{Transmission Vario-Fendt}

@@ -67,13 +67,15 @@ Il est constitué de deux courbes correspondant aux tracés du module et la phas
 
 \begin{minipage}{0.3\linewidth}
 	\begin{itemize}
-	 \item Le module $G_{db}=\vert H(j\omega) \vert$ est exprimé en décibel. 
+	 \item Le module $G_{db}=20\cdot log \vert H(j\omega) \vert$ est exprimé en décibel. 
 	 \item La phase $\varphi$ est exprimée en degrés. 
 	\end{itemize}
 \end{minipage}
 \hfill
 \begin{minipage}{0.66\linewidth}
-	\includegraphics[width=.9\linewidth]{img/Bode1}
+\centering
+\def\svgwidth{0.75\columnwidth}
+\input{img/bode1.pdf_tex}
 \end{minipage}
 }}
 
@@ -93,9 +95,9 @@ Il est constitué de deux courbes correspondant aux tracés du module et la phas
 \end{itemize}
 \end{minipage}
 
-\begin{center}
-	\includegraphics[width=0.7\linewidth]{img/Bode2}
-\end{center}
+\centering
+\def\svgwidth{0.65\columnwidth}
+\input{img/gain.pdf_tex}
 }}
 
 {\frame{
@@ -114,9 +116,9 @@ Il est constitué de deux courbes correspondant aux tracés du module et la phas
 \end{itemize}
 \end{minipage}
 
-\begin{center}
-	\includegraphics[width=0.6\linewidth]{img/Bode3}
-\end{center}
+\centering
+\def\svgwidth{0.65\columnwidth}
+\input{img/integrateur.pdf_tex}
 }}
 
 {\frame{
@@ -151,9 +153,10 @@ Pour $\omega=\omega_c=\dfrac{1}{\tau}$, pulsation de cassure.
 
 {\frame{
 \frametitle{Cas du premier ordre}
-\begin{center}
-	\includegraphics[width=0.8\linewidth]{img/Bode4}
-\end{center}
+\centering
+\def\svgwidth{0.9\columnwidth}
+\input{img/premier_ordre.pdf_tex}
+
 }}
 
 {\frame{
@@ -177,9 +180,10 @@ Pour $\omega_0=\sqrt{\dfrac{1}{T_1.T_2}}$, la courbe de phase passe toujours par
 
 {\frame{
 \frametitle{Cas du second ordre (z>1)}
-\begin{center}
-	\includegraphics[width=0.8\linewidth]{img/Bode5}
-\end{center}
+\centering
+\def\svgwidth{0.9\columnwidth}
+\input{img/second_ordre_2.pdf_tex}
+
 }}
 
 {\frame{
@@ -203,9 +207,9 @@ Pour $\omega_0=\sqrt{\dfrac{1}{T_1.T_2}}$, la courbe de phase passe toujours par
 
 {\frame{
 \frametitle{Cas du second ordre (z=1)}
-\begin{center}
-	\includegraphics[width=0.8\linewidth]{img/Bode6}
-\end{center}
+\centering
+\def\svgwidth{0.9\columnwidth}
+\input{img/second_ordre_1.pdf_tex}
 }}
 
 
@@ -229,9 +233,9 @@ Pour $\omega_0=\sqrt{\dfrac{1}{T_1.T_2}}$, la courbe de phase passe toujours par
 
 {\frame{
 \frametitle{Cas du second ordre (z<1)}
-\begin{center}
-	\includegraphics[width=0.8\linewidth]{img/Bode7}
-\end{center}
+\centering
+\def\svgwidth{0.9\columnwidth}
+\input{img/second_ordre.pdf_tex}
 }}
 
 {\frame{
